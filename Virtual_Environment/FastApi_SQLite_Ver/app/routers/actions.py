@@ -277,7 +277,7 @@ async def action_fight(
                 drops = current_monster.drops
                 for drop in drops:
                     # drop_chance = 1 / drop.rate
-                    drop_chance = 1  # remove drop_chance for now
+                    drop_chance = 1  # TODO: remove drop_chance for now
                     result = random.choices([None, 1], weights=[1 - drop_chance, drop_chance], k=1)[0]
                     if result:
                         quantity = random.randint(drop.min_quantity, drop.max_quantity)
