@@ -56,12 +56,11 @@ with open("../Data/items.json") as j_file:
 
 router = APIRouter()
 
-def calculate_skill_max_xp(level: int) -> int:
-    """
-    XP required to go from <level> to <level+1>.
-    Starts at 150 for level 1→2, and increases by +10 each level.
-    """
-    return 150 + (level - 1) * 10
+def calculate_skill_max_xp(skill_level: int):
+    base_xp = 100
+    xp_increase = int(base_xp * math.log2(skill_level) * ((skill_level // 10) + 1))
+    xp_increase = (xp_increase // 50) * 50 + 150  # Round up
+    return xp_increase
 
 class CharacterInventoryLink(SQLModel, table=True):
     character_id: int | None = Field(default=None, foreign_key="character.id", primary_key=True)
@@ -140,41 +139,46 @@ class Character(SQLModel, table=True):
     cooking_max_xp: int = Field(description="Cooking XP required to level up the skill.", default=150, ge=0)
 
     @staticmethod
-    def skill_xp_gain(action_level: int, character_skill_level: int, modifier: int = 1) -> int:
-        """
-        Always award 20 XP (×modifier), unless skill is >10 levels above the action.
-        """
-        if character_skill_level > action_level + 10:
-            return 0
-        return 50 * modifier
+    def skill_xp_gain(action_level: int, character_skill_level: int, modifier: int = 1):
+        if ((character_skill_level // 10) * 10) > ((action_level // 10) * 10):
+            return 0  # No XP if the character's level is more than 10 levels higher than the resource
 
-    def increase_skill_xp(self, session: Session, skill: str, action_level: int, modifier: int = 1) -> int:
-        """
-        Add XP to <skill> (e.g. 'mining'), level up if threshold reached.
-        """
-        current_xp     = getattr(self, f"{skill}_xp")
-        current_level  = getattr(self, f"{skill}_level")
-        xp_gain        = self.skill_xp_gain(action_level, current_level, modifier)
-        new_xp         = current_xp + xp_gain
-        new_xp, new_lv, new_thr = self.level_up_skill(new_xp, current_level, getattr(self, f"{skill}_max_xp"))
-        setattr(self, f"{skill}_xp",      new_xp)
-        setattr(self, f"{skill}_level",   new_lv)
-        setattr(self, f"{skill}_max_xp",  new_thr)
+        base_xp = 18  # Base XP for resource level 1, adjust as needed
+        xp_for_resource = base_xp + int(base_xp * (action_level / 50))
+        # print(f"xp_for_resource: {xp_for_resource}")
+
+        xp_multiplier = max(1 - (character_skill_level - action_level) / 10, 0.5)
+        # print(f"xp_multiplier: {xp_multiplier}")
+
+        xp = xp_for_resource * xp_multiplier  # Adjust as necessary
+        # print(f"xp: {modifier * max(1, int(xp))}")
+
+        return modifier * max(1, int(xp))  # Ensure XP is not negative
+
+    def increase_skill_xp(self, session: Session, skill: str, action_level: int, modifier: int = 1):
+        skill_xp = getattr(self, f'{skill}_xp')
+        skill_level = getattr(self, f'{skill}_level')
+        action_xp = self.skill_xp_gain(action_level, skill_level, modifier)
+        skill_max_xp = getattr(self, f'{skill}_max_xp')
+        skill_xp, skill_level, skill_max_xp = self.level_up_skill(skill_xp + action_xp, skill_level, skill_max_xp)
+        setattr(self, f'{skill}_xp', skill_xp)
+        setattr(self, f'{skill}_level', skill_level)
+        setattr(self, f'{skill}_max_xp', skill_max_xp)
         session.add(self)
         session.commit()
-        return xp_gain
+        return action_xp
+
 
     @staticmethod
-    def level_up_skill(xp: int, level: int, threshold: int) -> tuple[int,int,int]:
-        """
-        While XP ≥ threshold and level < 40, consume threshold, bump level,
-        recalc new threshold via global calculate_skill_max_xp().
-        """
-        while level < 40 and xp >= threshold:
-            xp    -= threshold
-            level += 1
-            threshold = calculate_skill_max_xp(level)
-        return xp, level, threshold
+    def level_up_skill(skill_xp, skill_level, skill_max_xp):
+        while skill_level < 40 and skill_xp >= skill_max_xp:
+            skill_xp -= skill_max_xp
+            skill_level += 1
+            if skill_level <= 40:
+                skill_max_xp = calculate_skill_max_xp(skill_level=skill_level)  # Use the new logarithmic formula for XP requirement
+            # else:
+            #     skill_xp = skill_max_xp  # Ensure XP does not overflow when level is capped
+        return skill_xp, skill_level, skill_max_xp
 
     hp: int = Field(description="Character HP.", default=120)
 
@@ -859,3 +863,4 @@ async def get_character_logs(
     if not logs:
         raise error_response(status_code=404, message=f"No logs found for character {name}")
     return logs
+
