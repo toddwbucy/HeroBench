@@ -202,10 +202,8 @@ def craft(name: str, code: str, quantity: int) -> tuple[int, dict]:
     response codes:
         200: The item was successfully crafted.
         404: Craft not found.
-        478: Missing item or insufficient quantity.
-        493: Not skill level required.
         498: Character not found.
-        598: Workshop not found on this map.
+        500: Crafting Error.
     """
     base_url = "http://127.0.0.1:8000"
     url = f"{base_url}/my/{name}/action/crafting"
