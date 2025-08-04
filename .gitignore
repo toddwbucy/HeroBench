@@ -10,4 +10,4 @@
 /Virtual_Environment/FastApi_Redis_Ver/__pycache__
 Virtual_Environment/FastApi_SQLite_Ver/artifact.db
 /Virtual_Environment/FastApi_Redis_Ver/app/routers/backend/__pycache__
-Virtual_Environment/FastApi_Redis_Ver/test_main.http
+Virtual_Environment/test_main.http
