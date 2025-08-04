@@ -7,11 +7,11 @@ Works slower, localy saves database in artifact.db file
 ## Redis Version
 Works faster, needs Redis instance running on port 6379 (linux or WSL)
 
+---
+
 # API CALLS Documentation
 
-This document describes all available API calls for interacting with the game server.
-
----
+This document describes all available API calls for interacting with the virtual environment.
 
 ## Character Actions
 
