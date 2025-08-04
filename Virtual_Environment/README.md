@@ -128,10 +128,8 @@ Crafts an item (requires workshop).
 **Response Codes:**
 - 200: Item crafted successfully
 - 404: Craft not found
-- 478: Missing materials
-- 493: Insufficient skill level
 - 498: Character not found
-- 598: Workshop not found
+- 500: Crafting Error
 
 ---
 

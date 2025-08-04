@@ -3,8 +3,9 @@ from typing import Optional, Annotated, List
 from fastapi import APIRouter, Path, Body
 
 from app.db import RedisDep
-from app.routers import error_response
+from app.routers import error_response, error_info_response
 from app.routers.backend.actions_redis import CharacterUpdateRedis
+from app.routers.backend.maps_redis import get_correct_map_from_redis
 from app.routers.backend.monsters_redis import get_monster_from_redis
 from app.routers.backend.response_models import CharacterResponseRedis, CharacterMovementDataResponseRedis, \
     SkillResponseRedis, CharacterFightDataRedis, ItemRedis, MonsterRedis, EquipRequestResponseRedis, ItemSlot, \
@@ -127,6 +128,7 @@ async def action_gathering(
         486: {"description": "An action is already in progress by your character."},
         493: {"description": "Not skill level required."},
         498: {"description": "Character not found."},
+        500: {"description": "Crafting Error."},
         598: {"description": "Workshop not found on this map."}
     },
 )
@@ -142,33 +144,86 @@ async def action_crafting(
             int, Body(description="Quantity of items to craft.", ge=1)
         ],
 ):
+    on_workshop_tile = False
+    needed_skill_level = False
+    enough_items_for_craft = False
+
+
+    # Must checks
     character: Optional[CharacterResponseRedis] = await get_character_redis(redis, name)
     if not character:
         return error_response(498, "Character not found.")
 
-    current_map: Optional[MapRedis] = await get_map_from_redis(redis, character.x, character.y)
-    if not current_map or not current_map.content or not current_map.content.type == "workshop":
-        return error_response(598, "Workshop not found on this map.")
-
-    current_item: Optional[ItemRedis] = await get_item_from_redis(redis, code)
-    if not current_item or not current_item.craft:
+    current_craft: Optional[ItemRedis] = await get_item_from_redis(redis, code)
+    if not current_craft or not current_craft.craft:
         return error_response(404, "Craft not found.")
 
-    character_skill_level = getattr(character, f'{current_map.content.code}_level')
-    if character_skill_level < current_item.craft.level:
-        return error_response(493, "Not skill level required.")
+    # Can checks
+    current_map: Optional[MapRedis] = await get_map_from_redis(redis, character.x, character.y)
+    if not current_map or not current_map.content or not current_map.content.type == "workshop" or current_map.content.code != current_craft.craft.skill:
+        print(current_craft.craft.skill)
+        correct_map = await get_correct_map_from_redis(redis, content_type="workshop", content_code=current_craft.craft.skill)
+        # return error_response(598, "Workshop not found on this map.")
+    else:
+        correct_map = current_map
+        on_workshop_tile = True
 
-    needed_items_for_craft = current_item.craft.items
+    character_skill_level = getattr(character, f'{current_craft.craft.skill}_level')
+    if character_skill_level < current_craft.craft.level:
+        # return error_response(493, "Not skill level required.")
+        pass
+    else:
+        needed_skill_level = True
+
+    needed_items_for_craft = current_craft.craft.items
+
     update_redis = CharacterUpdateRedis(redis, character)
 
     if not character.inventory or not await update_redis.has_all_items_for_craft(needed_items_for_craft, quantity):  # check if character inventory empty or has enough items to craft
-        return error_response(478, "Missing item or insufficient quantity.")
+        # return error_response(478, "Missing item or insufficient quantity.")
+        pass
+    else:
+        enough_items_for_craft = True
 
-    skill_info, crafted = await update_redis.craft_item(current_item, quantity)
-    if not crafted or not await update_redis.update_redis():
-        return error_response(486, "Redis Error.")
+    if on_workshop_tile and needed_skill_level and enough_items_for_craft:
+        skill_info, crafted = await update_redis.craft_item(current_craft, quantity)
+        if not crafted or not await update_redis.update_redis():
+            return error_response(486, "Redis Error.")
 
-    return SkillResponseRedis(details=skill_info, character=update_redis.changed_character)
+        return SkillResponseRedis(details=skill_info, character=update_redis.changed_character)
+    else:
+        errors = {
+            "on_workshop_tile": on_workshop_tile,
+            "needed_skill_level": needed_skill_level,
+            "enough_items_for_craft": enough_items_for_craft,
+        }
+        error_workshop = {
+            "needed": f"({correct_map.x}, {correct_map.y})",
+            "current": f"({current_map.x}, {current_map.y})",
+        }
+        error_skill_level = {
+            "skill": current_craft.craft.skill,
+            "needed": current_craft.craft.level,
+            "current": character_skill_level
+        }
+        error_missing_items = await update_redis.get_missing_items_for_craft(needed_items_for_craft, quantity)
+        info = {
+            "errors": errors,
+            "workshop": error_workshop,
+            "skill_level": error_skill_level,
+            "missing_items": error_missing_items
+        }
+        log_text = f"{update_redis.changed_character.name} failed to craft {code} x{quantity}."
+        if not on_workshop_tile:
+            log_text += f" On wrong map tile: {error_workshop}."
+        if not needed_skill_level:
+            log_text += f" Needed skill level: {error_skill_level}."
+        if not enough_items_for_craft:
+            log_text += f" Missing items: {error_missing_items}."
+
+        await update_redis.add_craft_failure_log(log_text)
+
+        return error_info_response(500, info)
 
 
 @router.post(
@@ -232,7 +287,7 @@ async def action_fight_multiple(
             str, Path(description="Name of your character.", regex=r'^[a-zA-Z0-9_-]+$')
         ],
         quantity: Annotated[
-            int, Path(description="Quantity of items to craft.", ge=1)
+            int, Path(description="Quantity of monsters to fight.", ge=1)
         ],
 ):
     character: Optional[CharacterResponseRedis] = await get_character_redis(redis, name)

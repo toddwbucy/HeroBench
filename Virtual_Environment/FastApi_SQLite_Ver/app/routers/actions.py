@@ -443,7 +443,7 @@ async def action_crafting(
 
     character_skill_level = getattr(character, f'{current_craft.craft.skill.value}_level')
     if character_skill_level < current_craft.craft.level:  # Check character passed skill level check
-    #     return error_info_response(493, info)
+    #     return error_response(493, "Not skill level required.")
         pass
     else:
         needed_skill_level = True

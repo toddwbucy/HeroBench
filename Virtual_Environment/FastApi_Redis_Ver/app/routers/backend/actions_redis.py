@@ -197,6 +197,19 @@ class CharacterUpdateRedis:
                 return False
         return True
 
+    async def get_missing_items_for_craft(self, needed_items_for_craft: List[CraftItemRedis], craft_quantity: int = 1):
+        missing_items_for_craft = []
+        for item in needed_items_for_craft:
+            inventory_item = next((slot for slot in self.changed_character.inventory if slot.code == item.code),
+                                  None)
+            if not inventory_item:  # Append full quantity if item not in inventory
+                missing_items_for_craft.append(
+                    {"code": item.code, "needed": (item.quantity * craft_quantity), "got": 0})
+            elif inventory_item.quantity < (item.quantity * craft_quantity):  # append missing quantity
+                missing_items_for_craft.append({"code": item.code, "needed": (item.quantity * craft_quantity),
+                                                "got": (item.quantity * craft_quantity) - inventory_item.quantity})
+        return missing_items_for_craft
+
     async def craft_item(self, craft_item: ItemRedis, craft_quantity: int, modifier: int = 3) -> Tuple[Optional[SkillInfoResponseRedis], bool]:
         try:
             total_got_xp = 0
@@ -212,6 +225,9 @@ class CharacterUpdateRedis:
         except Exception as e:
             print(e)
             return None, False
+
+    async def add_craft_failure_log(self, log_text: str):
+        await create_log(redis=self.redis, character_name=self.character_name, action=ActionType.craft, log=log_text)
 
     @staticmethod
     async def level_up_character(xp, level, max_xp, hp):
@@ -524,8 +540,7 @@ class CharacterUpdateRedis:
             print(e)
             return None, False
 
-    async def give_item_to_recipient(self, code: str, quantity: int, recipient: 'CharacterUpdateRedis') -> Tuple[
-        Optional[SimpleItemResponseRedis], bool]:
+    async def give_item_to_recipient(self, code: str, quantity: int, recipient: 'CharacterUpdateRedis') -> Tuple[Optional[SimpleItemResponseRedis], bool]:
         try:
             await self.remove_item(code, quantity)
             await recipient.add_item(code, quantity)
