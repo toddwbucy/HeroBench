@@ -161,7 +161,6 @@ async def action_crafting(
     # Can checks
     current_map: Optional[MapRedis] = await get_map_from_redis(redis, character.x, character.y)
     if not current_map or not current_map.content or not current_map.content.type == "workshop" or current_map.content.code != current_craft.craft.skill:
-        print(current_craft.craft.skill)
         correct_map = await get_correct_map_from_redis(redis, content_type="workshop", content_code=current_craft.craft.skill)
         # return error_response(598, "Workshop not found on this map.")
     else:
@@ -209,6 +208,7 @@ async def action_crafting(
         error_missing_items = await update_redis.get_missing_items_for_craft(needed_items_for_craft, quantity)
         info = {
             "errors": errors,
+            "item": current_craft.code,
             "workshop": error_workshop,
             "skill_level": error_skill_level,
             "missing_items": error_missing_items

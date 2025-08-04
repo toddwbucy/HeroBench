@@ -46,9 +46,7 @@ async def get_map_from_redis(redis: Redis, x: int, y: int) -> Optional[MapRedis]
     return MapRedis(**data)
 
 async def get_correct_map_from_redis(redis: Redis, content_type, content_code):
-    print(f"content_type: {content_type}, content_code: {content_code}")
     maps = await get_maps_from_redis(redis=redis, content_code=content_code, content_type=content_type)
-    print(f"maps: {maps}")
     return maps[0]
 
 async def get_maps_from_redis(

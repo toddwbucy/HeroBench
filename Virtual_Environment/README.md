@@ -131,6 +131,59 @@ Crafts an item (requires workshop).
 - 498: Character not found
 - 500: Crafting Error
 
+** Crafting Error Example**
+```json
+{
+  "error": {
+    "code": 500,
+    "message": {
+      "errors": {
+        "on_workshop_tile": false,
+        "needed_skill_level": false,
+        "enough_items_for_craft": false
+      },
+      "item": "gold_platebody",
+      "workshop": {
+        "needed": "(3, 1)",
+        "current": "(0, 0)"
+      },
+      "skill_level": {
+        "skill": "gearcrafting",
+        "needed": 30,
+        "current": 1
+      },
+      "missing_items": [
+        {
+          "code": "demon_horn",
+          "needed": 2,
+          "got": 0
+        },
+        {
+          "code": "owlbear_hair",
+          "needed": 3,
+          "got": 0
+        },
+        {
+          "code": "demoniac_dust",
+          "needed": 4,
+          "got": 0
+        },
+        {
+          "code": "gold",
+          "needed": 8,
+          "got": 0
+        },
+        {
+          "code": "red_cloth",
+          "needed": 3,
+          "got": 0
+        }
+      ]
+    }
+  }
+}
+```
+
 ---
 
 ### DELETE_ITEM
