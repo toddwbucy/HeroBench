@@ -5,7 +5,7 @@
 Works slower, localy saves database in artifact.db file
 
 ## Redis Version
-Works faster, needs Redis instance running on port 6379 (linux or WSL)
+Works faster, needs Redis instance running on port 6379 (linux or Docker/WSL)
 
 ---
 
