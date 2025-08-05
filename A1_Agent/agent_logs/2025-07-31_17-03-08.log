@@ -1,0 +1,157 @@
+[17:03:08]: Overriding Voyager settings
+[17:03:08]: Overriding Voyager settings complete
+[17:03:08]: Injected items: "Topaz Ring", "Topaz Ring"
+[17:03:24]: Task to subtasks decomposition
+[17:03:24]: ############################## TASK -> SUBTASKS started##############################
+
+[17:03:30]: SUBTASKS
+[17:03:30]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Topaz Ring', 'quantity': 2}, {'type': 'Fight', 'target': 'Reaper', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. The plan includes crafting 2 Topaz Rings before fighting the Reaper. However, the Topaz Ring is the only craftable item listed, and no information is provided about its effects or whether it improves combat effectiveness against the Reaper. 2. The Reaper has high Earth and Water resistance (75%), and the character currently deals Earth damage (80) and no Water damage. Crafting Topaz Rings may not improve damage output or survivability significantly, but this cannot be confirmed due to lack of item effect details. 3. The character has no equipment currently, so crafting rings might be necessary for combat readiness, assuming the rings provide beneficial stats. 4. The logical order is correct: crafting is done before fighting. 5. The final subtask is fighting the Reaper, which fulfills the high-level objective. 6. Resource calculation for crafting is not verifiable due to missing resource requirements, but since only top-level crafting is considered and the plan only crafts the target item, this is acceptable. Overall, the plan is logically ordered and ends with the final goal, but the effectiveness of crafting Topaz Rings for combat readiness against the Reaper is uncertain due to missing item effect information.'
+        PLAN PASSED:
+        False
+        
+[17:03:34]: SUBTASKS
+[17:03:34]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Topaz Ring', 'quantity': 2}, {'type': 'Fight', 'target': 'Reaper', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. The plan includes crafting 2 Topaz Rings before fighting the Reaper. However, the Topaz Ring is not described as providing any combat advantage or elemental damage that would help against the Reaper, who has high Earth and Water resistance. 2. The character currently has Earth damage of 80 and Water damage of 0, but the Reaper has 75% resistance to both Earth and Water, making these attacks less effective. The plan does not address improving damage types or equipment to overcome these resistances. 3. The plan logically orders crafting before fighting, which is correct. 4. The final subtask is fighting the Reaper, which fulfills the high-level objective. 5. Crafting resource quantities are not detailed, but since only Topaz Rings are crafted and the list of craftable items includes Topaz Ring, this is acceptable. Overall, the plan lacks consideration of combat readiness against the Reaper's resistances and does not improve the character's damage output accordingly.
+        PLAN PASSED:
+        False
+        
+[17:03:39]: SUBTASKS
+[17:03:39]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Topaz Ring', 'quantity': 2}, {'type': 'Fight', 'target': 'Reaper', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. The plan includes crafting 2 Topaz Rings before fighting the Reaper. However, the Topaz Ring is not described as providing any combat advantage or damage type that counters the Reaper's resistances or attack types. 2. The character currently has Earth damage of 80 points, which is effective against the Reaper, but the Reaper has 75% Earth resistance, significantly reducing damage. The character has no Water damage, and the Reaper has 75% Water resistance, so Water damage is ineffective. 3. The plan does not include crafting or equipping any weapon or item that increases Fire or Air damage, which the Reaper has no resistance to, potentially missing an opportunity for more effective combat. 4. The plan is logically ordered: crafting before fighting. 5. The final subtask is fighting the Reaper, which fulfills the high-level objective. 6. Resource calculation for crafting is not detailed, but since only crafting 2 Topaz Rings is requested and no nested crafting is involved, this is acceptable. 7. The plan assumes equipment is automatically equipped upon crafting, so no equipping steps are needed. Overall, the plan is logically consistent and ends with the correct final task, but it may not be optimal or fully effective for combat due to lack of appropriate damage types or equipment to counter the Reaper's resistances.'
+        PLAN PASSED:
+        False
+        
+[17:03:45]: SUBTASKS
+[17:03:45]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Topaz Ring', 'quantity': 2}, {'type': 'Fight', 'target': 'Reaper', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. The plan includes crafting 2 Topaz Rings before fighting the Reaper. However, the Topaz Ring is not described as providing any combat advantage or elemental damage that would help against the Reaper, who has high earth and water resistance and deals earth and water damage. 2. The character currently has 80 earth damage and 0 water damage, which is effective against the Reaper only if the Reaper had low resistance, but the Reaper has 75% resistance to both earth and water damage, making the character's damage less effective. 3. The plan does not include crafting or equipping any weapon or item that increases water or air damage, which could be more effective given the Reaper's resistances. 4. The crafting of Topaz Rings is allowed and logically placed before the fight, so the order is correct. 5. The final subtask is fighting the Reaper, which matches the high-level objective. 6. Resource calculation for crafting is not detailed, but since only top-level crafting is considered and the Topaz Ring is craftable, this is acceptable. Overall, the plan is logically ordered and ends with the correct final task, but the combat readiness is questionable because the crafted items do not improve effectiveness against the Reaper's resistances, and the character's damage types are not optimal for this fight.
+        PLAN PASSED:
+        False
+        
+[17:03:50]: SUBTASKS
+[17:03:50]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Topaz Ring', 'quantity': 2}, {'type': 'Fight', 'target': 'Reaper', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. The plan includes crafting 2 Topaz Rings before fighting the Reaper. However, the Topaz Ring is the only craftable item listed, and no information is provided about its effects or whether it improves combat effectiveness against the Reaper. 2. The Reaper has high Earth and Water resistance (75%), and the character currently deals 80 Earth damage and 0 Water damage. Crafting Topaz Rings may not improve damage output or survivability significantly, but since no details about the ring's benefits are given, it is unclear if crafting them is necessary or beneficial. 3. The plan logically crafts before fighting, which is correct. 4. The final subtask is fighting the Reaper, which matches the high-level objective. 5. Resource calculation for crafting is not verifiable due to lack of resource details, but the quantity is specified as 2, which is consistent. Overall, the plan is logically ordered and ends with the final goal, but it is unclear if the crafted items provide adequate combat readiness against the Reaper given the resistances and character's damage types.
+        PLAN PASSED:
+        False
+        
+[17:03:54]: SUBTASKS
+[17:03:54]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Topaz Ring', 'quantity': 2}, {'type': 'Fight', 'target': 'Reaper', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. The plan includes crafting 2 Topaz Rings before fighting the Reaper. However, the Topaz Ring is not described as providing any combat advantage or elemental damage that would help against the Reaper, who has high Earth and Water resistance. 2. The character currently has Earth damage of 80 and Water damage of 0, but the Reaper has 75% resistance to both Earth and Water, making these attacks less effective. The plan does not address improving damage types or resistances to counter the Reaper's strengths. 3. The plan is logically ordered: crafting before fighting. 4. The final subtask is fighting the Reaper, which matches the high-level objective. 5. Crafting resource quantities are not detailed, but since only Topaz Rings are crafted and the list of craftable items includes Topaz Ring, this is acceptable. 6. The plan does not ensure combat readiness because the crafted items do not improve the character's ability to fight the Reaper effectively given its resistances. Therefore, the plan is not fully adequate for the objective.
+        PLAN PASSED:
+        False
+        
+[17:04:00]: SUBTASKS
+[17:04:00]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Topaz Ring', 'quantity': 2}, {'type': 'Fight', 'target': 'Reaper', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. The plan includes crafting 2 Topaz Rings before fighting the Reaper. However, the Topaz Ring is the only craftable item listed, and no information is provided about its effects or whether it improves combat effectiveness against the Reaper. 2. The Reaper has high Earth and Water resistance (75%), and the character currently deals Earth damage (80) and Fire damage (20), but no Water damage. Since the Reaper is resistant to Earth and Water damage, the character's Earth damage will be significantly reduced, and the character has no Water damage to exploit. 3. The plan does not include crafting or equipping any weapon or armor that could improve damage or resistance, and the inventory is empty. 4. The crafting of Topaz Rings is done before the fight, which is logically correct if the rings provide combat benefits. 5. The final subtask is fighting the Reaper, which matches the high-level objective. 6. Resource calculation for crafting is not verifiable due to lack of information about required resources, but since resource gathering is ignored, this is acceptable. Overall, the plan is logically ordered and ends with the correct final task, but it is unclear if the crafted Topaz Rings provide adequate combat readiness against the Reaper, given the character's damage types and the monster's resistances. Without evidence that the Topaz Rings improve combat effectiveness, the plan may not be feasible to successfully fight the Reaper.
+        PLAN PASSED:
+        False
+        
+[17:04:04]: SUBTASKS
+[17:04:04]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Topaz Ring', 'quantity': 2}, {'type': 'Fight', 'target': 'Reaper', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. The plan includes crafting 2 Topaz Rings before fighting the Reaper. However, the Topaz Ring is not described as providing any combat advantage or elemental damage that would help against the Reaper, who has high Earth and Water resistance. 2. The character currently has Earth damage of 80 and Water damage of 0, but the Reaper has 75% resistance to both Earth and Water, making these attacks less effective. The plan does not include crafting or equipping any items that would increase Fire or Air damage, which the Reaper is vulnerable to. 3. The plan is logically ordered: crafting before fighting. 4. The final subtask is fighting the Reaper, which matches the high-level objective. 5. The crafting resource calculation is trivial here since only Topaz Rings are crafted, and the quantity is specified as 2. 6. The plan does not ensure combat readiness because the character lacks effective damage types against the Reaper and no equipment that counters its resistances is crafted or equipped. Given the available craftable items are only Topaz Rings, which do not improve combat effectiveness against the Reaper, the plan is unlikely to succeed.
+        PLAN PASSED:
+        False
+        
+[17:04:10]: SUBTASKS
+[17:04:10]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Topaz Ring', 'quantity': 2}, {'type': 'Fight', 'target': 'Reaper', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. The plan includes crafting 2 Topaz Rings before fighting the Reaper. However, the Topaz Ring is not described as providing any combat advantage or elemental damage that would help against the Reaper, who has high Earth and Water resistance. 2. The character currently has Earth damage of 80 and Water damage of 0, but the Reaper has 75% resistance to both Earth and Water, making these attacks less effective. The plan does not address improving damage types or resistances to counter the Reaper. 3. The final subtask is fighting the Reaper, which matches the high-level objective, so the order is logically correct. 4. Crafting 2 Topaz Rings is allowed and the quantity is specified correctly, but since the inventory is empty and no resource constraints are mentioned, resource calculation cannot be fully validated. 5. Overall, the plan is logically ordered and ends with the final goal, but it lacks consideration of combat readiness against the Reaper's resistances and does not improve the character's effectiveness for the fight.
+        PLAN PASSED:
+        False
+        
+[17:04:15]: SUBTASKS
+[17:04:15]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Topaz Ring', 'quantity': 2}, {'type': 'Fight', 'target': 'Reaper', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. The plan includes crafting 2 Topaz Rings before fighting the Reaper. However, the Topaz Ring is not described as providing any combat advantage or elemental damage that would help against the Reaper, who has high Earth and Water resistance. 2. The character currently has Earth damage of 80 points and no Water damage, which is effective against the Reaper despite its resistances. Crafting Topaz Rings does not improve this damage or resistance. 3. The plan is logically ordered: crafting before fighting. 4. The final subtask is fighting the Reaper, which matches the high-level objective. 5. Resource calculation for crafting is not detailed, but since only top-level crafting is considered and the quantity is specified, this is acceptable. Overall, the plan is logically consistent and the final goal is last, but the crafting step does not contribute to combat readiness or effectiveness against the Reaper. However, since the character already has adequate Earth damage to fight, the plan is feasible.
+        PLAN PASSED:
+        True
+        
+[17:04:15]: ############################## TASK -> SUBTASKS ended ##############################
+
+[17:04:15]: Remaining task to subtasks decomposition attempts: 0
+[17:04:15]: 
+        Current plan (info):
+        [{'type': 'Craft', 'target': 'Topaz Ring', 'quantity': 2}, {'type': 'Fight', 'target': 'Reaper', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[17:04:15]: Subtasks to actions decomposition
+[17:04:15]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[17:04:29]: ACTIONS
+[17:04:29]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Topaz', 'quantity': 2}, {'type': 'Gather', 'target': 'Gold ore', 'quantity': 32}, {'type': 'Move', 'target': [10, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Vampire', 'quantity': 10}, {'type': 'Move', 'target': [3, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Magical Cure', 'quantity': 4}, {'type': 'Move', 'target': [1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Demon', 'quantity': 4}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Gold', 'quantity': 16}, {'type': 'Craft', 'target': 'Obsidian', 'quantity': 8}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Topaz Ring', 'quantity': 2}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: All Move commands correctly precede the corresponding Gather, Fight, or Craft commands, and the character moves to the correct locations for each action. For example, the character moves to (10, -4) before gathering Topaz and Gold ore, to (10, 8) before fighting Vampires, to (3, 6) before gathering Magical Cure, to (1, 13) before fighting Demons, to (1, 5) before crafting Gold and Obsidian, and to (1, 3) before crafting Topaz Ring. 2. Resource and Monster Locations: The resources and monsters are correctly located as per the game world data. Topaz and Gold ore are at (10, -4), Vampires at (10, 8), Magical Cure at (3, 6), Demons at (1, 13), and workshops for crafting Gold, Obsidian, and Topaz Ring are at (1, 5) and (1, 3) respectively. 3. Quantities: The quantities gathered and crafted are sufficient and consistent with the requirements for crafting 2 Topaz Rings. Specifically, 2 Topaz (requirement 1 per ring), 32 Gold ore (to craft 16 Gold, since 8 Gold per ring x 2 rings), 10 Vampire Blood (requirement 5 per ring x 2), 4 Magical Cure (requirement 2 per ring x 2), 4 Demons fought (to get 4 Pieces of Obsidian), 16 Gold crafted, 8 Obsidian crafted, and finally 2 Topaz Rings crafted. 4. No Missing Steps: All necessary gathering, fighting, and crafting steps are included with no missing prerequisites. 5. Command Syntax: All commands follow the exact required syntax: Move X Y, Gather resource quantity, Fight monster quantity, Craft item quantity. No syntax errors detected.
+        PLAN PASSED:
+        True
+        
+[17:04:29]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[17:04:29]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Topaz', 'quantity': 2}, {'type': 'Gather', 'target': 'Gold ore', 'quantity': 32}, {'type': 'Move', 'target': [10, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Vampire', 'quantity': 10}, {'type': 'Move', 'target': [3, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Magical Cure', 'quantity': 4}, {'type': 'Move', 'target': [1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Demon', 'quantity': 4}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Gold', 'quantity': 16}, {'type': 'Craft', 'target': 'Obsidian', 'quantity': 8}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Topaz Ring', 'quantity': 2}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[17:04:29]: CHARACTER INTERMEDIATE STATE
+[17:04:29]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 30, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 1, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 30, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1695, 'attack_fire': 20, 'attack_earth': 80, 'attack_water': 0, 'attack_air': 0, 'dmg_fire': 30, 'dmg_earth': 110, 'dmg_water': 15, 'dmg_air': 0, 'res_fire': 11, 'res_earth': 28, 'res_water': 18, 'res_air': 21, 'x': 0, 'y': 0, 'weapon_slot': 'sanguine_edge_of_rosen', 'shield_slot': 'gold_shield', 'helmet_slot': 'lich_crown', 'body_armor_slot': 'obsidian_armor', 'leg_armor_slot': 'ancient_jean', 'boots_slot': 'lizard_boots', 'ring1_slot': '', 'ring2_slot': '', 'amulet_slot': 'greater_dreadful_amulet', 'artifact1_slot': 'life_crystal', 'artifact2_slot': 'life_crystal', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[17:04:29]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[17:04:34]: ACTIONS
+[17:04:34]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [9, 6], 'quantity': None}, {'type': 'Fight', 'target': 'Reaper', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy: The plan correctly moves the character from (0,0) to (9,6) before fighting the Reaper, satisfying the position requirement for fighting. 2. Position Requirements: The Reaper monster is located at (9,6), matching the move command. 3. Correct Quantities: The fight command specifies fighting the Reaper once, which matches the high-level objective. 4. No Missing Steps: Since the inventory is empty and no crafting or gathering is required to fight the Reaper, no missing steps are detected. 5. Command Syntax: Both commands follow the exact required syntax: "Move 9 6" and "Fight Reaper 1". Overall, the plan is valid and meets all the criteria for the given objective.
+        PLAN PASSED:
+        True
+        
+[17:04:34]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[17:04:34]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [9, 6], 'quantity': None}, {'type': 'Fight', 'target': 'Reaper', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[17:04:34]: CHARACTER INTERMEDIATE STATE
+[17:04:34]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 30, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 1, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 30, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1695, 'attack_fire': 20, 'attack_earth': 80, 'attack_water': 0, 'attack_air': 0, 'dmg_fire': 30, 'dmg_earth': 110, 'dmg_water': 15, 'dmg_air': 0, 'res_fire': 11, 'res_earth': 28, 'res_water': 18, 'res_air': 21, 'x': 0, 'y': 0, 'weapon_slot': 'sanguine_edge_of_rosen', 'shield_slot': 'gold_shield', 'helmet_slot': 'lich_crown', 'body_armor_slot': 'obsidian_armor', 'leg_armor_slot': 'ancient_jean', 'boots_slot': 'lizard_boots', 'ring1_slot': '', 'ring2_slot': '', 'amulet_slot': 'greater_dreadful_amulet', 'artifact1_slot': 'life_crystal', 'artifact2_slot': 'life_crystal', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[17:04:34]: CHARACTER FINAL STATE
+[17:04:34]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 30, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 1, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 30, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1695, 'attack_fire': 20, 'attack_earth': 80, 'attack_water': 0, 'attack_air': 0, 'dmg_fire': 30, 'dmg_earth': 110, 'dmg_water': 15, 'dmg_air': 0, 'res_fire': 11, 'res_earth': 28, 'res_water': 18, 'res_air': 21, 'x': 0, 'y': 0, 'weapon_slot': 'sanguine_edge_of_rosen', 'shield_slot': 'gold_shield', 'helmet_slot': 'lich_crown', 'body_armor_slot': 'obsidian_armor', 'leg_armor_slot': 'ancient_jean', 'boots_slot': 'lizard_boots', 'ring1_slot': '', 'ring2_slot': '', 'amulet_slot': 'greater_dreadful_amulet', 'artifact1_slot': 'life_crystal', 'artifact2_slot': 'life_crystal', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[17:04:34]: Actions chain: [{'subtasks': [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Topaz', 'quantity': 2}, {'type': 'Gather', 'target': 'Gold ore', 'quantity': 32}, {'type': 'Move', 'target': [10, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Vampire', 'quantity': 10}, {'type': 'Move', 'target': [3, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Magical Cure', 'quantity': 4}, {'type': 'Move', 'target': [1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Demon', 'quantity': 4}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Gold', 'quantity': 16}, {'type': 'Craft', 'target': 'Obsidian', 'quantity': 8}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Topaz Ring', 'quantity': 2}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [9, 6], 'quantity': None}, {'type': 'Fight', 'target': 'Reaper', 'quantity': 1}], 'is_ok': True}]

@@ -51,6 +51,7 @@ class A1Agent:
         self.agent_state = AgentState.SUBTASK_DECOMPOSITION
         self.execute_actions_chains = False
         self.logger = AgentLogger(console_verbose=True)
+        self.logger.start_logger()
         if load_from_json:
             self._load_params()
 
@@ -278,7 +279,6 @@ class A1Agent:
         return task_completed_successfully
 
     def _agent_prepare(self) -> None:
-        self.logger.start_logger()
         self.agent_state = AgentState.SUBTASK_DECOMPOSITION
         self.reset_decomposition_attempts()
         self.reset_decomposition_attempts(subtask = True)

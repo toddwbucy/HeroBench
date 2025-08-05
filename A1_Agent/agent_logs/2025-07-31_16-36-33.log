@@ -1,0 +1,141 @@
+[16:36:33]: Overriding Voyager settings
+[16:36:33]: Overriding Voyager settings complete
+[16:36:33]: Injected items: "Strangold Legs Armor", "Life Crystal", "Life Crystal"
+[16:36:49]: Task to subtasks decomposition
+[16:36:49]: ############################## TASK -> SUBTASKS started##############################
+
+[16:36:55]: SUBTASKS
+[16:36:55]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Strangold Legs Armor', 'quantity': 1}, {'type': 'Craft', 'target': 'Life Crystal', 'quantity': 2}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Combat readiness issue: The Cultist Emperor has very high air resistance (90%) and deals significant air damage (90 points). The character currently has 0 air damage and only 21% air resistance, which is insufficient for effective combat. The plan crafts "Strangold Legs Armor" and "Life Crystal" but does not craft or equip any weapon or gear that increases air damage or air resistance, which is critical against this monster. 2. Logical order: The crafting subtasks precede the fight, which is logically correct. 3. Final goal: The last subtask is fighting the Cultist Emperor, which directly fulfills the high-level objective. 4. Crafting resource accuracy: The crafting tasks are straightforward and do not involve nested crafting; quantities are specified correctly. 5. Missing combat preparation: Since the character has no weapons or offensive gear listed in inventory or craftable items, the plan lacks necessary preparation for combat. Overall, the plan does not ensure combat readiness against the Cultist Emperor due to inadequate offensive capabilities and resistances.
+        PLAN PASSED:
+        False
+        
+[16:37:03]: SUBTASKS
+[16:37:03]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Strangold Legs Armor', 'quantity': 1}, {'type': 'Craft', 'target': 'Life Crystal', 'quantity': 2}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Combat readiness: The Cultist Emperor has high air resistance (90%) and moderate earth and water resistance (40%). The character deals 60 water damage and 20 earth damage, which will be partially resisted, and 0 air damage. The character currently has no equipment, but plans to craft "Strangold Legs Armor" which presumably provides some defense or stats. However, the plan does not include crafting or equipping any weapon or offensive gear to increase damage output, which may make the fight difficult. 2. Logical order: The plan crafts "Strangold Legs Armor" first, then crafts 2 "Life Crystal" items, then fights the Cultist Emperor. This order is logical if the Life Crystals are consumables or buffs to aid in combat. 3. Final goal: The last subtask is to fight the Cultist Emperor, which directly fulfills the high-level objective. 4. Crafting resource accuracy: The plan includes crafting 1 "Strangold Legs Armor" and 2 "Life Crystal" items. Since "Life Crystal" is listed twice in the craftable items list, it is craftable. There is no information about resource requirements, but since resource gathering is ignored, this is acceptable. Overall, the plan is logically ordered and ends with the final fight. However, the plan lacks crafting or equipping any weapon or offensive gear, which may be necessary for combat readiness against a level 35 boss with high resistances. Without offensive equipment, the fight may be infeasible or very difficult. The plan does not violate any explicit rules but may be suboptimal for combat success.
+        PLAN PASSED:
+        False
+        
+[16:37:10]: SUBTASKS
+[16:37:10]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Strangold Legs Armor', 'quantity': 1}, {'type': 'Craft', 'target': 'Life Crystal', 'quantity': 2}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Combat readiness: The Cultist Emperor has high air damage (90) and high air resistance (90%). The character currently has 0 air damage and only 21% air resistance, which is insufficient to mitigate the high air damage. Crafting "Strangold Legs Armor" may improve defense, but without specific stats for this armor, it is unclear if it provides adequate air resistance or other defensive stats to survive the fight. The character's damage output is mostly water (60) and earth (20), but the Cultist Emperor has 40% resistance to both, reducing effectiveness. 2. Logical order: The plan crafts armor and life crystals before fighting, which is logical. 3. Final goal: The last subtask is fighting the Cultist Emperor, which directly fulfills the high-level objective. 4. Crafting resource accuracy: The plan crafts 1 "Strangold Legs Armor" and 2 "Life Crystal" items. Since "Life Crystal" is listed twice in the craftable items list, it is valid to craft two. There is no indication of resource miscalculation. However, the plan does not specify crafting any weapons or offensive gear, which may be necessary for effective combat. Overall, the plan lacks explicit preparation of offensive equipment and may not provide sufficient defense or damage to defeat the Cultist Emperor. Without more information on the stats provided by "Strangold Legs Armor" and "Life Crystal," it is uncertain if the character is adequately prepared for combat.
+        PLAN PASSED:
+        False
+        
+[16:37:16]: SUBTASKS
+[16:37:16]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Strangold Legs Armor', 'quantity': 1}, {'type': 'Craft', 'target': 'Life Crystal', 'quantity': 2}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Combat readiness issue: The Cultist Emperor has high air resistance (90%) and deals significant air damage (90 points). The character currently has 0 air damage and only 21% air resistance, which is insufficient for effective combat. The plan crafts "Strangold Legs Armor" and "Life Crystal" but does not include crafting or equipping any weapon or gear that increases air damage or air resistance. Since the inventory is empty and no weapons or offensive gear are crafted, the character lacks adequate equipment to fight the Cultist Emperor effectively. 2. Logical order: The crafting subtasks precede the fight, which is logically correct. 3. Final goal: The last subtask is fighting the Cultist Emperor, which directly fulfills the high-level objective. 4. Crafting resource accuracy: The plan crafts 1 "Strangold Legs Armor" and 2 "Life Crystal" items. There is no information about resource requirements, but since only top-level crafting is considered and the items are listed as craftable, this is acceptable. However, crafting "Life Crystal" twice seems unnecessary for combat readiness given the current character stats and no explanation of their use. Overall, the plan fails due to inadequate combat readiness against the Cultist Emperor given the character's current attributes and crafted items.
+        PLAN PASSED:
+        False
+        
+[16:37:21]: SUBTASKS
+[16:37:21]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Strangold Legs Armor', 'quantity': 1}, {'type': 'Craft', 'target': 'Life Crystal', 'quantity': 2}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. The plan includes crafting "Strangold Legs Armor" and "Life Crystal" before fighting the Cultist Emperor, which is logically correct as it prepares the character for combat. 2. The character currently has no equipment and no inventory items, so crafting armor and life crystals is necessary for combat readiness. 3. The Cultist Emperor has high air resistance (90%) and moderate earth and water resistance (40%), while the character's damage types are earth (20) and water (60), which may be somewhat effective but not optimal; however, the plan does not include crafting or equipping any weapons or items to increase damage, but since only armor and life crystals are craftable, this is acceptable. 4. The crafting quantities are correct: 1 "Strangold Legs Armor" and 2 "Life Crystal" items are crafted as specified. 5. The final subtask is fighting the Cultist Emperor, which directly fulfills the high-level objective. 6. The logical order is correct: crafting before fighting. 7. No missing craftable equipment is required or possible according to the provided list. Overall, the plan is feasible and logically sound given the constraints and available craftable items.
+        PLAN PASSED:
+        True
+        
+[16:37:21]: ############################## TASK -> SUBTASKS ended ##############################
+
+[16:37:21]: Remaining task to subtasks decomposition attempts: 5
+[16:37:21]: 
+        Current plan (info):
+        [{'type': 'Craft', 'target': 'Strangold Legs Armor', 'quantity': 1}, {'type': 'Craft', 'target': 'Life Crystal', 'quantity': 2}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:37:21]: Subtasks to actions decomposition
+[16:37:21]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[16:37:38]: ACTIONS
+[16:37:38]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Gold ore', 'quantity': 24}, {'type': 'Move', 'target': [-1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Strange Ore', 'quantity': 40}, {'type': 'Craft', 'target': 'Strangold', 'quantity': 8}, {'type': 'Move', 'target': [3, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Magical Cure', 'quantity': 2}, {'type': 'Move', 'target': [-1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Acolyte', 'quantity': 3}, {'type': 'Move', 'target': [-5, -4], 'quantity': None}, {'type': 'Fight', 'target': 'Ogre', 'quantity': 4}, {'type': 'Move', 'target': [10, 7], 'quantity': None}, {'type': 'Fight', 'target': 'Death Knight', 'quantity': 3}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Strangold Legs Armor', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: All Move commands correctly precede the corresponding Gather, Fight, or Craft commands, and the character moves to the exact tile where the resource, monster, or workshop is located. For example, the character moves to (10, -4) before gathering Gold ore, to (-1, 7) before gathering Strange Ore, to (3, 6) before gathering Magical Cure, to (-1, 13) before fighting Cultist Acolyte, to (-5, -4) before fighting Ogre, to (10, 7) before fighting Death Knight, and to (3, 1) before crafting Strangold Legs Armor. 2. Resource and Monster Locations: The resources and monsters are correctly matched with their locations as per the game world data. For instance, Gold ore is at (10, -4), Strange Ore at (-1, 7), Magical Cure at (3, 6), Cultist Acolyte at (-1, 13), Ogre at (-5, -4), Death Knight at (10, 7), and the Gearcrafting workshop for crafting Strangold Legs Armor is at (3, 1). 3. Quantities: The quantities gathered and fought are sufficient and consistent with the crafting requirements. Specifically, to craft 8 Strangold, the plan gathers 24 Gold ore (3 per Strangold * 8) and 40 Strange Ore (5 per Strangold * 8), which is correct. The plan fights 3 Cultist Acolytes to obtain 3 Cursed Books, 4 Ogres for 4 Ogre Eyes, and 3 Death Knights for 3 Red Cloths, matching the required quantities. It also gathers 2 Magical Cure as required. 4. No Missing Steps: The plan includes all necessary gathering, fighting, and crafting steps with no missing prerequisites. The crafting of Strangold occurs after gathering the required ores, and the final crafting of Strangold Legs Armor occurs after all components are obtained. 5. Command Syntax: All commands strictly follow the required syntax: Move X Y, Gather resource quantity, Fight monster quantity, Craft item quantity. No syntax errors detected. Overall, the plan is logically consistent, complete, and syntactically correct for the given objective and game world.
+        PLAN PASSED:
+        True
+        
+[16:37:38]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[16:37:38]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Gold ore', 'quantity': 24}, {'type': 'Move', 'target': [-1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Strange Ore', 'quantity': 40}, {'type': 'Craft', 'target': 'Strangold', 'quantity': 8}, {'type': 'Move', 'target': [3, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Magical Cure', 'quantity': 2}, {'type': 'Move', 'target': [-1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Acolyte', 'quantity': 3}, {'type': 'Move', 'target': [-5, -4], 'quantity': None}, {'type': 'Fight', 'target': 'Ogre', 'quantity': 4}, {'type': 'Move', 'target': [10, 7], 'quantity': None}, {'type': 'Fight', 'target': 'Death Knight', 'quantity': 3}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Strangold Legs Armor', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:37:38]: CHARACTER INTERMEDIATE STATE
+[16:37:38]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 35, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 35, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 1, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1295, 'attack_fire': 0, 'attack_earth': 20, 'attack_water': 60, 'attack_air': 0, 'dmg_fire': 68, 'dmg_earth': 79, 'dmg_water': 69, 'dmg_air': 0, 'res_fire': 24, 'res_earth': 20, 'res_water': 26, 'res_air': 21, 'x': 0, 'y': 0, 'weapon_slot': 'greater_dreadful_staff', 'shield_slot': 'gold_shield', 'helmet_slot': 'lich_crown', 'body_armor_slot': 'bandit_armor', 'leg_armor_slot': 'lizard_skin_legs_armor', 'boots_slot': 'lizard_boots', 'ring1_slot': 'sapphire_ring', 'ring2_slot': 'sapphire_ring', 'amulet_slot': 'greater_dreadful_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:37:38]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[16:37:47]: ACTIONS
+[16:37:47]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [9, 7], 'quantity': None}, {'type': 'Fight', 'target': 'Lich', 'quantity': 2}, {'type': 'Equip', 'target': 'Life Crystal', 'quantity': 2}]}
+        Plan critique (last known): 
+        1. Movement Accuracy: The plan correctly moves the character to (9, 7) before fighting the Lich, satisfying the position requirement for fighting.
+2. Position Requirements: The Lich monster is located at (9, 7), matching the move command before the fight.
+3. Correct Quantities: The plan specifies fighting the Lich 2 times, which matches the goal to craft 2 Life Crystals (assuming each Lich drops one Life Crystal). The Equip command also equips 2 Life Crystals, consistent with the fight quantity.
+4. No Missing Steps: Since Life Crystals drop directly from the Lich and no crafting or gathering is required, no intermediate steps are missing.
+5. Command Syntax: All commands follow the exact required syntax: "Move 9 7", "Fight Lich 2", "Equip Life Crystal 2".
+
+Overall, the plan is logically consistent, complete, and syntactically correct.
+        PLAN PASSED:
+        True
+        
+[16:37:47]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[16:37:47]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [9, 7], 'quantity': None}, {'type': 'Fight', 'target': 'Lich', 'quantity': 2}, {'type': 'Equip', 'target': 'Life Crystal', 'quantity': 2}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:37:47]: CHARACTER INTERMEDIATE STATE
+[16:37:48]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 35, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 35, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 1, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1295, 'attack_fire': 0, 'attack_earth': 20, 'attack_water': 60, 'attack_air': 0, 'dmg_fire': 68, 'dmg_earth': 79, 'dmg_water': 69, 'dmg_air': 0, 'res_fire': 24, 'res_earth': 20, 'res_water': 26, 'res_air': 21, 'x': 0, 'y': 0, 'weapon_slot': 'greater_dreadful_staff', 'shield_slot': 'gold_shield', 'helmet_slot': 'lich_crown', 'body_armor_slot': 'bandit_armor', 'leg_armor_slot': 'lizard_skin_legs_armor', 'boots_slot': 'lizard_boots', 'ring1_slot': 'sapphire_ring', 'ring2_slot': 'sapphire_ring', 'amulet_slot': 'greater_dreadful_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:37:48]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[16:38:02]: ACTIONS
+[16:38:02]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [-2, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: The plan correctly moves the character to the tile (-2, 13) where the Cultist Emperor is located before fighting. 2. Position Requirements: The character is on the correct tile to fight the Cultist Emperor. 3. Correct Quantities: The fight quantity is 1, which matches the goal to defeat the Cultist Emperor once. 4. No Missing Steps: Since the inventory is empty and no crafting or gathering is required for this task, no missing steps are detected. 5. Command Syntax: The commands "Move -2 13" and "Fight Cultist Emperor 1" follow the exact required syntax.
+        PLAN PASSED:
+        True
+        
+[16:38:02]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[16:38:02]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [-2, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:38:02]: CHARACTER INTERMEDIATE STATE
+[16:38:02]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 35, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 35, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 1, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1295, 'attack_fire': 0, 'attack_earth': 20, 'attack_water': 60, 'attack_air': 0, 'dmg_fire': 68, 'dmg_earth': 79, 'dmg_water': 69, 'dmg_air': 0, 'res_fire': 24, 'res_earth': 20, 'res_water': 26, 'res_air': 21, 'x': 0, 'y': 0, 'weapon_slot': 'greater_dreadful_staff', 'shield_slot': 'gold_shield', 'helmet_slot': 'lich_crown', 'body_armor_slot': 'bandit_armor', 'leg_armor_slot': 'lizard_skin_legs_armor', 'boots_slot': 'lizard_boots', 'ring1_slot': 'sapphire_ring', 'ring2_slot': 'sapphire_ring', 'amulet_slot': 'greater_dreadful_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:38:02]: CHARACTER FINAL STATE
+[16:38:02]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 35, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 35, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 1, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1295, 'attack_fire': 0, 'attack_earth': 20, 'attack_water': 60, 'attack_air': 0, 'dmg_fire': 68, 'dmg_earth': 79, 'dmg_water': 69, 'dmg_air': 0, 'res_fire': 24, 'res_earth': 20, 'res_water': 26, 'res_air': 21, 'x': 0, 'y': 0, 'weapon_slot': 'greater_dreadful_staff', 'shield_slot': 'gold_shield', 'helmet_slot': 'lich_crown', 'body_armor_slot': 'bandit_armor', 'leg_armor_slot': 'lizard_skin_legs_armor', 'boots_slot': 'lizard_boots', 'ring1_slot': 'sapphire_ring', 'ring2_slot': 'sapphire_ring', 'amulet_slot': 'greater_dreadful_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:38:02]: Actions chain: [{'subtasks': [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Gold ore', 'quantity': 24}, {'type': 'Move', 'target': [-1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Strange Ore', 'quantity': 40}, {'type': 'Craft', 'target': 'Strangold', 'quantity': 8}, {'type': 'Move', 'target': [3, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Magical Cure', 'quantity': 2}, {'type': 'Move', 'target': [-1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Acolyte', 'quantity': 3}, {'type': 'Move', 'target': [-5, -4], 'quantity': None}, {'type': 'Fight', 'target': 'Ogre', 'quantity': 4}, {'type': 'Move', 'target': [10, 7], 'quantity': None}, {'type': 'Fight', 'target': 'Death Knight', 'quantity': 3}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Strangold Legs Armor', 'quantity': 1}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [9, 7], 'quantity': None}, {'type': 'Fight', 'target': 'Lich', 'quantity': 2}, {'type': 'Equip', 'target': 'Life Crystal', 'quantity': 2}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [-2, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}], 'is_ok': True}]

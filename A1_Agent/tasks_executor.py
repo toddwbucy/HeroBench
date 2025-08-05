@@ -82,6 +82,8 @@ def autotask_exec(task_json: dict, model: str, env_eval: bool) -> tuple[list,tup
     num_attempts = 5
     current_attempts = 0
     completed = False
+    checks = (False, False)
+    action_chain = []
     while not completed and current_attempts < num_attempts:
         try:
             action_chain, checks = agent.run(task, eval_on_env=env_eval)
@@ -89,11 +91,8 @@ def autotask_exec(task_json: dict, model: str, env_eval: bool) -> tuple[list,tup
         except Exception as e:
             #raise e
             current_attempts += 1
-
     if not completed:
         return [], (False,False), task_target
-    checks = (False, False)
-    action_chain = []
     try:
         if env_eval is False:
             for chain in action_chain:

@@ -1,0 +1,122 @@
+[17:20:16]: Overriding Voyager settings
+[17:20:16]: Overriding Voyager settings complete
+[17:20:16]: Injected items: "Steel Helm", "Life Ring", "Skull Ring"
+[17:20:34]: Task to subtasks decomposition
+[17:20:34]: ############################## TASK -> SUBTASKS started##############################
+
+[17:20:41]: SUBTASKS
+[17:20:41]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Steel Helm', 'quantity': 1}, {'type': 'Craft', 'target': 'Life Ring', 'quantity': 1}, {'type': 'Craft', 'target': 'Skull Ring', 'quantity': 1}, {'type': 'Fight', 'target': 'Ogre', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Combat readiness: The Ogre has 80% Earth resistance and deals 80 Earth damage. The character currently has 0 Earth damage and only 18% Earth resistance, which is low against the Ogre's attack. The crafted items "Steel Helm", "Life Ring", and "Skull Ring" are craftable and presumably provide defensive or utility benefits, but none increase Earth damage or Earth resistance significantly. Since the character has no Earth damage, the fight may be prolonged or difficult, but the plan does not include crafting any Earth damage gear (which is not listed as craftable). 2. Logical order: The crafting subtasks precede the fight, which is logical. 3. Final goal: The last subtask is fighting the Ogre, which directly fulfills the high-level objective. 4. Crafting resource accuracy: The plan only lists top-level crafting tasks and does not specify resource quantities beyond the quantity of 1 for each item. Since resource gathering is ignored and nested crafting is not considered, this is acceptable. Overall, the plan is logically ordered and ends with the final fight, but the character lacks Earth damage to effectively fight the Ogre, and Earth resistance is low. However, given the constraints and available craftable items, the plan is feasible but may be challenging.'
+        PLAN PASSED:
+        True
+        
+[17:20:41]: ############################## TASK -> SUBTASKS ended ##############################
+
+[17:20:41]: Remaining task to subtasks decomposition attempts: 9
+[17:20:41]: 
+        Current plan (info):
+        [{'type': 'Craft', 'target': 'Steel Helm', 'quantity': 1}, {'type': 'Craft', 'target': 'Life Ring', 'quantity': 1}, {'type': 'Craft', 'target': 'Skull Ring', 'quantity': 1}, {'type': 'Fight', 'target': 'Ogre', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[17:20:41]: Subtasks to actions decomposition
+[17:20:41]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[17:20:53]: ACTIONS
+[17:20:53]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [-3, -3], 'quantity': None}, {'type': 'Fight', 'target': 'Pig', 'quantity': 3}, {'type': 'Move', 'target': [-2, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Wolf', 'quantity': 2}, {'type': 'Move', 'target': [7, 4], 'quantity': None}, {'type': 'Fight', 'target': 'Flying Serpent', 'quantity': 3}, {'type': 'Move', 'target': [1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Iron Ore', 'quantity': 24}, {'type': 'Move', 'target': [1, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Coal', 'quantity': 40}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Steel', 'quantity': 8}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Steel Helm', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: All Move commands correctly precede the corresponding Fight, Gather, or Craft commands, and the character moves to the exact location of the resource, monster, or workshop as required. For example, the character moves to (-3, -3) before fighting Pig, to (-2, 1) before fighting Wolf, to (7, 4) before fighting Flying Serpent, to (1, 7) before gathering Iron Ore, to (1, 6) before gathering Coal, to (1, 5) before crafting Steel, and to (3, 1) before crafting Steel Helm. 2. Resource/Workshop/Monster Existence: All resources, monsters, and workshops exist at the specified locations in the plan. 3. Correct Quantities: The quantities gathered and crafted are sufficient and consistent with the requirements: - Iron Ore: 24 units gathered (3 Iron Ore per Steel × 8 Steel = 24) - Coal: 40 units gathered (5 Coal per Steel × 8 Steel = 40) - Steel crafted: 8 units (required for Steel Helm) - Pig Skin: 3 units (required for Steel Helm) - Wolf Bone: 2 units (required for Steel Helm) - Flying Wing: 3 units (required for Steel Helm) - Fighting quantities match the required drops for Pig (3), Wolf (2), and Flying Serpent (3) to obtain the needed materials. 4. No Missing Steps: The plan includes all necessary movements, fights, gathering, and crafting steps in logical order without missing any prerequisite actions. 5. Command Syntax: All commands strictly follow the required syntax: - Move [X] [Y] - Gather [resource name] [quantity] - Craft [item name] [quantity] - Fight [monster name] [quantity] - Equip [item name] [quantity] (not used here) Overall, the plan is logically consistent, complete, and syntactically correct for the given objective.
+        PLAN PASSED:
+        True
+        
+[17:20:53]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[17:20:53]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [-3, -3], 'quantity': None}, {'type': 'Fight', 'target': 'Pig', 'quantity': 3}, {'type': 'Move', 'target': [-2, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Wolf', 'quantity': 2}, {'type': 'Move', 'target': [7, 4], 'quantity': None}, {'type': 'Fight', 'target': 'Flying Serpent', 'quantity': 3}, {'type': 'Move', 'target': [1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Iron Ore', 'quantity': 24}, {'type': 'Move', 'target': [1, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Coal', 'quantity': 40}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Steel', 'quantity': 8}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Steel Helm', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[17:20:53]: CHARACTER INTERMEDIATE STATE
+[17:20:53]: {'name': 'Hero', 'skin': 'men1', 'level': 25, 'xp': 0, 'max_xp': 150, 'mining_level': 20, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 20, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 20, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 510, 'attack_fire': 40, 'attack_earth': 0, 'attack_water': 0, 'attack_air': 0, 'dmg_fire': 24, 'dmg_earth': 14, 'dmg_water': 14, 'dmg_air': 24, 'res_fire': 26, 'res_earth': 18, 'res_water': 18, 'res_air': 26, 'x': 0, 'y': 0, 'weapon_slot': 'skull_staff', 'shield_slot': 'slime_shield', 'helmet_slot': 'adventurer_helmet', 'body_armor_slot': 'adventurer_vest', 'leg_armor_slot': 'iron_legs_armor', 'boots_slot': 'adventurer_boots', 'ring1_slot': '', 'ring2_slot': '', 'amulet_slot': 'skull_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': '', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[17:20:53]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[17:21:03]: ACTIONS
+[17:21:03]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [0, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Chicken', 'quantity': 3}, {'type': 'Move', 'target': [6, 4], 'quantity': None}, {'type': 'Fight', 'target': 'Mushmush', 'quantity': 3}, {'type': 'Move', 'target': [1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Iron Ore', 'quantity': 40}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Iron', 'quantity': 5}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Life Ring', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: The plan correctly moves the character to the location of the Chicken monster at (0,1) before fighting it, then to Mushmush at (6,4) before fighting it, then to Iron Rocks at (1,7) before gathering Iron Ore, then to the Mining workshop at (1,5) before crafting Iron, and finally to the Jewelrycrafting workshop at (1,3) before crafting the Life Ring. All movements precede the respective actions as required. 2. Resource and Quantity Requirements: The plan gathers 40 Iron Ore, which is sufficient to craft 5 Iron (each Iron requires 8 Iron Ore, so 5 Iron requires 40 Iron Ore). It fights 3 Chickens and 3 Mushmush to obtain 3 Feathers and 3 Mushrooms respectively, matching the required quantities for the Life Ring. 3. Command Syntax: All commands follow the exact required syntax: Move [X] [Y], Fight [monster name] [quantity], Gather [resource name] [quantity], Craft [item name] [quantity]. 4. No Missing Steps: The plan includes all necessary steps: gathering Iron Ore, crafting Iron, fighting for Feathers and Mushrooms, and crafting the Life Ring. The quantities and order are consistent with the requirements. Therefore, the plan is valid and executable as is.
+        PLAN PASSED:
+        True
+        
+[17:21:03]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[17:21:03]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [0, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Chicken', 'quantity': 3}, {'type': 'Move', 'target': [6, 4], 'quantity': None}, {'type': 'Fight', 'target': 'Mushmush', 'quantity': 3}, {'type': 'Move', 'target': [1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Iron Ore', 'quantity': 40}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Iron', 'quantity': 5}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Life Ring', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[17:21:03]: CHARACTER INTERMEDIATE STATE
+[17:21:03]: {'name': 'Hero', 'skin': 'men1', 'level': 25, 'xp': 0, 'max_xp': 150, 'mining_level': 20, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 20, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 20, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 510, 'attack_fire': 40, 'attack_earth': 0, 'attack_water': 0, 'attack_air': 0, 'dmg_fire': 24, 'dmg_earth': 14, 'dmg_water': 14, 'dmg_air': 24, 'res_fire': 26, 'res_earth': 18, 'res_water': 18, 'res_air': 26, 'x': 0, 'y': 0, 'weapon_slot': 'skull_staff', 'shield_slot': 'slime_shield', 'helmet_slot': 'adventurer_helmet', 'body_armor_slot': 'adventurer_vest', 'leg_armor_slot': 'iron_legs_armor', 'boots_slot': 'adventurer_boots', 'ring1_slot': '', 'ring2_slot': '', 'amulet_slot': 'skull_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': '', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[17:21:03]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[17:21:16]: ACTIONS
+[17:21:16]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [-2, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Wolf', 'quantity': 4}, {'type': 'Move', 'target': [8, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Skeleton', 'quantity': 1}, {'type': 'Move', 'target': [0, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Jasper Crystal', 'quantity': 2}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Move', 'target': [1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Iron Ore', 'quantity': 12}, {'type': 'Move', 'target': [1, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Coal', 'quantity': 20}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Steel', 'quantity': 4}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Skull Ring', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: The plan correctly moves the character to the location of each resource or monster before gathering or fighting. For example, the character moves to (-2,1) before fighting Wolves, (8,8) before fighting Skeleton, (0,6) before gathering Jasper Crystal, (1,7) before gathering Iron Ore, and (1,6) before gathering Coal. The crafting steps are done at the correct workshop locations: Steel crafted at (1,5) and Skull Ring crafted at (1,3). 2. Resource and Quantity Requirements: The quantities gathered and crafted are sufficient and consistent with the requirements. Specifically, 4 Steel are crafted, which requires 12 Iron Ore and 20 Coal gathered (3 Iron Ore and 5 Coal per Steel x4). 4 Wolf Bones are obtained by fighting 4 Wolves at (-2,1). 1 Skeleton Skull is obtained by fighting 1 Skeleton at (8,8). 2 Jasper Crystals are gathered at (0,6). All quantities match the high-level objective requirements. 3. Command Syntax: All commands follow the exact required syntax: Move [X] [Y], Gather [resource name] [quantity], Craft [item name] [quantity], Fight [monster name] [quantity]. 4. No Missing Steps: The plan includes all necessary movements before actions, and the sequence logically supports the crafting of the Skull Ring. There are no missing gathering or fighting steps for required materials. 5. Additional Notes: The plan moves to (1,5) twice, once before crafting Steel and once before gathering Iron Ore, which is acceptable. Overall, the plan is logically consistent, complete, and syntactically correct.
+        PLAN PASSED:
+        True
+        
+[17:21:16]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[17:21:16]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [-2, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Wolf', 'quantity': 4}, {'type': 'Move', 'target': [8, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Skeleton', 'quantity': 1}, {'type': 'Move', 'target': [0, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Jasper Crystal', 'quantity': 2}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Move', 'target': [1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Iron Ore', 'quantity': 12}, {'type': 'Move', 'target': [1, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Coal', 'quantity': 20}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Steel', 'quantity': 4}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Skull Ring', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[17:21:16]: CHARACTER INTERMEDIATE STATE
+[17:21:16]: {'name': 'Hero', 'skin': 'men1', 'level': 25, 'xp': 0, 'max_xp': 150, 'mining_level': 20, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 20, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 20, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 510, 'attack_fire': 40, 'attack_earth': 0, 'attack_water': 0, 'attack_air': 0, 'dmg_fire': 24, 'dmg_earth': 14, 'dmg_water': 14, 'dmg_air': 24, 'res_fire': 26, 'res_earth': 18, 'res_water': 18, 'res_air': 26, 'x': 0, 'y': 0, 'weapon_slot': 'skull_staff', 'shield_slot': 'slime_shield', 'helmet_slot': 'adventurer_helmet', 'body_armor_slot': 'adventurer_vest', 'leg_armor_slot': 'iron_legs_armor', 'boots_slot': 'adventurer_boots', 'ring1_slot': '', 'ring2_slot': '', 'amulet_slot': 'skull_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': '', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[17:21:16]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[17:21:21]: ACTIONS
+[17:21:21]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [-5, -5], 'quantity': None}, {'type': 'Fight', 'target': 'Ogre', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: The plan moves the character to (-5, -5) before fighting the Ogre, which is correct since an Ogre is located at (-5, -5). 2. Command Syntax: The commands "Move -5 -5" and "Fight Ogre 1" follow the correct syntax. 3. Quantities: The fight quantity is 1, which matches the goal to fight one Ogre. 4. No Missing Steps: Since the inventory is empty and no crafting or gathering is required for this task, no missing steps are detected. Overall, the plan correctly moves the character to the Ogre's location and fights it once, fulfilling the objective without any syntax or logical errors.
+        PLAN PASSED:
+        True
+        
+[17:21:21]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[17:21:21]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [-5, -5], 'quantity': None}, {'type': 'Fight', 'target': 'Ogre', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[17:21:21]: CHARACTER INTERMEDIATE STATE
+[17:21:21]: {'name': 'Hero', 'skin': 'men1', 'level': 25, 'xp': 0, 'max_xp': 150, 'mining_level': 20, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 20, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 20, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 510, 'attack_fire': 40, 'attack_earth': 0, 'attack_water': 0, 'attack_air': 0, 'dmg_fire': 24, 'dmg_earth': 14, 'dmg_water': 14, 'dmg_air': 24, 'res_fire': 26, 'res_earth': 18, 'res_water': 18, 'res_air': 26, 'x': 0, 'y': 0, 'weapon_slot': 'skull_staff', 'shield_slot': 'slime_shield', 'helmet_slot': 'adventurer_helmet', 'body_armor_slot': 'adventurer_vest', 'leg_armor_slot': 'iron_legs_armor', 'boots_slot': 'adventurer_boots', 'ring1_slot': '', 'ring2_slot': '', 'amulet_slot': 'skull_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': '', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[17:21:21]: CHARACTER FINAL STATE
+[17:21:21]: {'name': 'Hero', 'skin': 'men1', 'level': 25, 'xp': 0, 'max_xp': 150, 'mining_level': 20, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 20, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 20, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 510, 'attack_fire': 40, 'attack_earth': 0, 'attack_water': 0, 'attack_air': 0, 'dmg_fire': 24, 'dmg_earth': 14, 'dmg_water': 14, 'dmg_air': 24, 'res_fire': 26, 'res_earth': 18, 'res_water': 18, 'res_air': 26, 'x': 0, 'y': 0, 'weapon_slot': 'skull_staff', 'shield_slot': 'slime_shield', 'helmet_slot': 'adventurer_helmet', 'body_armor_slot': 'adventurer_vest', 'leg_armor_slot': 'iron_legs_armor', 'boots_slot': 'adventurer_boots', 'ring1_slot': '', 'ring2_slot': '', 'amulet_slot': 'skull_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': '', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[17:21:21]: Actions chain: [{'subtasks': [{'type': 'Move', 'target': [-3, -3], 'quantity': None}, {'type': 'Fight', 'target': 'Pig', 'quantity': 3}, {'type': 'Move', 'target': [-2, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Wolf', 'quantity': 2}, {'type': 'Move', 'target': [7, 4], 'quantity': None}, {'type': 'Fight', 'target': 'Flying Serpent', 'quantity': 3}, {'type': 'Move', 'target': [1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Iron Ore', 'quantity': 24}, {'type': 'Move', 'target': [1, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Coal', 'quantity': 40}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Steel', 'quantity': 8}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Steel Helm', 'quantity': 1}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [0, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Chicken', 'quantity': 3}, {'type': 'Move', 'target': [6, 4], 'quantity': None}, {'type': 'Fight', 'target': 'Mushmush', 'quantity': 3}, {'type': 'Move', 'target': [1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Iron Ore', 'quantity': 40}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Iron', 'quantity': 5}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Life Ring', 'quantity': 1}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [-2, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Wolf', 'quantity': 4}, {'type': 'Move', 'target': [8, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Skeleton', 'quantity': 1}, {'type': 'Move', 'target': [0, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Jasper Crystal', 'quantity': 2}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Move', 'target': [1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Iron Ore', 'quantity': 12}, {'type': 'Move', 'target': [1, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Coal', 'quantity': 20}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Steel', 'quantity': 4}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Skull Ring', 'quantity': 1}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [-5, -5], 'quantity': None}, {'type': 'Fight', 'target': 'Ogre', 'quantity': 1}], 'is_ok': True}]

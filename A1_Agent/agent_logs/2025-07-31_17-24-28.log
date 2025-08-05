@@ -1,0 +1,128 @@
+[17:24:28]: Overriding Voyager settings
+[17:24:28]: Overriding Voyager settings complete
+[17:24:28]: Injected items: "Gold Helm", "Lizard Skin Armor", "Sapphire Amulet"
+[17:24:45]: Task to subtasks decomposition
+[17:24:45]: ############################## TASK -> SUBTASKS started##############################
+
+[17:24:57]: SUBTASKS
+[17:24:57]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Gold Helm', 'quantity': 1}, {'type': 'Craft', 'target': 'Lizard Skin Armor', 'quantity': 1}, {'type': 'Craft', 'target': 'Sapphire Amulet', 'quantity': 1}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]}
+        Plan critique (last known): 
+        The plan logically orders crafting before combat, which is correct. The final subtask is the fight against the Cultist Emperor, fulfilling the high-level objective. The character currently has no equipment, so crafting the Gold Helm, Lizard Skin Armor, and Sapphire Amulet is necessary and feasible since all are craftable. However, the plan does not specify resource quantities or check if the crafted items provide adequate protection or damage to handle the Cultist Emperor's high resistances and damage types. Given the character's damage types (Earth 20, Water 60, no Air damage) and the Cultist Emperor's high Air resistance (90%), the character's damage output may be suboptimal, but this is not a plan validation issue. The crafting resource quantities are not detailed, but since only top-level crafting is considered and all items are craftable, this is acceptable. Overall, the plan meets the criteria for combat readiness, logical order, final goal placement, and crafting feasibility.
+        PLAN PASSED:
+        True
+        
+[17:24:57]: ############################## TASK -> SUBTASKS ended ##############################
+
+[17:24:57]: Remaining task to subtasks decomposition attempts: 9
+[17:24:57]: 
+        Current plan (info):
+        [{'type': 'Craft', 'target': 'Gold Helm', 'quantity': 1}, {'type': 'Craft', 'target': 'Lizard Skin Armor', 'quantity': 1}, {'type': 'Craft', 'target': 'Sapphire Amulet', 'quantity': 1}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[17:24:57]: Subtasks to actions decomposition
+[17:24:57]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[17:25:24]: ACTIONS
+[17:25:24]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Gold ore', 'quantity': 64}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Gold', 'quantity': 8}, {'type': 'Move', 'target': [1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Demon', 'quantity': 2}, {'type': 'Move', 'target': [0, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Imp', 'quantity': 3}, {'type': 'Move', 'target': [10, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Vampire', 'quantity': 3}, {'type': 'Move', 'target': [10, 2], 'quantity': None}, {'type': 'Fight', 'target': 'Owlbear', 'quantity': 4}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Gold Helm', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: All Move commands correctly precede the corresponding Gather, Fight, or Craft commands, and the character moves to the exact locations of resources, monsters, or workshops as required. For example, the character moves to (10, -4) before gathering Gold ore, to (1, 5) before crafting Gold, and to (3, 1) before crafting Gold Helm. 2. Resource and Monster Locations: The resources and monsters are correctly matched with their locations as per the game world data. Gold ore is at (10, -4), Demon at (1, 13), Imp at (0, 13), Vampire at (10, 8), Owlbear at (10, 2), and the workshops are at the correct locations. 3. Quantities: The quantities gathered and crafted match the requirements. 64 Gold ore are gathered to craft 8 Gold (8 Gold ore per Gold), 8 Gold crafted, 2 Demons fought for 2 Demon Horns, 3 Imps fought for 3 Demoniac Dust, 3 Vampires fought for 3 Vampire Blood, 4 Owlbears fought for 4 Owlbear hair, and finally 1 Gold Helm crafted. All quantities satisfy the high-level objective requirements. 4. No Missing Steps: The plan includes all necessary gathering, fighting, and crafting steps with no missing prerequisites. 5. Command Syntax: All commands follow the exact required syntax: Move X Y, Gather resource quantity, Craft item quantity, Fight monster quantity. Therefore, the plan is logically consistent, complete, and syntactically correct.
+        PLAN PASSED:
+        True
+        
+[17:25:24]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[17:25:24]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Gold ore', 'quantity': 64}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Gold', 'quantity': 8}, {'type': 'Move', 'target': [1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Demon', 'quantity': 2}, {'type': 'Move', 'target': [0, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Imp', 'quantity': 3}, {'type': 'Move', 'target': [10, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Vampire', 'quantity': 3}, {'type': 'Move', 'target': [10, 2], 'quantity': None}, {'type': 'Fight', 'target': 'Owlbear', 'quantity': 4}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Gold Helm', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[17:25:24]: CHARACTER INTERMEDIATE STATE
+[17:25:24]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 30, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 30, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 30, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 25, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1305, 'attack_fire': 0, 'attack_earth': 20, 'attack_water': 60, 'attack_air': 0, 'dmg_fire': 68, 'dmg_earth': 29, 'dmg_water': 49, 'dmg_air': 0, 'res_fire': 26, 'res_earth': 20, 'res_water': 25, 'res_air': 21, 'x': 0, 'y': 0, 'weapon_slot': 'greater_dreadful_staff', 'shield_slot': 'gold_shield', 'helmet_slot': '', 'body_armor_slot': 'bandit_armor', 'leg_armor_slot': 'obsidian_legs_armor', 'boots_slot': 'lizard_boots', 'ring1_slot': 'ruby_ring', 'ring2_slot': 'sapphire_ring', 'amulet_slot': '', 'artifact1_slot': 'life_crystal', 'artifact2_slot': 'life_crystal', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[17:25:24]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[17:25:36]: ACTIONS
+[17:25:36]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [4, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Bandit Lizard', 'quantity': 5}, {'type': 'Move', 'target': [-5, -4], 'quantity': None}, {'type': 'Fight', 'target': 'Ogre', 'quantity': 4}, {'type': 'Move', 'target': [0, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Jasper Crystal', 'quantity': 2}, {'type': 'Move', 'target': [9, 8], 'quantity': None}, {'type': 'Gather', 'target': 'Dead Wood', 'quantity': 40}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Craft', 'target': 'Dead Wood Plank', 'quantity': 5}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Lizard Skin Armor', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: All Move commands correctly precede the corresponding Fight, Gather, or Craft commands, and the character moves to the correct locations for each action. 2. Resource/Workshop/Monster Existence: All resources, monsters, and workshops exist at the specified locations as per the game world data. 3. Quantities: - Fight Bandit Lizard 5 times to get 5 Lizard Skins: correct. - Fight Ogre 4 times to get 4 Ogre Skins: correct. - Gather 2 Jasper Crystals: matches requirement. - Gather 40 Dead Wood: Dead Wood Plank requires 8 Dead Wood each, and 5 Dead Wood Planks are crafted, so 8*5=40 Dead Wood needed, correct. - Craft 5 Dead Wood Planks: correct quantity to produce required 5 planks. - Craft 1 Lizard Skin Armor: correct. 4. No Missing Steps: All necessary gathering, fighting, and crafting steps are included and in logical order. 5. Command Syntax: All commands follow the exact required syntax. Therefore, the plan is valid and executable as is.
+        PLAN PASSED:
+        True
+        
+[17:25:36]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[17:25:36]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [4, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Bandit Lizard', 'quantity': 5}, {'type': 'Move', 'target': [-5, -4], 'quantity': None}, {'type': 'Fight', 'target': 'Ogre', 'quantity': 4}, {'type': 'Move', 'target': [0, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Jasper Crystal', 'quantity': 2}, {'type': 'Move', 'target': [9, 8], 'quantity': None}, {'type': 'Gather', 'target': 'Dead Wood', 'quantity': 40}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Craft', 'target': 'Dead Wood Plank', 'quantity': 5}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Lizard Skin Armor', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[17:25:36]: CHARACTER INTERMEDIATE STATE
+[17:25:36]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 30, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 30, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 30, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 25, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1305, 'attack_fire': 0, 'attack_earth': 20, 'attack_water': 60, 'attack_air': 0, 'dmg_fire': 68, 'dmg_earth': 29, 'dmg_water': 49, 'dmg_air': 0, 'res_fire': 26, 'res_earth': 20, 'res_water': 25, 'res_air': 21, 'x': 0, 'y': 0, 'weapon_slot': 'greater_dreadful_staff', 'shield_slot': 'gold_shield', 'helmet_slot': '', 'body_armor_slot': 'bandit_armor', 'leg_armor_slot': 'obsidian_legs_armor', 'boots_slot': 'lizard_boots', 'ring1_slot': 'ruby_ring', 'ring2_slot': 'sapphire_ring', 'amulet_slot': '', 'artifact1_slot': 'life_crystal', 'artifact2_slot': 'life_crystal', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[17:25:36]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[17:25:51]: ACTIONS
+[17:25:51]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Sapphire', 'quantity': 1}, {'type': 'Move', 'target': [-2, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Wolf', 'quantity': 5}, {'type': 'Move', 'target': [0, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Jasper Crystal', 'quantity': 2}, {'type': 'Move', 'target': [6, 1], 'quantity': None}, {'type': 'Gather', 'target': 'Ash Wood', 'quantity': 24}, {'type': 'Move', 'target': [-1, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Birch Wood', 'quantity': 40}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Craft', 'target': 'Hardwood Plank', 'quantity': 8}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Sapphire Amulet', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: All Move commands correctly precede the corresponding Gather, Fight, or Craft commands, and the character moves to the correct locations for each action. 2. Resource and Monster Locations: The plan gathers Sapphire at (10, -4) which is correct. It fights Wolves at ( -2, 1), which matches the monster location. It gathers Jasper Crystal at (0, 6), Ash Wood at (6, 1), and Birch Wood at (-1, 6), all correct resource locations. It crafts Hardwood Plank at (-2, -3), the woodcutting workshop location, and crafts Sapphire Amulet at (1, 3), the jewelrycrafting workshop location. 3. Quantities: The plan gathers 1 Sapphire (required 1), fights 5 Wolves (required 5 Wolf hair), gathers 2 Jasper Crystals (required 2), gathers 24 Ash Wood and 40 Birch Wood. For Hardwood Plank crafting, 8 planks are needed, each requiring 3 Ash Wood and 5 Birch Wood, so total Ash Wood needed is 24 (3*8) and Birch Wood is 40 (5*8), which matches the gathered quantities. 4. No Missing Steps: The plan gathers all required resources before crafting Hardwood Plank and then crafts the Sapphire Amulet after crafting the planks. 5. Command Syntax: All commands follow the exact required syntax. No errors found. Overall, the plan is logically consistent, complete, and syntactically correct.
+        PLAN PASSED:
+        True
+        
+[17:25:51]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[17:25:51]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Sapphire', 'quantity': 1}, {'type': 'Move', 'target': [-2, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Wolf', 'quantity': 5}, {'type': 'Move', 'target': [0, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Jasper Crystal', 'quantity': 2}, {'type': 'Move', 'target': [6, 1], 'quantity': None}, {'type': 'Gather', 'target': 'Ash Wood', 'quantity': 24}, {'type': 'Move', 'target': [-1, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Birch Wood', 'quantity': 40}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Craft', 'target': 'Hardwood Plank', 'quantity': 8}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Sapphire Amulet', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[17:25:51]: CHARACTER INTERMEDIATE STATE
+[17:25:51]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 30, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 30, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 30, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 25, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1305, 'attack_fire': 0, 'attack_earth': 20, 'attack_water': 60, 'attack_air': 0, 'dmg_fire': 68, 'dmg_earth': 29, 'dmg_water': 49, 'dmg_air': 0, 'res_fire': 26, 'res_earth': 20, 'res_water': 25, 'res_air': 21, 'x': 0, 'y': 0, 'weapon_slot': 'greater_dreadful_staff', 'shield_slot': 'gold_shield', 'helmet_slot': '', 'body_armor_slot': 'bandit_armor', 'leg_armor_slot': 'obsidian_legs_armor', 'boots_slot': 'lizard_boots', 'ring1_slot': 'ruby_ring', 'ring2_slot': 'sapphire_ring', 'amulet_slot': '', 'artifact1_slot': 'life_crystal', 'artifact2_slot': 'life_crystal', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[17:25:51]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[17:25:56]: ACTIONS
+[17:25:56]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [-2, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: The plan correctly moves the character to the tile (-2, 13) where the Cultist Emperor is located before the fight, satisfying the movement and position requirements for fighting.
+2. Resource/Workshop/Monster Existence: The Cultist Emperor monster exists at location (-2, 13) as specified.
+3. Correct Quantities: The fight command specifies fighting the Cultist Emperor once, which matches the high-level objective.
+4. No Missing Steps: Since the inventory is empty and no gathering or crafting is required for this task, no missing steps are detected.
+5. Command Syntax: The commands follow the exact required syntax: "Move -2 13" and "Fight Cultist Emperor 1".
+
+Overall, the plan is logically consistent, complete, and syntactically correct for the given objective.
+        PLAN PASSED:
+        True
+        
+[17:25:56]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[17:25:56]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [-2, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[17:25:56]: CHARACTER INTERMEDIATE STATE
+[17:25:56]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 30, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 30, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 30, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 25, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1305, 'attack_fire': 0, 'attack_earth': 20, 'attack_water': 60, 'attack_air': 0, 'dmg_fire': 68, 'dmg_earth': 29, 'dmg_water': 49, 'dmg_air': 0, 'res_fire': 26, 'res_earth': 20, 'res_water': 25, 'res_air': 21, 'x': 0, 'y': 0, 'weapon_slot': 'greater_dreadful_staff', 'shield_slot': 'gold_shield', 'helmet_slot': '', 'body_armor_slot': 'bandit_armor', 'leg_armor_slot': 'obsidian_legs_armor', 'boots_slot': 'lizard_boots', 'ring1_slot': 'ruby_ring', 'ring2_slot': 'sapphire_ring', 'amulet_slot': '', 'artifact1_slot': 'life_crystal', 'artifact2_slot': 'life_crystal', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[17:25:56]: CHARACTER FINAL STATE
+[17:25:56]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 30, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 30, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 30, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 25, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1305, 'attack_fire': 0, 'attack_earth': 20, 'attack_water': 60, 'attack_air': 0, 'dmg_fire': 68, 'dmg_earth': 29, 'dmg_water': 49, 'dmg_air': 0, 'res_fire': 26, 'res_earth': 20, 'res_water': 25, 'res_air': 21, 'x': 0, 'y': 0, 'weapon_slot': 'greater_dreadful_staff', 'shield_slot': 'gold_shield', 'helmet_slot': '', 'body_armor_slot': 'bandit_armor', 'leg_armor_slot': 'obsidian_legs_armor', 'boots_slot': 'lizard_boots', 'ring1_slot': 'ruby_ring', 'ring2_slot': 'sapphire_ring', 'amulet_slot': '', 'artifact1_slot': 'life_crystal', 'artifact2_slot': 'life_crystal', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[17:25:56]: Actions chain: [{'subtasks': [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Gold ore', 'quantity': 64}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Gold', 'quantity': 8}, {'type': 'Move', 'target': [1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Demon', 'quantity': 2}, {'type': 'Move', 'target': [0, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Imp', 'quantity': 3}, {'type': 'Move', 'target': [10, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Vampire', 'quantity': 3}, {'type': 'Move', 'target': [10, 2], 'quantity': None}, {'type': 'Fight', 'target': 'Owlbear', 'quantity': 4}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Gold Helm', 'quantity': 1}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [4, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Bandit Lizard', 'quantity': 5}, {'type': 'Move', 'target': [-5, -4], 'quantity': None}, {'type': 'Fight', 'target': 'Ogre', 'quantity': 4}, {'type': 'Move', 'target': [0, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Jasper Crystal', 'quantity': 2}, {'type': 'Move', 'target': [9, 8], 'quantity': None}, {'type': 'Gather', 'target': 'Dead Wood', 'quantity': 40}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Craft', 'target': 'Dead Wood Plank', 'quantity': 5}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Lizard Skin Armor', 'quantity': 1}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Sapphire', 'quantity': 1}, {'type': 'Move', 'target': [-2, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Wolf', 'quantity': 5}, {'type': 'Move', 'target': [0, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Jasper Crystal', 'quantity': 2}, {'type': 'Move', 'target': [6, 1], 'quantity': None}, {'type': 'Gather', 'target': 'Ash Wood', 'quantity': 24}, {'type': 'Move', 'target': [-1, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Birch Wood', 'quantity': 40}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Craft', 'target': 'Hardwood Plank', 'quantity': 8}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Sapphire Amulet', 'quantity': 1}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [-2, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}], 'is_ok': True}]

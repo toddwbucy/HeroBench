@@ -1,0 +1,157 @@
+[16:47:00]: Overriding Voyager settings
+[16:47:00]: Overriding Voyager settings complete
+[16:47:00]: Injected items: "Death Knight Sword", "Bandit Armor", "Ruby Ring", "Life Crystal", "Life Crystal"
+[16:47:15]: Task to subtasks decomposition
+[16:47:15]: ############################## TASK -> SUBTASKS started##############################
+
+[16:47:21]: SUBTASKS
+[16:47:21]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Death Knight Sword', 'quantity': 1}, {'type': 'Craft', 'target': 'Bandit Armor', 'quantity': 1}, {'type': 'Craft', 'target': 'Ruby Ring', 'quantity': 1}, {'type': 'Craft', 'target': 'Life Crystal', 'quantity': 2}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Combat readiness: The plan includes crafting "Death Knight Sword", "Bandit Armor", and "Ruby Ring" before fighting the Cultist Emperor, which is appropriate since the inventory is empty. These items are craftable and presumably provide necessary combat stats. 2. Logical order: The crafting subtasks precede the fight, which is logical. 3. Final goal is last: The last subtask is fighting the Cultist Emperor, directly fulfilling the high-level objective. 4. Crafting resource accuracy: The plan crafts 2 "Life Crystal" items, which is consistent with the quantity specified. There is no indication that nested crafting or resource miscalculation occurs. Overall, the plan is logically ordered, ensures combat readiness by crafting necessary equipment, and ends with the fight as required.'
+        PLAN PASSED:
+        True
+        
+[16:47:21]: ############################## TASK -> SUBTASKS ended ##############################
+
+[16:47:21]: Remaining task to subtasks decomposition attempts: 9
+[16:47:21]: 
+        Current plan (info):
+        [{'type': 'Craft', 'target': 'Death Knight Sword', 'quantity': 1}, {'type': 'Craft', 'target': 'Bandit Armor', 'quantity': 1}, {'type': 'Craft', 'target': 'Ruby Ring', 'quantity': 1}, {'type': 'Craft', 'target': 'Life Crystal', 'quantity': 2}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:47:21]: Subtasks to actions decomposition
+[16:47:21]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[16:47:26]: ACTIONS
+[16:47:26]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [10, 7], 'quantity': None}, {'type': 'Fight', 'target': 'Death Knight', 'quantity': 1}, {'type': 'Equip', 'target': 'Death Knight Sword', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy: The plan correctly moves the character to (10, 7) before fighting the Death Knight, satisfying the position requirement for fighting. 2. Position Requirements: The Death Knight monster is located at (10, 7), matching the move command. 3. Correct Quantities: The fight quantity is 1, which matches the goal of defeating the Death Knight once to obtain the Death Knight Sword. 4. No Missing Steps: Since the Death Knight Sword is dropped by the Death Knight monster and the inventory is initially empty, no gathering or crafting steps are necessary before fighting. 5. Command Syntax: All commands follow the exact required syntax: "Move 10 7", "Fight Death Knight 1", "Equip Death Knight Sword 1". Therefore, the plan is logically consistent and syntactically correct.
+        PLAN PASSED:
+        True
+        
+[16:47:26]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[16:47:26]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [10, 7], 'quantity': None}, {'type': 'Fight', 'target': 'Death Knight', 'quantity': 1}, {'type': 'Equip', 'target': 'Death Knight Sword', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:47:26]: CHARACTER INTERMEDIATE STATE
+[16:47:26]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 30, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 1, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 30, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1245, 'attack_fire': 40, 'attack_earth': 0, 'attack_water': 0, 'attack_air': 40, 'dmg_fire': 103, 'dmg_earth': 35, 'dmg_water': 12, 'dmg_air': 22, 'res_fire': 33, 'res_earth': 13, 'res_water': 16, 'res_air': 27, 'x': 0, 'y': 0, 'weapon_slot': 'strangold_sword', 'shield_slot': 'gold_shield', 'helmet_slot': 'lich_crown', 'body_armor_slot': 'strangold_armor', 'leg_armor_slot': 'piggy_pants', 'boots_slot': 'lizard_boots', 'ring1_slot': 'ruby_ring', 'ring2_slot': '', 'amulet_slot': 'ruby_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:47:26]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[16:47:30]: ACTIONS
+[16:47:30]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [4, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Bandit Lizard', 'quantity': 1}, {'type': 'Equip', 'target': 'Bandit Armor', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy: The plan correctly moves the character to (4, 8) before fighting the Bandit Lizard, satisfying the movement requirement for fighting.
+2. Position Requirements: The Bandit Lizard is located at (4, 8), matching the move command. The character is correctly positioned before the fight.
+3. Correct Quantities: The plan fights the Bandit Lizard once, which is sufficient to obtain the Bandit Armor as per the high-level objective.
+4. No Missing Steps: Since the Bandit Armor is dropped by the Bandit Lizard and no crafting or gathering is required, no additional steps are missing.
+5. Command Syntax: All commands follow the exact required syntax.
+
+Overall, the plan is logically consistent, complete, and syntactically correct for the given objective.
+        PLAN PASSED:
+        True
+        
+[16:47:30]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[16:47:30]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [4, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Bandit Lizard', 'quantity': 1}, {'type': 'Equip', 'target': 'Bandit Armor', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:47:30]: CHARACTER INTERMEDIATE STATE
+[16:47:30]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 30, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 1, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 30, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1245, 'attack_fire': 40, 'attack_earth': 0, 'attack_water': 0, 'attack_air': 40, 'dmg_fire': 103, 'dmg_earth': 35, 'dmg_water': 12, 'dmg_air': 22, 'res_fire': 33, 'res_earth': 13, 'res_water': 16, 'res_air': 27, 'x': 0, 'y': 0, 'weapon_slot': 'strangold_sword', 'shield_slot': 'gold_shield', 'helmet_slot': 'lich_crown', 'body_armor_slot': 'strangold_armor', 'leg_armor_slot': 'piggy_pants', 'boots_slot': 'lizard_boots', 'ring1_slot': 'ruby_ring', 'ring2_slot': '', 'amulet_slot': 'ruby_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:47:30]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[16:47:41]: ACTIONS
+[16:47:41]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Ruby', 'quantity': 1}, {'type': 'Gather', 'target': 'Gold ore', 'quantity': 64}, {'type': 'Move', 'target': [10, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Vampire', 'quantity': 5}, {'type': 'Move', 'target': [1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Demon', 'quantity': 1}, {'type': 'Move', 'target': [3, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Magical Cure', 'quantity': 2}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Gold', 'quantity': 8}, {'type': 'Craft', 'target': 'Obsidian', 'quantity': 4}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Ruby Ring', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: All Move commands correctly precede Gather, Fight, and Craft commands, and the character moves to the correct locations for each action. For example, the character moves to (10, -4) before gathering Ruby and Gold ore, to (10, 8) before fighting Vampires, to (1, 13) before fighting Demon, to (3, 6) before gathering Magical Cure, to (1, 5) before crafting Gold and Obsidian, and to (1, 3) before crafting Ruby Ring. 2. Resource and Monster Locations: The resources and monsters are correctly located as per the game world data. Ruby and Gold ore are at (10, -4), Vampires at (10, 8), Demon at (1, 13), Magical Cure at (3, 6), and workshops for crafting Gold, Obsidian, and Ruby Ring are at (1, 5) and (1, 3) respectively. 3. Quantities: The quantities gathered and fought are sufficient and consistent with the crafting requirements. Specifically, 1 Ruby gathered, 64 Gold ore gathered (enough to craft 8 Gold, each requiring 8 Gold ore), 5 Vampires fought (to get 5 Vampire Blood), 1 Demon fought (to get 1 Piece of Obsidian), 2 Magical Cure gathered, 8 Gold crafted, 4 Obsidian crafted, and finally 1 Ruby Ring crafted. 4. No Missing Steps: The plan includes all necessary gathering, fighting, and crafting steps in the correct order with no missing prerequisites. 5. Command Syntax: All commands strictly follow the required syntax: Move X Y, Gather resource quantity, Fight monster quantity, Craft item quantity. No syntax errors detected.
+        PLAN PASSED:
+        True
+        
+[16:47:41]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[16:47:41]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Ruby', 'quantity': 1}, {'type': 'Gather', 'target': 'Gold ore', 'quantity': 64}, {'type': 'Move', 'target': [10, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Vampire', 'quantity': 5}, {'type': 'Move', 'target': [1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Demon', 'quantity': 1}, {'type': 'Move', 'target': [3, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Magical Cure', 'quantity': 2}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Gold', 'quantity': 8}, {'type': 'Craft', 'target': 'Obsidian', 'quantity': 4}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Ruby Ring', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:47:41]: CHARACTER INTERMEDIATE STATE
+[16:47:41]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 30, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 1, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 30, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1245, 'attack_fire': 40, 'attack_earth': 0, 'attack_water': 0, 'attack_air': 40, 'dmg_fire': 103, 'dmg_earth': 35, 'dmg_water': 12, 'dmg_air': 22, 'res_fire': 33, 'res_earth': 13, 'res_water': 16, 'res_air': 27, 'x': 0, 'y': 0, 'weapon_slot': 'strangold_sword', 'shield_slot': 'gold_shield', 'helmet_slot': 'lich_crown', 'body_armor_slot': 'strangold_armor', 'leg_armor_slot': 'piggy_pants', 'boots_slot': 'lizard_boots', 'ring1_slot': 'ruby_ring', 'ring2_slot': '', 'amulet_slot': 'ruby_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:47:41]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[16:47:48]: ACTIONS
+[16:47:48]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [9, 7], 'quantity': None}, {'type': 'Fight', 'target': 'Lich', 'quantity': 2}, {'type': 'Equip', 'target': 'Life Crystal', 'quantity': 2}]}
+        Plan critique (last known): 
+        1. Movement Accuracy: The plan correctly moves the character to (9, 7) before fighting the Lich, satisfying the position requirement for fighting. 2. Position Requirements: The Lich monster is located at (9, 7), matching the move command. 3. Correct Quantities: The plan fights the Lich 2 times, which is consistent with crafting 2 Life Crystals. 4. No Missing Steps: Since the Life Crystal is a drop from the Lich and the inventory is initially empty, fighting the Lich twice is sufficient to obtain 2 Life Crystals. No gathering or crafting steps are needed. 5. Command Syntax: All commands follow the exact required syntax. Therefore, the plan is logically consistent and executable as given.
+        PLAN PASSED:
+        True
+        
+[16:47:48]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[16:47:48]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [9, 7], 'quantity': None}, {'type': 'Fight', 'target': 'Lich', 'quantity': 2}, {'type': 'Equip', 'target': 'Life Crystal', 'quantity': 2}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:47:48]: CHARACTER INTERMEDIATE STATE
+[16:47:48]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 30, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 1, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 30, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1245, 'attack_fire': 40, 'attack_earth': 0, 'attack_water': 0, 'attack_air': 40, 'dmg_fire': 103, 'dmg_earth': 35, 'dmg_water': 12, 'dmg_air': 22, 'res_fire': 33, 'res_earth': 13, 'res_water': 16, 'res_air': 27, 'x': 0, 'y': 0, 'weapon_slot': 'strangold_sword', 'shield_slot': 'gold_shield', 'helmet_slot': 'lich_crown', 'body_armor_slot': 'strangold_armor', 'leg_armor_slot': 'piggy_pants', 'boots_slot': 'lizard_boots', 'ring1_slot': 'ruby_ring', 'ring2_slot': '', 'amulet_slot': 'ruby_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:47:48]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[16:47:53]: ACTIONS
+[16:47:53]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [-2, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: The plan correctly moves the character to the tile (-2, 13) where the Cultist Emperor is located before the fight, satisfying the movement and position requirements for fighting.
+2. Resource/Workshop/Monster Existence: The Cultist Emperor monster exists at location (-2, 13), so the fight target is valid.
+3. Correct Quantities: The fight quantity is 1, which matches the high-level objective to fight the Cultist Emperor once.
+4. No Missing Steps: Since the inventory is empty and no gathering or crafting is required for this fight, no missing steps are detected.
+5. Command Syntax: The commands "Move -2 13" and "Fight Cultist Emperor 1" follow the exact required syntax.
+
+Overall, the plan is logically consistent, complete, and syntactically correct for the given objective.
+        PLAN PASSED:
+        True
+        
+[16:47:53]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[16:47:53]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [-2, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:47:53]: CHARACTER INTERMEDIATE STATE
+[16:47:53]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 30, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 1, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 30, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1245, 'attack_fire': 40, 'attack_earth': 0, 'attack_water': 0, 'attack_air': 40, 'dmg_fire': 103, 'dmg_earth': 35, 'dmg_water': 12, 'dmg_air': 22, 'res_fire': 33, 'res_earth': 13, 'res_water': 16, 'res_air': 27, 'x': 0, 'y': 0, 'weapon_slot': 'strangold_sword', 'shield_slot': 'gold_shield', 'helmet_slot': 'lich_crown', 'body_armor_slot': 'strangold_armor', 'leg_armor_slot': 'piggy_pants', 'boots_slot': 'lizard_boots', 'ring1_slot': 'ruby_ring', 'ring2_slot': '', 'amulet_slot': 'ruby_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:47:53]: CHARACTER FINAL STATE
+[16:47:53]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 30, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 1, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 1, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 30, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1245, 'attack_fire': 40, 'attack_earth': 0, 'attack_water': 0, 'attack_air': 40, 'dmg_fire': 103, 'dmg_earth': 35, 'dmg_water': 12, 'dmg_air': 22, 'res_fire': 33, 'res_earth': 13, 'res_water': 16, 'res_air': 27, 'x': 0, 'y': 0, 'weapon_slot': 'strangold_sword', 'shield_slot': 'gold_shield', 'helmet_slot': 'lich_crown', 'body_armor_slot': 'strangold_armor', 'leg_armor_slot': 'piggy_pants', 'boots_slot': 'lizard_boots', 'ring1_slot': 'ruby_ring', 'ring2_slot': '', 'amulet_slot': 'ruby_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:47:53]: Actions chain: [{'subtasks': [{'type': 'Move', 'target': [10, 7], 'quantity': None}, {'type': 'Fight', 'target': 'Death Knight', 'quantity': 1}, {'type': 'Equip', 'target': 'Death Knight Sword', 'quantity': 1}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [4, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Bandit Lizard', 'quantity': 1}, {'type': 'Equip', 'target': 'Bandit Armor', 'quantity': 1}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Ruby', 'quantity': 1}, {'type': 'Gather', 'target': 'Gold ore', 'quantity': 64}, {'type': 'Move', 'target': [10, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Vampire', 'quantity': 5}, {'type': 'Move', 'target': [1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Demon', 'quantity': 1}, {'type': 'Move', 'target': [3, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Magical Cure', 'quantity': 2}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Gold', 'quantity': 8}, {'type': 'Craft', 'target': 'Obsidian', 'quantity': 4}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Ruby Ring', 'quantity': 1}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [9, 7], 'quantity': None}, {'type': 'Fight', 'target': 'Lich', 'quantity': 2}, {'type': 'Equip', 'target': 'Life Crystal', 'quantity': 2}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [-2, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}], 'is_ok': True}]

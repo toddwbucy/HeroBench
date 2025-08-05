@@ -13,7 +13,7 @@ class AgentLogger:
     It supports both file logging and optional console output.
     """
 
-    LOG_DIRECTORY = 'agent_logs'
+    LOG_DIRECTORY = './A1_Agent/agent_logs'
 
     def __init__(self, console_verbose: bool = False) -> None:
         """

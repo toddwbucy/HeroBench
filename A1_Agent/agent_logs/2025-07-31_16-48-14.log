@@ -1,0 +1,99 @@
+[16:48:14]: Overriding Voyager settings
+[16:48:14]: Overriding Voyager settings complete
+[16:48:14]: Injected items: "Lizard Skin Legs Armor", "Lizard Boots"
+[16:48:28]: Task to subtasks decomposition
+[16:48:28]: ############################## TASK -> SUBTASKS started##############################
+
+[16:48:35]: SUBTASKS
+[16:48:35]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Lizard Skin Legs Armor', 'quantity': 1}, {'type': 'Craft', 'target': 'Lizard Boots', 'quantity': 1}, {'type': 'Fight', 'target': 'Cultist Acolyte', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Combat readiness: The plan includes crafting "Lizard Skin Legs Armor" and "Lizard Boots" before fighting the Cultist Acolyte. However, these items do not provide any indication of increasing water damage or resistance, which is the character's main damage type and the monster's main resistances are earth and air. The character's water damage (60 points) is effective since the monster has 0% water resistance, so the character is adequately equipped damage-wise. Since the inventory is empty and these are the only craftable items, the plan is acceptable in terms of combat readiness. 2. Logical order: Crafting is done before fighting, which is logical. 3. Final goal is last: The last subtask is fighting the Cultist Acolyte, which directly fulfills the high-level objective. 4. Crafting resource accuracy: The plan only crafts the two items once each, which is consistent with the quantities specified. Nested crafting is ignored as per instructions. Overall, the plan is logically ordered, combat-ready given the character's damage type and the monster's resistances, and ends with the final fight.
+        PLAN PASSED:
+        True
+        
+[16:48:35]: ############################## TASK -> SUBTASKS ended ##############################
+
+[16:48:35]: Remaining task to subtasks decomposition attempts: 9
+[16:48:35]: 
+        Current plan (info):
+        [{'type': 'Craft', 'target': 'Lizard Skin Legs Armor', 'quantity': 1}, {'type': 'Craft', 'target': 'Lizard Boots', 'quantity': 1}, {'type': 'Fight', 'target': 'Cultist Acolyte', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:48:35]: Subtasks to actions decomposition
+[16:48:35]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[16:48:46]: ACTIONS
+[16:48:46]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [4, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Bandit Lizard', 'quantity': 4}, {'type': 'Move', 'target': [7, 4], 'quantity': None}, {'type': 'Fight', 'target': 'Flying Serpent', 'quantity': 5}, {'type': 'Move', 'target': [9, 8], 'quantity': None}, {'type': 'Gather', 'target': 'Sap', 'quantity': 1}, {'type': 'Move', 'target': [-5, -4], 'quantity': None}, {'type': 'Fight', 'target': 'Ogre', 'quantity': 4}, {'type': 'Move', 'target': [0, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Jasper Crystal', 'quantity': 2}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Lizard Skin Legs Armor', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: All Move commands correctly precede the corresponding Fight or Gather actions, and the character moves to the exact tile where the resource or monster is located. For example, the character moves to (4,8) before fighting Bandit Lizard, which is correct. Similarly, the character moves to (9,8) before gathering Sap from Dead Tree at that location. 2. Resource and Monster Locations: All resources and monsters are correctly targeted at their known locations. Bandit Lizard is at (4,8), Flying Serpent at (7,4), Sap at (9,8), Ogre at (-5,-4), and Jasper Crystal at (0,6). 3. Quantities: The quantities gathered or fought match the required amounts for crafting the Lizard Skin Legs Armor: 4 Lizard Skin (from Bandit Lizard), 5 Flying Wing (from Flying Serpent), 1 Sap, 4 Ogre Eye (from Ogre), and 2 Jasper Crystal. 4. Command Syntax: All commands follow the exact required syntax: Move X Y, Fight monster quantity, Gather resource quantity, Craft item quantity. 5. No Missing Steps: The plan includes all necessary fights and gathering steps before crafting. The character starts at (0,0) and moves appropriately before each action. The crafting is done at (3,1), the Gearcrafting workshop location, which is correct. Overall, the plan is logically consistent, complete, and syntactically correct.
+        PLAN PASSED:
+        True
+        
+[16:48:46]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[16:48:46]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [4, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Bandit Lizard', 'quantity': 4}, {'type': 'Move', 'target': [7, 4], 'quantity': None}, {'type': 'Fight', 'target': 'Flying Serpent', 'quantity': 5}, {'type': 'Move', 'target': [9, 8], 'quantity': None}, {'type': 'Gather', 'target': 'Sap', 'quantity': 1}, {'type': 'Move', 'target': [-5, -4], 'quantity': None}, {'type': 'Fight', 'target': 'Ogre', 'quantity': 4}, {'type': 'Move', 'target': [0, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Jasper Crystal', 'quantity': 2}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Lizard Skin Legs Armor', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:48:46]: CHARACTER INTERMEDIATE STATE
+[16:48:46]: {'name': 'Hero', 'skin': 'men1', 'level': 30, 'xp': 0, 'max_xp': 150, 'mining_level': 20, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 30, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 30, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 1, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1275, 'attack_fire': 0, 'attack_earth': 20, 'attack_water': 60, 'attack_air': 0, 'dmg_fire': 39, 'dmg_earth': 7, 'dmg_water': 66, 'dmg_air': 12, 'res_fire': 11, 'res_earth': 8, 'res_water': 13, 'res_air': 8, 'x': 0, 'y': 0, 'weapon_slot': 'greater_dreadful_staff', 'shield_slot': '', 'helmet_slot': '', 'body_armor_slot': 'lizard_skin_armor', 'leg_armor_slot': 'piggy_pants', 'boots_slot': 'gold_boots', 'ring1_slot': 'gold_ring', 'ring2_slot': 'sapphire_ring', 'amulet_slot': 'sapphire_amulet', 'artifact1_slot': 'life_crystal', 'artifact2_slot': 'life_crystal', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:48:46]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[16:48:56]: ACTIONS
+[16:48:56]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [9, 8], 'quantity': None}, {'type': 'Gather', 'target': 'Dead Wood', 'quantity': 64}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Craft', 'target': 'Dead Wood Plank', 'quantity': 8}, {'type': 'Move', 'target': [4, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Bandit Lizard', 'quantity': 4}, {'type': 'Move', 'target': [0, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Imp', 'quantity': 4}, {'type': 'Move', 'target': [10, 2], 'quantity': None}, {'type': 'Fight', 'target': 'Owlbear', 'quantity': 3}, {'type': 'Move', 'target': [3, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Magical Cure', 'quantity': 1}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Lizard Boots', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: All Move commands correctly precede the corresponding Gather, Craft, or Fight commands, and the character moves to the correct locations for each action as per the task requirements. 2. Resource and Monster Locations: The resources "Dead Wood" at (9,8), "Magical Cure" at (3,6), and monsters "Bandit Lizard" at (4,8), "Imp" at (0,13), and "Owlbear" at (10,2) are correctly targeted at their specified locations. The workshops for crafting "Dead Wood Plank" at (-2,-3) and "Lizard Boots" at (3,1) are correctly used. 3. Quantities: The quantities gathered and fought are sufficient: 64 Dead Wood to craft 8 Dead Wood Planks (8 Dead Wood per plank), 4 Bandit Lizards for 4 Lizard Skins, 4 Imps for 4 Demoniac Dust, 3 Owlbears for 3 Owlbear hairs, 1 Magical Cure gathered, and crafting 1 Lizard Boots. 4. No Missing Steps: The plan includes all necessary gathering, fighting, crafting, and movement steps with no missing prerequisites. 5. Command Syntax: All commands follow the exact required syntax. Overall, the plan is logically consistent, complete, and syntactically correct.
+        PLAN PASSED:
+        True
+        
+[16:48:56]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[16:48:56]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [9, 8], 'quantity': None}, {'type': 'Gather', 'target': 'Dead Wood', 'quantity': 64}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Craft', 'target': 'Dead Wood Plank', 'quantity': 8}, {'type': 'Move', 'target': [4, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Bandit Lizard', 'quantity': 4}, {'type': 'Move', 'target': [0, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Imp', 'quantity': 4}, {'type': 'Move', 'target': [10, 2], 'quantity': None}, {'type': 'Fight', 'target': 'Owlbear', 'quantity': 3}, {'type': 'Move', 'target': [3, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Magical Cure', 'quantity': 1}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Lizard Boots', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:48:56]: CHARACTER INTERMEDIATE STATE
+[16:48:56]: {'name': 'Hero', 'skin': 'men1', 'level': 30, 'xp': 0, 'max_xp': 150, 'mining_level': 20, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 30, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 30, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 1, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1275, 'attack_fire': 0, 'attack_earth': 20, 'attack_water': 60, 'attack_air': 0, 'dmg_fire': 39, 'dmg_earth': 7, 'dmg_water': 66, 'dmg_air': 12, 'res_fire': 11, 'res_earth': 8, 'res_water': 13, 'res_air': 8, 'x': 0, 'y': 0, 'weapon_slot': 'greater_dreadful_staff', 'shield_slot': '', 'helmet_slot': '', 'body_armor_slot': 'lizard_skin_armor', 'leg_armor_slot': 'piggy_pants', 'boots_slot': 'gold_boots', 'ring1_slot': 'gold_ring', 'ring2_slot': 'sapphire_ring', 'amulet_slot': 'sapphire_amulet', 'artifact1_slot': 'life_crystal', 'artifact2_slot': 'life_crystal', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:48:56]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[16:49:02]: ACTIONS
+[16:49:02]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [-1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Acolyte', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy: The plan correctly moves the character to (-1, 13) before fighting, which is the location of the Cultist Acolyte monster. 2. Position Requirements: The character is on the correct tile (-1, 13) to fight the Cultist Acolyte. 3. Correct Quantities: The fight quantity is 1, matching the goal to fight Cultist Acolyte once. 4. No Missing Steps: No gathering or crafting is required for this task, so no missing steps. 5. Command Syntax: The commands "Move -1 13" and "Fight Cultist Acolyte 1" follow the exact required syntax. Overall, the plan meets all validation criteria.
+        PLAN PASSED:
+        True
+        
+[16:49:02]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[16:49:02]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [-1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Acolyte', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:49:02]: CHARACTER INTERMEDIATE STATE
+[16:49:02]: {'name': 'Hero', 'skin': 'men1', 'level': 30, 'xp': 0, 'max_xp': 150, 'mining_level': 20, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 30, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 30, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 1, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1275, 'attack_fire': 0, 'attack_earth': 20, 'attack_water': 60, 'attack_air': 0, 'dmg_fire': 39, 'dmg_earth': 7, 'dmg_water': 66, 'dmg_air': 12, 'res_fire': 11, 'res_earth': 8, 'res_water': 13, 'res_air': 8, 'x': 0, 'y': 0, 'weapon_slot': 'greater_dreadful_staff', 'shield_slot': '', 'helmet_slot': '', 'body_armor_slot': 'lizard_skin_armor', 'leg_armor_slot': 'piggy_pants', 'boots_slot': 'gold_boots', 'ring1_slot': 'gold_ring', 'ring2_slot': 'sapphire_ring', 'amulet_slot': 'sapphire_amulet', 'artifact1_slot': 'life_crystal', 'artifact2_slot': 'life_crystal', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:49:02]: CHARACTER FINAL STATE
+[16:49:02]: {'name': 'Hero', 'skin': 'men1', 'level': 30, 'xp': 0, 'max_xp': 150, 'mining_level': 20, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 30, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 30, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 1, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1275, 'attack_fire': 0, 'attack_earth': 20, 'attack_water': 60, 'attack_air': 0, 'dmg_fire': 39, 'dmg_earth': 7, 'dmg_water': 66, 'dmg_air': 12, 'res_fire': 11, 'res_earth': 8, 'res_water': 13, 'res_air': 8, 'x': 0, 'y': 0, 'weapon_slot': 'greater_dreadful_staff', 'shield_slot': '', 'helmet_slot': '', 'body_armor_slot': 'lizard_skin_armor', 'leg_armor_slot': 'piggy_pants', 'boots_slot': 'gold_boots', 'ring1_slot': 'gold_ring', 'ring2_slot': 'sapphire_ring', 'amulet_slot': 'sapphire_amulet', 'artifact1_slot': 'life_crystal', 'artifact2_slot': 'life_crystal', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:49:02]: Actions chain: [{'subtasks': [{'type': 'Move', 'target': [4, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Bandit Lizard', 'quantity': 4}, {'type': 'Move', 'target': [7, 4], 'quantity': None}, {'type': 'Fight', 'target': 'Flying Serpent', 'quantity': 5}, {'type': 'Move', 'target': [9, 8], 'quantity': None}, {'type': 'Gather', 'target': 'Sap', 'quantity': 1}, {'type': 'Move', 'target': [-5, -4], 'quantity': None}, {'type': 'Fight', 'target': 'Ogre', 'quantity': 4}, {'type': 'Move', 'target': [0, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Jasper Crystal', 'quantity': 2}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Lizard Skin Legs Armor', 'quantity': 1}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [9, 8], 'quantity': None}, {'type': 'Gather', 'target': 'Dead Wood', 'quantity': 64}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Craft', 'target': 'Dead Wood Plank', 'quantity': 8}, {'type': 'Move', 'target': [4, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Bandit Lizard', 'quantity': 4}, {'type': 'Move', 'target': [0, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Imp', 'quantity': 4}, {'type': 'Move', 'target': [10, 2], 'quantity': None}, {'type': 'Fight', 'target': 'Owlbear', 'quantity': 3}, {'type': 'Move', 'target': [3, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Magical Cure', 'quantity': 1}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Lizard Boots', 'quantity': 1}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [-1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Acolyte', 'quantity': 1}], 'is_ok': True}]

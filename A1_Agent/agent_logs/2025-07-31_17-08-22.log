@@ -1,0 +1,131 @@
+[17:08:22]: Overriding Voyager settings
+[17:08:22]: Overriding Voyager settings complete
+[17:08:22]: Injected items: "Gold Ring", "Diamond Amulet"
+[17:08:37]: Task to subtasks decomposition
+[17:08:37]: ############################## TASK -> SUBTASKS started##############################
+
+[17:08:44]: SUBTASKS
+[17:08:44]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Gold Ring', 'quantity': 1}, {'type': 'Craft', 'target': 'Diamond Amulet', 'quantity': 1}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]}
+        Plan critique (last known): 
+        The plan logically orders crafting before fighting, which is correct. The final subtask is the fight with the Cultist Emperor, fulfilling the high-level objective. However, the plan lacks consideration of combat readiness: the character currently has no equipment and only crafts a Gold Ring and a Diamond Amulet, but it is unclear if these items provide adequate damage or resistance to handle the Cultist Emperor, who has high air damage and resistance. Since the character has 0 air damage and the Cultist Emperor has 90 air resistance, the character will be ineffective offensively. Also, the character has low earth and water damage compared to the enemy's resistances. The plan does not include crafting or equipping any weapons or armor that could improve combat effectiveness, and the character's inventory is empty. Given the list of craftable items only includes Gold Ring and Diamond Amulet, and no weapons or armor, the plan cannot improve combat readiness. Therefore, the plan is not feasible for successful combat. There are no errors in resource calculation or logical order, but the plan fails on combat readiness.
+        PLAN PASSED:
+        False
+        
+[17:08:47]: SUBTASKS
+[17:08:47]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Gold Ring', 'quantity': 1}, {'type': 'Craft', 'target': 'Diamond Amulet', 'quantity': 1}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. The plan includes crafting 'Gold Ring' and 'Diamond Amulet' before fighting the Cultist Emperor, which is logical and ensures combat readiness. 2. The character currently has no equipment, so crafting these items is necessary. 3. The character's damage and resistance stats are suboptimal against the Cultist Emperor's high air damage and resistance, but since the crafted items are the only available gear, the plan is feasible. 4. The crafting quantities are correct and no nested crafting is required or indicated. 5. The final subtask is the fight against the Cultist Emperor, which directly fulfills the high-level objective. 6. The plan follows a logical order: craft necessary equipment first, then fight. Therefore, the plan is valid and feasible as per the given constraints.
+        PLAN PASSED:
+        True
+        
+[17:08:47]: ############################## TASK -> SUBTASKS ended ##############################
+
+[17:08:47]: Remaining task to subtasks decomposition attempts: 8
+[17:08:47]: 
+        Current plan (info):
+        [{'type': 'Craft', 'target': 'Gold Ring', 'quantity': 1}, {'type': 'Craft', 'target': 'Diamond Amulet', 'quantity': 1}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[17:08:47]: Subtasks to actions decomposition
+[17:08:47]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[17:08:58]: ACTIONS
+[17:08:58]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Gold ore', 'quantity': 64}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Gather', 'target': 'Dead Wood', 'quantity': 24}, {'type': 'Craft', 'target': 'Dead Wood Plank', 'quantity': 3}, {'type': 'Move', 'target': [-2, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Wolf', 'quantity': 3}, {'type': 'Move', 'target': [10, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Vampire', 'quantity': 3}, {'type': 'Move', 'target': [8, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Skeleton', 'quantity': 3}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Gold', 'quantity': 8}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Gold Ring', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: All Move commands correctly precede the corresponding Gather, Fight, or Craft commands, and the character moves to the correct locations for each action as per the game world data. 2. Resource and Monster Locations: The resources and monsters targeted for gathering and fighting exist at the specified locations in the plan. 3. Quantities: - Gather Gold ore: 64 units gathered, which is more than sufficient for crafting 8 Gold (each requires 8 Gold ore, so 8 Gold requires 64 Gold ore). - Gather Dead Wood: 24 units gathered, which is sufficient for crafting 3 Dead Wood Planks (each requires 8 Dead Wood, so 3 Planks require 24 Dead Wood). - Fight Wolf, Vampire, Skeleton: 3 times each, matching the required quantities for 3 Wolf Bone, 3 Vampire Blood, and 3 Skeleton Bone respectively. - Craft Dead Wood Plank: 3 units, matching the required quantity. - Craft Gold: 8 units, matching the required quantity. - Craft Gold Ring: 1 unit, matching the goal. 4. No Missing Steps: All necessary gathering, fighting, and crafting steps are included and in logical order. 5. Command Syntax: All commands follow the exact required syntax. Therefore, the plan is logically consistent, complete, and syntactically correct.'
+        PLAN PASSED:
+        True
+        
+[17:08:58]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[17:08:58]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Gold ore', 'quantity': 64}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Gather', 'target': 'Dead Wood', 'quantity': 24}, {'type': 'Craft', 'target': 'Dead Wood Plank', 'quantity': 3}, {'type': 'Move', 'target': [-2, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Wolf', 'quantity': 3}, {'type': 'Move', 'target': [10, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Vampire', 'quantity': 3}, {'type': 'Move', 'target': [8, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Skeleton', 'quantity': 3}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Gold', 'quantity': 8}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Gold Ring', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[17:08:58]: CHARACTER INTERMEDIATE STATE
+[17:08:58]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 35, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 35, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 1, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 35, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1535, 'attack_fire': 0, 'attack_earth': 20, 'attack_water': 60, 'attack_air': 0, 'dmg_fire': 37, 'dmg_earth': 35, 'dmg_water': 66, 'dmg_air': 0, 'res_fire': 29, 'res_earth': 13, 'res_water': 29, 'res_air': 21, 'x': 0, 'y': 0, 'weapon_slot': 'greater_dreadful_staff', 'shield_slot': 'gold_shield', 'helmet_slot': 'lich_crown', 'body_armor_slot': 'lizard_skin_armor', 'leg_armor_slot': 'lizard_skin_legs_armor', 'boots_slot': 'lizard_boots', 'ring1_slot': '', 'ring2_slot': 'sapphire_ring', 'amulet_slot': '', 'artifact1_slot': 'life_crystal', 'artifact2_slot': 'life_crystal', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[17:08:58]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[17:09:16]: ACTIONS
+[17:09:16]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [-5, -4], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Acolyte', 'quantity': 5}, {'type': 'Move', 'target': [1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Demon', 'quantity': 20}, {'type': 'Move', 'target': [0, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Imp', 'quantity': 8}, {'type': 'Move', 'target': [-1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Diamond', 'quantity': 1}, {'type': 'Move', 'target': [3, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Magical Cure', 'quantity': 2}, {'type': 'Move', 'target': [-3, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Magic Wood', 'quantity': 40}, {'type': 'Move', 'target': [9, 8], 'quantity': None}, {'type': 'Gather', 'target': 'Dead Wood', 'quantity': 24}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Craft', 'target': 'Magical Plank', 'quantity': 8}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Obsidian', 'quantity': 5}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Diamond Amulet', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: All Move commands correctly precede the corresponding Gather, Fight, or Craft commands, and the character moves to the correct tile for each action. For example, the character moves to (-5, -4) before fighting Cultist Acolyte, which is incorrect because Cultist Acolyte is located at (-1, 13). Similarly, the character moves to (1, 13) before fighting Demon, which is correct. The character moves to (0, 13) before fighting Imp, which is correct. The character moves to (-1, 7) before gathering Diamond, which is correct. The character moves to (3, 6) before gathering Magical Cure, which is correct. The character moves to (-3, 7) before gathering Magic Wood, which is correct. The character moves to (9, 8) before gathering Dead Wood, which is correct. The character moves to (-2, -3) before crafting Magical Plank, which is correct. The character moves to (1, 5) before crafting Obsidian, which is correct. The character moves to (1, 3) before crafting Diamond Amulet, which is correct. However, the first Move command to (-5, -4) is incorrect for fighting Cultist Acolyte, which is at (-1, 13). This violates subtask 2 (Position Requirements).
+
+2. Quantities: The quantities for fighting Cultist Acolyte (5), Demon (20), and Imp (8) are not verified against the required quantities of Cursed Book (4), Piece of Obsidian (4 from Demon and Imp combined), and other drops. The plan fights 5 Cultist Acolytes but only needs 4 Cursed Books, which is sufficient. The plan fights 20 Demons and 8 Imps, which should yield enough Piece of Obsidian (each drops Piece of Obsidian) to craft 5 Obsidian (each requires 4 Piece of Obsidian, total 20). The quantities for gathering Diamond (1), Magical Cure (2), Magic Wood (40), and Dead Wood (24) are sufficient to meet crafting requirements (Magical Plank requires 3 Dead Wood and 5 Magic Wood per plank, 8 planks total require 24 Dead Wood and 40 Magic Wood). Crafting quantities for Magical Plank (8), Obsidian (5), and Diamond Amulet (1) are correct.
+
+3. Command Syntax: All commands follow the correct syntax as per the specification.
+
+4. No Missing Steps: The plan does not include gathering Dead Wood and Magic Wood before crafting Magical Plank, which is correct. It also includes fighting monsters to obtain required drops before crafting Obsidian and Cursed Book. However, the initial Move to (-5, -4) before fighting Cultist Acolyte is incorrect and may cause failure to fight the correct monster. This is a missing step in moving to the correct monster location.
+
+Summary: The main issue is the incorrect initial Move command to (-5, -4) before fighting Cultist Acolyte, which is located at (-1, 13). This violates position requirements and may cause the fight to fail. Other than that, quantities, syntax, and steps are correct.
+        PLAN PASSED:
+        False
+        
+[17:09:34]: ACTIONS
+[17:09:34]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [-1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Acolyte', 'quantity': 4}, {'type': 'Move', 'target': [1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Demon', 'quantity': 20}, {'type': 'Move', 'target': [-1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Diamond', 'quantity': 1}, {'type': 'Move', 'target': [3, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Magical Cure', 'quantity': 2}, {'type': 'Move', 'target': [-3, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Magic Wood', 'quantity': 40}, {'type': 'Move', 'target': [9, 8], 'quantity': None}, {'type': 'Gather', 'target': 'Dead Wood', 'quantity': 24}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Craft', 'target': 'Magical Plank', 'quantity': 8}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Obsidian', 'quantity': 5}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Diamond Amulet', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: All Move commands correctly precede the corresponding Gather, Fight, or Craft commands, and the character moves to the exact locations where resources, monsters, or workshops are located as per the game world data. 2. Resource and Monster Locations: The resources "Diamond" at (-1,7), "Magical Cure" at (3,6), "Magic Wood" at (-3,7), and "Dead Wood" at (9,8) are correctly targeted at their respective locations. The monsters "Cultist Acolyte" at (-1,13) and "Demon" at (1,13) are correctly targeted for fighting at their locations. Workshops for crafting "Magical Plank" at (-2,-3), "Obsidian" at (1,5), and "Diamond Amulet" at (1,3) are correctly targeted. 3. Quantities: The quantities gathered and crafted match the required amounts for crafting 1 Diamond Amulet: 8 Magical Planks, 1 Diamond, 5 Obsidians, 4 Cursed Books (from fighting 4 Cultist Acolytes), 2 Magical Cures. The gather quantities for Magic Wood (40) and Dead Wood (24) are sufficient to craft 8 Magical Planks (each requiring 3 Dead Wood and 5 Magic Wood, total 24 Dead Wood and 40 Magic Wood). The fight quantities for monsters match the required drops (4 Cultist Acolytes for 4 Cursed Books, 20 Demons for 20 Pieces of Obsidian to craft 5 Obsidians). 4. No Missing Steps: All necessary gathering, fighting, and crafting steps are included in the correct order with no missing prerequisites. 5. Command Syntax: All commands strictly follow the required syntax: Move [X] [Y], Gather [resource name] [quantity], Craft [item name] [quantity], Fight [monster name] [quantity]. No Equip commands are present, which is acceptable. Overall, the plan is logically consistent, complete, and syntactically correct.
+        PLAN PASSED:
+        True
+        
+[17:09:34]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[17:09:34]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [-1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Acolyte', 'quantity': 4}, {'type': 'Move', 'target': [1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Demon', 'quantity': 20}, {'type': 'Move', 'target': [-1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Diamond', 'quantity': 1}, {'type': 'Move', 'target': [3, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Magical Cure', 'quantity': 2}, {'type': 'Move', 'target': [-3, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Magic Wood', 'quantity': 40}, {'type': 'Move', 'target': [9, 8], 'quantity': None}, {'type': 'Gather', 'target': 'Dead Wood', 'quantity': 24}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Craft', 'target': 'Magical Plank', 'quantity': 8}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Obsidian', 'quantity': 5}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Diamond Amulet', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[17:09:34]: CHARACTER INTERMEDIATE STATE
+[17:09:34]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 35, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 35, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 1, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 35, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1535, 'attack_fire': 0, 'attack_earth': 20, 'attack_water': 60, 'attack_air': 0, 'dmg_fire': 37, 'dmg_earth': 35, 'dmg_water': 66, 'dmg_air': 0, 'res_fire': 29, 'res_earth': 13, 'res_water': 29, 'res_air': 21, 'x': 0, 'y': 0, 'weapon_slot': 'greater_dreadful_staff', 'shield_slot': 'gold_shield', 'helmet_slot': 'lich_crown', 'body_armor_slot': 'lizard_skin_armor', 'leg_armor_slot': 'lizard_skin_legs_armor', 'boots_slot': 'lizard_boots', 'ring1_slot': '', 'ring2_slot': 'sapphire_ring', 'amulet_slot': '', 'artifact1_slot': 'life_crystal', 'artifact2_slot': 'life_crystal', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[17:09:34]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[17:09:39]: ACTIONS
+[17:09:39]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [-2, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: The plan correctly moves the character to the tile (-2, 13) where the Cultist Emperor is located before the fight, satisfying the movement and position requirements for fighting.
+2. Resource/Workshop/Monster Existence: The Cultist Emperor monster exists at location (-2, 13) as specified.
+3. Correct Quantities: The fight quantity is 1, which matches the high-level objective to fight the Cultist Emperor once.
+4. No Missing Steps: Since the inventory is empty and no gathering or crafting is required for this task, no missing steps are detected.
+5. Command Syntax: The commands "Move -2 13" and "Fight Cultist Emperor 1" follow the exact required syntax.
+
+Overall, the plan is logically consistent, complete, and syntactically correct for the given objective.
+        PLAN PASSED:
+        True
+        
+[17:09:39]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[17:09:39]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [-2, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[17:09:39]: CHARACTER INTERMEDIATE STATE
+[17:09:39]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 35, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 35, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 1, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 35, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1535, 'attack_fire': 0, 'attack_earth': 20, 'attack_water': 60, 'attack_air': 0, 'dmg_fire': 37, 'dmg_earth': 35, 'dmg_water': 66, 'dmg_air': 0, 'res_fire': 29, 'res_earth': 13, 'res_water': 29, 'res_air': 21, 'x': 0, 'y': 0, 'weapon_slot': 'greater_dreadful_staff', 'shield_slot': 'gold_shield', 'helmet_slot': 'lich_crown', 'body_armor_slot': 'lizard_skin_armor', 'leg_armor_slot': 'lizard_skin_legs_armor', 'boots_slot': 'lizard_boots', 'ring1_slot': '', 'ring2_slot': 'sapphire_ring', 'amulet_slot': '', 'artifact1_slot': 'life_crystal', 'artifact2_slot': 'life_crystal', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[17:09:39]: CHARACTER FINAL STATE
+[17:09:39]: {'name': 'Hero', 'skin': 'men1', 'level': 40, 'xp': 0, 'max_xp': 150, 'mining_level': 35, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 35, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 1, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 35, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 1535, 'attack_fire': 0, 'attack_earth': 20, 'attack_water': 60, 'attack_air': 0, 'dmg_fire': 37, 'dmg_earth': 35, 'dmg_water': 66, 'dmg_air': 0, 'res_fire': 29, 'res_earth': 13, 'res_water': 29, 'res_air': 21, 'x': 0, 'y': 0, 'weapon_slot': 'greater_dreadful_staff', 'shield_slot': 'gold_shield', 'helmet_slot': 'lich_crown', 'body_armor_slot': 'lizard_skin_armor', 'leg_armor_slot': 'lizard_skin_legs_armor', 'boots_slot': 'lizard_boots', 'ring1_slot': '', 'ring2_slot': 'sapphire_ring', 'amulet_slot': '', 'artifact1_slot': 'life_crystal', 'artifact2_slot': 'life_crystal', 'artifact3_slot': 'life_crystal', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[17:09:39]: Actions chain: [{'subtasks': [{'type': 'Move', 'target': [10, -4], 'quantity': None}, {'type': 'Gather', 'target': 'Gold ore', 'quantity': 64}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Gather', 'target': 'Dead Wood', 'quantity': 24}, {'type': 'Craft', 'target': 'Dead Wood Plank', 'quantity': 3}, {'type': 'Move', 'target': [-2, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Wolf', 'quantity': 3}, {'type': 'Move', 'target': [10, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Vampire', 'quantity': 3}, {'type': 'Move', 'target': [8, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Skeleton', 'quantity': 3}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Gold', 'quantity': 8}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Gold Ring', 'quantity': 1}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [-1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Acolyte', 'quantity': 4}, {'type': 'Move', 'target': [1, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Demon', 'quantity': 20}, {'type': 'Move', 'target': [-1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Diamond', 'quantity': 1}, {'type': 'Move', 'target': [3, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Magical Cure', 'quantity': 2}, {'type': 'Move', 'target': [-3, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Magic Wood', 'quantity': 40}, {'type': 'Move', 'target': [9, 8], 'quantity': None}, {'type': 'Gather', 'target': 'Dead Wood', 'quantity': 24}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Craft', 'target': 'Magical Plank', 'quantity': 8}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Obsidian', 'quantity': 5}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Diamond Amulet', 'quantity': 1}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [-2, 13], 'quantity': None}, {'type': 'Fight', 'target': 'Cultist Emperor', 'quantity': 1}], 'is_ok': True}]

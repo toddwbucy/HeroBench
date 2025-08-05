@@ -1,0 +1,150 @@
+[16:45:25]: Overriding Voyager settings
+[16:45:25]: Overriding Voyager settings complete
+[16:45:25]: Injected items: "Skeleton Pants", "Fire Ring"
+[16:45:42]: Task to subtasks decomposition
+[16:45:42]: ############################## TASK -> SUBTASKS started##############################
+
+[16:45:50]: SUBTASKS
+[16:45:50]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Craft', 'target': 'Skeleton Pants', 'quantity': 1}, {'type': 'Craft', 'target': 'Fire Ring', 'quantity': 1}, {'type': 'Fight', 'target': 'Vampire', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Combat readiness: The Vampire has 60 points of Air damage and 60% Air resistance, while the character has 0 Air damage and only 19% Air resistance. The character has 40 Fire damage and 19% Fire resistance, but the Vampire has 24% Fire resistance and 24 Fire damage. The crafted items are "Skeleton Pants" and "Fire Ring". Since the character has no Air damage and the Vampire has high Air resistance, the character is not well-equipped to deal effective damage. However, the plan does not include crafting any Air damage equipment, and none is craftable. 2. Logical order: The plan crafts "Skeleton Pants" and "Fire Ring" before fighting the Vampire, which is logically correct. 3. Final goal is last: The last subtask is to fight the Vampire, which directly fulfills the high-level objective. 4. Crafting resource accuracy: The plan only includes crafting "Skeleton Pants" and "Fire Ring" with quantity 1 each, which is consistent with the inventory being empty and no nested crafting required. Overall, the plan is logically ordered and ends with the fight, but the character lacks adequate Air damage or Air resistance to effectively fight the Vampire. However, given the constraints and available craftable items, the plan is feasible as no better equipment is available.
+        PLAN PASSED:
+        True
+        
+[16:45:50]: ############################## TASK -> SUBTASKS ended ##############################
+
+[16:45:50]: Remaining task to subtasks decomposition attempts: 9
+[16:45:50]: 
+        Current plan (info):
+        [{'type': 'Craft', 'target': 'Skeleton Pants', 'quantity': 1}, {'type': 'Craft', 'target': 'Fire Ring', 'quantity': 1}, {'type': 'Fight', 'target': 'Vampire', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:45:50]: Subtasks to actions decomposition
+[16:45:50]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[16:46:02]: ACTIONS
+[16:46:02]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [-2, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Wolf', 'quantity': 3}, {'type': 'Fight', 'target': 'Wolf', 'quantity': 2}, {'type': 'Move', 'target': [8, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Skeleton', 'quantity': 3}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Move', 'target': [6, 1], 'quantity': None}, {'type': 'Gather', 'target': 'Ash Wood', 'quantity': 9}, {'type': 'Move', 'target': [-1, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Birch Wood', 'quantity': 15}, {'type': 'Craft', 'target': 'Hardwood Plank', 'quantity': 7}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Skeleton Pants', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: The plan correctly moves the character to the locations of the Wolf (-2,1) and Skeleton (8,8) monsters before fighting, satisfying the fight position requirements. It also moves to the Ash Wood location (6,1) and Birch Wood location (-1,6) before gathering, which matches the resource locations. The character moves to the Woodcutting workshop (-2,-3) before crafting Hardwood Plank, and finally to the Gearcrafting workshop (3,1) before crafting Skeleton Pants, which is correct.
+
+2. Quantities and Resource Requirements: The plan fights Wolf 3 times and then 2 times more, totaling 5 fights. However, only 3 Wolf Bones and 2 Wolf Hairs are required for Skeleton Pants, so fighting 5 Wolves is more than sufficient (no issue here). The plan fights Skeleton 3 times, which matches the 3 Skeleton Bones required.
+
+For gathering Ash Wood and Birch Wood, the plan gathers 9 Ash Wood and 15 Birch Wood. Crafting 7 Hardwood Planks requires 3 Ash Wood and 5 Birch Wood each, so for 7 planks, 21 Ash Wood and 35 Birch Wood are needed. The gathered quantities are insufficient for crafting 7 Hardwood Planks.
+
+3. Command Syntax: The commands in the plan do not follow the exact required syntax. The plan uses a dictionary format with keys like "type", "target", and "quantity" instead of the strict command syntax:
+- Move [X] [Y]
+- Gather [resource name] [quantity]
+- Craft [item name] [quantity]
+- Fight [monster name] [quantity]
+- Equip [item name] [quantity]
+
+For example, "Move [-2, 1]" should be "Move -2 1". Similarly, "Fight" and "Gather" commands must follow the exact syntax.
+
+4. No Missing Steps: The plan does not include gathering or fighting for Wolf Bone or Wolf Hair explicitly; it only fights Wolves. Since these items drop from Wolves, this is acceptable. However, the plan does not gather or craft the required quantities of Ash Wood and Birch Wood to produce 7 Hardwood Planks, which is a missing step or insufficient quantity.
+
+Summary: The plan has correct movement and position steps and sufficient fighting quantities. However, it gathers insufficient Ash Wood and Birch Wood for crafting Hardwood Planks. Also, the command syntax does not follow the strict required format, which is a critical issue.
+        PLAN PASSED:
+        False
+        
+[16:46:13]: ACTIONS
+[16:46:13]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [-2, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Wolf', 'quantity': 3}, {'type': 'Move', 'target': [8, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Skeleton', 'quantity': 3}, {'type': 'Move', 'target': [6, 1], 'quantity': None}, {'type': 'Gather', 'target': 'Ash Wood', 'quantity': 21}, {'type': 'Move', 'target': [-1, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Birch Wood', 'quantity': 35}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Craft', 'target': 'Hardwood Plank', 'quantity': 7}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Skeleton Pants', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: All Move commands correctly precede the corresponding Fight, Gather, or Craft commands, and the character moves to the correct locations where the resources, monsters, or workshops are located. Specifically, the character moves to (-2,1) before fighting Wolves, (8,8) before fighting Skeletons, (6,1) before gathering Ash Wood, (-1,6) before gathering Birch Wood, (-2,-3) before crafting Hardwood Planks, and (3,1) before crafting Skeleton Pants. 2. Resource and Monster Locations: The locations for resources and monsters match the game world data. Wolves are at (-2,1), Skeletons at (8,8), Ash Wood at (6,1), Birch Wood at (-1,6), Hardwood Plank crafted at (-2,-3), and Skeleton Pants crafted at (3,1). 3. Quantities: The quantities gathered and crafted are sufficient and consistent with the requirements. For Hardwood Plank, 7 units are crafted, which requires 21 Ash Wood and 35 Birch Wood gathered (3 Ash Wood and 5 Birch Wood per Hardwood Plank times 7). For Skeleton Pants, 1 unit is crafted requiring 3 Wolf Bone, 3 Skeleton Bone, 2 Wolf Hair, and 7 Hardwood Plank. The plan includes fighting 3 Wolves and 3 Skeletons to obtain the required bones and hair. 4. Command Syntax: All commands follow the exact required syntax: Move X Y, Fight monster quantity, Gather resource quantity, Craft item quantity. 5. No Missing Steps: The plan includes all necessary steps: fighting monsters to obtain bones and hair, gathering wood resources, crafting Hardwood Planks, and finally crafting Skeleton Pants. The inventory starts empty, and all required materials are obtained through the plan. Therefore, the plan is logically consistent and executable as per the game mechanics.
+        PLAN PASSED:
+        True
+        
+[16:46:13]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[16:46:13]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [-2, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Wolf', 'quantity': 3}, {'type': 'Move', 'target': [8, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Skeleton', 'quantity': 3}, {'type': 'Move', 'target': [6, 1], 'quantity': None}, {'type': 'Gather', 'target': 'Ash Wood', 'quantity': 21}, {'type': 'Move', 'target': [-1, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Birch Wood', 'quantity': 35}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Craft', 'target': 'Hardwood Plank', 'quantity': 7}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Skeleton Pants', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:46:13]: CHARACTER INTERMEDIATE STATE
+[16:46:13]: {'name': 'Hero', 'skin': 'men1', 'level': 25, 'xp': 0, 'max_xp': 150, 'mining_level': 10, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 20, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 20, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 15, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 620, 'attack_fire': 40, 'attack_earth': 0, 'attack_water': 0, 'attack_air': 0, 'dmg_fire': 57, 'dmg_earth': 10, 'dmg_water': 10, 'dmg_air': 37, 'res_fire': 19, 'res_earth': 14, 'res_water': 20, 'res_air': 19, 'x': 0, 'y': 0, 'weapon_slot': 'skull_staff', 'shield_slot': 'steel_shield', 'helmet_slot': 'steel_helm', 'body_armor_slot': 'skeleton_armor', 'leg_armor_slot': 'steel_legs_armor', 'boots_slot': 'adventurer_boots', 'ring1_slot': '', 'ring2_slot': 'skull_ring', 'amulet_slot': 'skull_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': '', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:46:13]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[16:46:25]: ACTIONS
+[16:46:25]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Iron Ore', 'quantity': 40}, {'type': 'Move', 'target': [2, -1], 'quantity': None}, {'type': 'Fight', 'target': 'Red Slime', 'quantity': 4}, {'type': 'Move', 'target': [7, 4], 'quantity': None}, {'type': 'Fight', 'target': 'Flying Serpent', 'quantity': 3}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Iron', 'quantity': 5}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Fire Ring', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: All Move commands correctly position the character before each Gather, Fight, or Craft action. The character moves to (1,7) before gathering Iron Ore, which is correct. Then moves to (2,-1) before fighting Red Slime, which is incorrect because Red Slime is located at (1,-1) and (2,-2), but not at (2,-1). The monster at (2,-1) is Blue Slime, not Red Slime. The character then moves to (7,4) before fighting Flying Serpent, which is correct. Moves to (1,5) before crafting Iron, which is correct (Mining workshop at 1,5). Moves to (1,3) before crafting Fire Ring, which is correct (Jewelrycrafting workshop at 1,3).
+
+2. Position Requirements for Fight: The Fight Red Slime action requires the character to be on the tile where the Red Slime is located. Red Slime is at (1,-1) and (2,-2), but the character moves to (2,-1) before fighting, which is invalid. The character must move to either (1,-1) or (2,-2) to fight Red Slime.
+
+3. Correct Quantities: Gathering 40 Iron Ore is sufficient to craft 5 Iron (each Iron requires 8 Iron Ore, so 5 Iron requires 40 Iron Ore). Fighting 4 Red Slime is sufficient to collect 4 Red Slimeballs. Fighting 3 Flying Serpent is sufficient to collect 3 Flying Wings. Crafting 5 Iron and 1 Fire Ring matches the requirements.
+
+4. Command Syntax: All commands follow the correct syntax.
+
+5. No Missing Steps: The plan does not include gathering Red Slimeballs explicitly but fights Red Slime to obtain them, which is correct. The plan does not gather Flying Wings but fights Flying Serpent to obtain them, which is correct. The plan does not gather Iron directly but crafts Iron from Iron Ore, which is correct.
+
+Summary: The main issue is the incorrect Move position before fighting Red Slime. The character must move to a tile where Red Slime is actually located (either (1,-1) or (2,-2)) before fighting. Other than that, the plan is valid.
+        PLAN PASSED:
+        False
+        
+[16:46:33]: ACTIONS
+[16:46:33]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Iron Ore', 'quantity': 40}, {'type': 'Move', 'target': [1, -1], 'quantity': None}, {'type': 'Fight', 'target': 'Red Slime', 'quantity': 4}, {'type': 'Move', 'target': [7, 4], 'quantity': None}, {'type': 'Fight', 'target': 'Flying Serpent', 'quantity': 3}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Iron', 'quantity': 5}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Fire Ring', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: All Move commands correctly position the character before each Gather, Fight, or Craft action. The character moves to (1,7) before gathering Iron Ore, to (1,-1) before fighting Red Slime, to (7,4) before fighting Flying Serpent, to (1,5) before crafting Iron, and to (1,3) before crafting Fire Ring, matching the required locations.
+2. Resource and Monster Locations: Iron Ore is gathered at (1,7) from Iron Rocks, which is correct. Red Slime is fought at (1,-1), which matches the monster location. Flying Serpent is fought at (7,4), which is correct. Iron is crafted at (1,5) (Mining workshop), and Fire Ring is crafted at (1,3) (Jewelrycrafting workshop), both correct.
+3. Quantities: The plan gathers 40 Iron Ore, which is sufficient to craft 5 Iron (each Iron requires 8 Iron Ore, total 40). The plan fights 4 Red Slimes to obtain 4 Red Slimeballs, and 3 Flying Serpents to obtain 3 Flying Wings, matching the required quantities for crafting the Fire Ring. The crafting quantities are correct: 5 Iron and 1 Fire Ring.
+4. Command Syntax: All commands follow the exact required syntax.
+5. No Missing Steps: The plan includes all necessary gathering, fighting, and crafting steps with correct movements and quantities. Inventory starts empty, so all materials are gathered or fought for before crafting.
+
+Overall, the plan is logically consistent, complete, and syntactically correct.
+        PLAN PASSED:
+        True
+        
+[16:46:33]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[16:46:33]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Iron Ore', 'quantity': 40}, {'type': 'Move', 'target': [1, -1], 'quantity': None}, {'type': 'Fight', 'target': 'Red Slime', 'quantity': 4}, {'type': 'Move', 'target': [7, 4], 'quantity': None}, {'type': 'Fight', 'target': 'Flying Serpent', 'quantity': 3}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Iron', 'quantity': 5}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Fire Ring', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:46:33]: CHARACTER INTERMEDIATE STATE
+[16:46:33]: {'name': 'Hero', 'skin': 'men1', 'level': 25, 'xp': 0, 'max_xp': 150, 'mining_level': 10, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 20, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 20, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 15, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 620, 'attack_fire': 40, 'attack_earth': 0, 'attack_water': 0, 'attack_air': 0, 'dmg_fire': 57, 'dmg_earth': 10, 'dmg_water': 10, 'dmg_air': 37, 'res_fire': 19, 'res_earth': 14, 'res_water': 20, 'res_air': 19, 'x': 0, 'y': 0, 'weapon_slot': 'skull_staff', 'shield_slot': 'steel_shield', 'helmet_slot': 'steel_helm', 'body_armor_slot': 'skeleton_armor', 'leg_armor_slot': 'steel_legs_armor', 'boots_slot': 'adventurer_boots', 'ring1_slot': '', 'ring2_slot': 'skull_ring', 'amulet_slot': 'skull_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': '', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:46:33]: ############################## SUBTASKS -> ACTIONS started##############################
+
+[16:46:37]: ACTIONS
+[16:46:37]: 
+        Current plan (info):
+        {'subtasks': [{'type': 'Move', 'target': [10, 6], 'quantity': None}, {'type': 'Fight', 'target': 'Vampire', 'quantity': 1}]}
+        Plan critique (last known): 
+        1. Movement Accuracy and Position Requirements: The plan includes moving to (10, 6) and then fighting the Vampire. The Vampire is located at (10, 6), so the movement is correct before the fight action. 2. Resource/Workshop/Monster Existence: The Vampire monster exists at (10, 6) as specified. 3. Correct Quantities: The fight quantity is 1, which matches the goal to fight Vampire 1 time. 4. No Missing Steps: Since the inventory is empty and no crafting or gathering is required for this task, no missing steps are detected. 5. Command Syntax: The commands are not explicitly provided in the input, but the subtasks are Move to (10, 6) and Fight Vampire 1, which correspond to the correct syntax: "Move 10 6" and "Fight Vampire 1". Overall, the plan meets all the validation criteria for the given objective.
+        PLAN PASSED:
+        True
+        
+[16:46:37]: ############################## SUBTASKS -> ACTIONS ended ##############################
+
+[16:46:37]: 
+        Current plan (info):
+        [{'type': 'Move', 'target': [10, 6], 'quantity': None}, {'type': 'Fight', 'target': 'Vampire', 'quantity': 1}]
+        Plan critique (last known): 
+        Critique not available for this plan
+        PLAN PASSED:
+        True
+        
+[16:46:37]: CHARACTER INTERMEDIATE STATE
+[16:46:37]: {'name': 'Hero', 'skin': 'men1', 'level': 25, 'xp': 0, 'max_xp': 150, 'mining_level': 10, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 20, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 20, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 15, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 620, 'attack_fire': 40, 'attack_earth': 0, 'attack_water': 0, 'attack_air': 0, 'dmg_fire': 57, 'dmg_earth': 10, 'dmg_water': 10, 'dmg_air': 37, 'res_fire': 19, 'res_earth': 14, 'res_water': 20, 'res_air': 19, 'x': 0, 'y': 0, 'weapon_slot': 'skull_staff', 'shield_slot': 'steel_shield', 'helmet_slot': 'steel_helm', 'body_armor_slot': 'skeleton_armor', 'leg_armor_slot': 'steel_legs_armor', 'boots_slot': 'adventurer_boots', 'ring1_slot': '', 'ring2_slot': 'skull_ring', 'amulet_slot': 'skull_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': '', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:46:37]: CHARACTER FINAL STATE
+[16:46:37]: {'name': 'Hero', 'skin': 'men1', 'level': 25, 'xp': 0, 'max_xp': 150, 'mining_level': 10, 'mining_xp': 0, 'mining_max_xp': 150, 'woodcutting_level': 20, 'woodcutting_xp': 0, 'woodcutting_max_xp': 150, 'fishing_level': 1, 'fishing_xp': 0, 'fishing_max_xp': 150, 'weaponcrafting_level': 1, 'weaponcrafting_xp': 0, 'weaponcrafting_max_xp': 150, 'gearcrafting_level': 20, 'gearcrafting_xp': 0, 'gearcrafting_max_xp': 150, 'jewelrycrafting_level': 15, 'jewelrycrafting_xp': 0, 'jewelrycrafting_max_xp': 150, 'cooking_level': 1, 'cooking_xp': 0, 'cooking_max_xp': 150, 'hp': 620, 'attack_fire': 40, 'attack_earth': 0, 'attack_water': 0, 'attack_air': 0, 'dmg_fire': 57, 'dmg_earth': 10, 'dmg_water': 10, 'dmg_air': 37, 'res_fire': 19, 'res_earth': 14, 'res_water': 20, 'res_air': 19, 'x': 0, 'y': 0, 'weapon_slot': 'skull_staff', 'shield_slot': 'steel_shield', 'helmet_slot': 'steel_helm', 'body_armor_slot': 'skeleton_armor', 'leg_armor_slot': 'steel_legs_armor', 'boots_slot': 'adventurer_boots', 'ring1_slot': '', 'ring2_slot': 'skull_ring', 'amulet_slot': 'skull_amulet', 'artifact1_slot': '', 'artifact2_slot': '', 'artifact3_slot': '', 'consumable1_slot': '', 'consumable1_slot_quantity': 0, 'consumable2_slot': '', 'consumable2_slot_quantity': 0, 'inventory': []}
+[16:46:37]: Actions chain: [{'subtasks': [{'type': 'Move', 'target': [-2, 1], 'quantity': None}, {'type': 'Fight', 'target': 'Wolf', 'quantity': 3}, {'type': 'Move', 'target': [8, 8], 'quantity': None}, {'type': 'Fight', 'target': 'Skeleton', 'quantity': 3}, {'type': 'Move', 'target': [6, 1], 'quantity': None}, {'type': 'Gather', 'target': 'Ash Wood', 'quantity': 21}, {'type': 'Move', 'target': [-1, 6], 'quantity': None}, {'type': 'Gather', 'target': 'Birch Wood', 'quantity': 35}, {'type': 'Move', 'target': [-2, -3], 'quantity': None}, {'type': 'Craft', 'target': 'Hardwood Plank', 'quantity': 7}, {'type': 'Move', 'target': [3, 1], 'quantity': None}, {'type': 'Craft', 'target': 'Skeleton Pants', 'quantity': 1}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [1, 7], 'quantity': None}, {'type': 'Gather', 'target': 'Iron Ore', 'quantity': 40}, {'type': 'Move', 'target': [1, -1], 'quantity': None}, {'type': 'Fight', 'target': 'Red Slime', 'quantity': 4}, {'type': 'Move', 'target': [7, 4], 'quantity': None}, {'type': 'Fight', 'target': 'Flying Serpent', 'quantity': 3}, {'type': 'Move', 'target': [1, 5], 'quantity': None}, {'type': 'Craft', 'target': 'Iron', 'quantity': 5}, {'type': 'Move', 'target': [1, 3], 'quantity': None}, {'type': 'Craft', 'target': 'Fire Ring', 'quantity': 1}], 'is_ok': True}, {'subtasks': [{'type': 'Move', 'target': [10, 6], 'quantity': None}, {'type': 'Fight', 'target': 'Vampire', 'quantity': 1}], 'is_ok': True}]
