@@ -136,7 +136,13 @@ uvicorn main:app --host 127.0.0.1 --port 8000
 - `openai==1.42.0` - OpenAI API client
 - `python-dotenv==1.0.1` - Environment variable management
 - `strictjson==6.1.1` - Structured JSON output from LLMs
-- `jupyter` - Interactive notebooks
+
+#### A2 Agent Dependecies
+- `taskgen-ai==4.0.1` - Main framework used to build A2 agentic system
+- `openai==1.59.9` - OpenAI API client
+- `python-dotenv==1.0.1` - Environment variable management
+- `requests==2.32.3` - HTTP client for API calls
+- `strictjson==6.1.1` - Structured JSON output from LLMs
 
 #### Virtual Environment Dependencies
 - `fastapi==0.116.1` - Web framework
@@ -185,6 +191,27 @@ ArtifactsBench/
 │   │   └── state_parse.py             # State parsing utilities
 │   │
 │   └── results/                       # Execution results
+│
+├── A2_Agent/
+│   ├── agent_demo.ipynb                 # Interactive demo notebook
+│   ├── requirements.txt                 # Python dependencies
+│   │
+│   ├── agent/                           # Agent implementations
+│   │   ├── agent.py                     # Main A2 agents system implementation
+│   │   ├── task_knowledge.py            # Contains environment instance knowledge getters
+│   │   └── agents_description/          # Agent prompts and functions to get task-dependent prompts
+│   │
+│   ├── utils/                           # Utility modules
+│   │   ├── api.py                       # ArtifactsMMO API implementation
+│   │   ├── crafting_tree.py             # Crafting tree generation for reward calculation
+│   │   ├── reward.py                    # Reward calculation for task evaluation
+│   │   └── data/                        # Contains environment data
+│   │
+│   ├── tasks/                           # Task datasets storage
+│   │   └── combined_tasks8_small.json   # Standard dataset in a JSON format
+│   │
+│   └── results/                         # Execution results storage
+│       └── [generated during execution]
 │
 └── Virtual_Environment/               # Game world simulation
     ├── FastApi_Redis_Ver/             # Redis-based implementation

@@ -12,4 +12,7 @@ Virtual_Environment/FastApi_SQLite_Ver/artifact.db
 /Virtual_Environment/FastApi_Redis_Ver/app/routers/backend/__pycache__
 Virtual_Environment/test_main.http
 /A1_Agent/.idea
-A1_Agent/.env
+/A1_Agent/.env
+/A2_Agent/.env
+/A2_Agent/agent/__pycache__
+/A2_Agent/agent/agents_description/__pycache__
