@@ -306,3 +306,4 @@ http-client.private.env.json
 .idea/.cache/.Apifox_Helper
 .idea/ApifoxUploaderProjectSetting.xml
 
+Virtual_Environment/FastApi_SQLite_Ver/artifact.db-journal
