@@ -474,6 +474,7 @@ async def action_crafting(
         error_missing_items = character.get_missing_items_for_craft(needed_items_for_craft, quantity)
         info = {
             "errors": errors,
+            "item": current_craft.code,
             "workshop": error_workshop,
             "skill_level": error_skill_level,
             "missing_items": error_missing_items
