@@ -1,0 +1,3260 @@
+{
+  "1": {
+    "1_Gold_craft": {
+      "difficulty": 3,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        1522
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        2
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "2_Spruce Plank_craft": {
+      "difficulty": 3,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        1428
+      ],
+      "rewards": [
+        2
+      ],
+      "ideal_rewards": [
+        2
+      ],
+      "scores": [
+        100.0
+      ]
+    },
+    "3_Hardwood Plank_craft": {
+      "difficulty": 4,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        1873
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        3
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "4_Wooden Staff_craft": {
+      "difficulty": 4,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        1803
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        3
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "5_Cultist Emperor_kill": {
+      "difficulty": 5,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        4314
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        4
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "6_Copper Ring_craft": {
+      "difficulty": 5,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        1745
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        3
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "7_Fire Staff_craft": {
+      "difficulty": 6,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        2103
+      ],
+      "rewards": [
+        4
+      ],
+      "ideal_rewards": [
+        4
+      ],
+      "scores": [
+        100.0
+      ]
+    },
+    "8_Greater Wooden Staff_craft": {
+      "difficulty": 6,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        2491
+      ],
+      "rewards": [
+        4
+      ],
+      "ideal_rewards": [
+        4
+      ],
+      "scores": [
+        100.0
+      ]
+    },
+    "9_Life Ring_craft": {
+      "difficulty": 7,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        2095
+      ],
+      "rewards": [
+        5
+      ],
+      "ideal_rewards": [
+        5
+      ],
+      "scores": [
+        100.0
+      ]
+    },
+    "10_Fire Ring_craft": {
+      "difficulty": 7,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        2212
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        5
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "11_Mushstaff_craft": {
+      "difficulty": 8,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        2418
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        6
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "12_Reaper_kill": {
+      "difficulty": 8,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        3487
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        6
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "13_Cultist Emperor_kill": {
+      "difficulty": 9,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        5033
+      ],
+      "rewards": [
+        10
+      ],
+      "ideal_rewards": [
+        10
+      ],
+      "scores": [
+        100.0
+      ]
+    },
+    "14_Cultist Emperor_kill": {
+      "difficulty": 9,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        6398
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        7
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "15_Cultist Emperor_kill": {
+      "difficulty": 10,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        6556
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        10
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "16_Magic Stone Amulet_craft": {
+      "difficulty": 10,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        3033
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        8
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "17_Cultist Emperor_kill": {
+      "difficulty": 11,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        6595
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        10
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "18_Cow_kill": {
+      "difficulty": 11,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        5405
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        6
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "19_Steel Boots_craft": {
+      "difficulty": 12,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        3217
+      ],
+      "rewards": [
+        9
+      ],
+      "ideal_rewards": [
+        9
+      ],
+      "scores": [
+        100.0
+      ]
+    },
+    "20_Skull Staff_craft": {
+      "difficulty": 12,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        2896
+      ],
+      "rewards": [
+        9
+      ],
+      "ideal_rewards": [
+        9
+      ],
+      "scores": [
+        100.0
+      ]
+    }
+  },
+  "2": {
+    "1_Lich_kill": {
+      "difficulty": 13,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        4696
+      ],
+      "rewards": [
+        4
+      ],
+      "ideal_rewards": [
+        8
+      ],
+      "scores": [
+        50.0
+      ]
+    },
+    "2_Cultist Emperor_kill": {
+      "difficulty": 13,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        5538
+      ],
+      "rewards": [
+        8
+      ],
+      "ideal_rewards": [
+        8
+      ],
+      "scores": [
+        100.0
+      ]
+    },
+    "3_Bat_kill": {
+      "difficulty": 14,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        5791
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        9
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "4_Vampire_kill": {
+      "difficulty": 14,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        5885
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        9
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "5_Bat_kill": {
+      "difficulty": 15,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        6288
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        11
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "6_Reaper_kill": {
+      "difficulty": 15,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        6249
+      ],
+      "rewards": [
+        8
+      ],
+      "ideal_rewards": [
+        11
+      ],
+      "scores": [
+        72.72727272727273
+      ]
+    },
+    "7_Mushmush_kill": {
+      "difficulty": 16,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        6843
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        11
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "8_Imp_kill": {
+      "difficulty": 16,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        5915
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        11
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "9_Vampire_kill": {
+      "difficulty": 17,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        5477
+      ],
+      "rewards": [
+        10
+      ],
+      "ideal_rewards": [
+        10
+      ],
+      "scores": [
+        100.0
+      ]
+    },
+    "10_Cultist Emperor_kill": {
+      "difficulty": 17,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        5509
+      ],
+      "rewards": [
+        9
+      ],
+      "ideal_rewards": [
+        13
+      ],
+      "scores": [
+        69.23076923076923
+      ]
+    },
+    "11_Skeleton_kill": {
+      "difficulty": 18,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        4337
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        10
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "12_Wolf_kill": {
+      "difficulty": 18,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        6148
+      ],
+      "rewards": [
+        1
+      ],
+      "ideal_rewards": [
+        10
+      ],
+      "scores": [
+        10.0
+      ]
+    },
+    "13_Blue Slime_kill": {
+      "difficulty": 19,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        5484
+      ],
+      "rewards": [
+        11
+      ],
+      "ideal_rewards": [
+        11
+      ],
+      "scores": [
+        100.0
+      ]
+    },
+    "14_Scarecrow_kill": {
+      "difficulty": 19,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        6241
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        13
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "15_Pig_kill": {
+      "difficulty": 20,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        6647
+      ],
+      "rewards": [
+        14
+      ],
+      "ideal_rewards": [
+        14
+      ],
+      "scores": [
+        100.0
+      ]
+    },
+    "16_Wolf_kill": {
+      "difficulty": 20,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        6255
+      ],
+      "rewards": [
+        12
+      ],
+      "ideal_rewards": [
+        12
+      ],
+      "scores": [
+        100.0
+      ]
+    },
+    "17_Vampire_kill": {
+      "difficulty": 21,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        7971
+      ],
+      "rewards": [
+        7
+      ],
+      "ideal_rewards": [
+        14
+      ],
+      "scores": [
+        50.0
+      ]
+    },
+    "18_Cultist Emperor_kill": {
+      "difficulty": 21,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        6824
+      ],
+      "rewards": [
+        5
+      ],
+      "ideal_rewards": [
+        20
+      ],
+      "scores": [
+        25.0
+      ]
+    },
+    "19_Cultist Acolyte_kill": {
+      "difficulty": 22,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8474
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        15
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "20_Death Knight_kill": {
+      "difficulty": 22,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        6466
+      ],
+      "rewards": [
+        13
+      ],
+      "ideal_rewards": [
+        13
+      ],
+      "scores": [
+        100.0
+      ]
+    }
+  },
+  "3": {
+    "1_Lich_kill": {
+      "difficulty": 23,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8288
+      ],
+      "rewards": [
+        8
+      ],
+      "ideal_rewards": [
+        15
+      ],
+      "scores": [
+        53.333333333333336
+      ]
+    },
+    "2_Imp_kill": {
+      "difficulty": 23,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        6927
+      ],
+      "rewards": [
+        9
+      ],
+      "ideal_rewards": [
+        15
+      ],
+      "scores": [
+        60.0
+      ]
+    },
+    "3_Cultist Emperor_kill": {
+      "difficulty": 24,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8074
+      ],
+      "rewards": [
+        10
+      ],
+      "ideal_rewards": [
+        20
+      ],
+      "scores": [
+        50.0
+      ]
+    },
+    "4_Reaper_kill": {
+      "difficulty": 24,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8454
+      ],
+      "rewards": [
+        8
+      ],
+      "ideal_rewards": [
+        15
+      ],
+      "scores": [
+        53.333333333333336
+      ]
+    },
+    "5_Cultist Emperor_kill": {
+      "difficulty": 25,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        7609
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        14
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "6_Pig_kill": {
+      "difficulty": 25,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        7230
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        16
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "7_Reaper_kill": {
+      "difficulty": 26,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        3987
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        11
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "8_Death Knight_kill": {
+      "difficulty": 26,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        7465
+      ],
+      "rewards": [
+        15
+      ],
+      "ideal_rewards": [
+        15
+      ],
+      "scores": [
+        100.0
+      ]
+    },
+    "9_Pig_kill": {
+      "difficulty": 27,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8543
+      ],
+      "rewards": [
+        8
+      ],
+      "ideal_rewards": [
+        17
+      ],
+      "scores": [
+        47.05882352941177
+      ]
+    },
+    "10_Cultist Emperor_kill": {
+      "difficulty": 27,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9247
+      ],
+      "rewards": [
+        10
+      ],
+      "ideal_rewards": [
+        20
+      ],
+      "scores": [
+        50.0
+      ]
+    },
+    "11_Cultist Emperor_kill": {
+      "difficulty": 28,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        10956
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        22
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "12_Bat_kill": {
+      "difficulty": 28,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        6134
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        14
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "13_Pig_kill": {
+      "difficulty": 29,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8471
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        19
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "14_Cultist Emperor_kill": {
+      "difficulty": 29,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9764
+      ],
+      "rewards": [
+        10
+      ],
+      "ideal_rewards": [
+        24
+      ],
+      "scores": [
+        41.666666666666664
+      ]
+    },
+    "15_Bandit Lizard_kill": {
+      "difficulty": 30,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        7078
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        15
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "16_Ogre_kill": {
+      "difficulty": 30,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        10262
+      ],
+      "rewards": [
+        9
+      ],
+      "ideal_rewards": [
+        18
+      ],
+      "scores": [
+        50.0
+      ]
+    },
+    "17_Death Knight_kill": {
+      "difficulty": 31,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        6634
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        18
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "18_Cultist Emperor_kill": {
+      "difficulty": 31,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9416
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        23
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "19_Death Knight_kill": {
+      "difficulty": 32,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8243
+      ],
+      "rewards": [
+        5
+      ],
+      "ideal_rewards": [
+        20
+      ],
+      "scores": [
+        25.0
+      ]
+    },
+    "20_Lich_kill": {
+      "difficulty": 32,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        7931
+      ],
+      "rewards": [
+        9
+      ],
+      "ideal_rewards": [
+        18
+      ],
+      "scores": [
+        50.0
+      ]
+    }
+  },
+  "4": {
+    "1_Scarecrow_kill": {
+      "difficulty": 33,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9343
+      ],
+      "rewards": [
+        9
+      ],
+      "ideal_rewards": [
+        18
+      ],
+      "scores": [
+        50.0
+      ]
+    },
+    "2_Pig_kill": {
+      "difficulty": 33,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8064
+      ],
+      "rewards": [
+        8
+      ],
+      "ideal_rewards": [
+        18
+      ],
+      "scores": [
+        44.44444444444444
+      ]
+    },
+    "3_Cultist Acolyte_kill": {
+      "difficulty": 34,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9761
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        18
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "4_Imp_kill": {
+      "difficulty": 34,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        5562
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        18
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "5_Cultist Acolyte_kill": {
+      "difficulty": 35,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9920
+      ],
+      "rewards": [
+        16
+      ],
+      "ideal_rewards": [
+        21
+      ],
+      "scores": [
+        76.19047619047619
+      ]
+    },
+    "6_Demon_kill": {
+      "difficulty": 35,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9373
+      ],
+      "rewards": [
+        14
+      ],
+      "ideal_rewards": [
+        23
+      ],
+      "scores": [
+        60.869565217391305
+      ]
+    },
+    "7_Ogre_kill": {
+      "difficulty": 36,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8822
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        16
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "8_Mushmush_kill": {
+      "difficulty": 36,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        7421
+      ],
+      "rewards": [
+        19
+      ],
+      "ideal_rewards": [
+        19
+      ],
+      "scores": [
+        100.0
+      ]
+    },
+    "9_Cultist Emperor_kill": {
+      "difficulty": 37,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8630
+      ],
+      "rewards": [
+        6
+      ],
+      "ideal_rewards": [
+        24
+      ],
+      "scores": [
+        25.0
+      ]
+    },
+    "10_Bat_kill": {
+      "difficulty": 37,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        10768
+      ],
+      "rewards": [
+        10
+      ],
+      "ideal_rewards": [
+        24
+      ],
+      "scores": [
+        41.666666666666664
+      ]
+    },
+    "11_Bandit Lizard_kill": {
+      "difficulty": 38,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9304
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        22
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "12_Cultist Acolyte_kill": {
+      "difficulty": 38,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        6755
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        24
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "13_Bandit Lizard_kill": {
+      "difficulty": 39,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        11096
+      ],
+      "rewards": [
+        11
+      ],
+      "ideal_rewards": [
+        22
+      ],
+      "scores": [
+        50.0
+      ]
+    },
+    "14_Scarecrow_kill": {
+      "difficulty": 39,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9254
+      ],
+      "rewards": [
+        6
+      ],
+      "ideal_rewards": [
+        25
+      ],
+      "scores": [
+        24.0
+      ]
+    },
+    "15_Death Knight_kill": {
+      "difficulty": 40,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8928
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        19
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "16_Skeleton_kill": {
+      "difficulty": 40,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8457
+      ],
+      "rewards": [
+        8
+      ],
+      "ideal_rewards": [
+        20
+      ],
+      "scores": [
+        40.0
+      ]
+    },
+    "17_Pig_kill": {
+      "difficulty": 41,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8804
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        21
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "18_Flying Serpent_kill": {
+      "difficulty": 41,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8852
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        23
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "19_Ogre_kill": {
+      "difficulty": 42,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        11359
+      ],
+      "rewards": [
+        16
+      ],
+      "ideal_rewards": [
+        21
+      ],
+      "scores": [
+        76.19047619047619
+      ]
+    },
+    "20_Reaper_kill": {
+      "difficulty": 42,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        11394
+      ],
+      "rewards": [
+        11
+      ],
+      "ideal_rewards": [
+        25
+      ],
+      "scores": [
+        44.0
+      ]
+    }
+  },
+  "5": {
+    "1_Lich_kill": {
+      "difficulty": 43,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9811
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        25
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "2_Cultist Acolyte_kill": {
+      "difficulty": 43,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        11153
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        28
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "3_Bat_kill": {
+      "difficulty": 44,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        6229
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        21
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "4_Skeleton_kill": {
+      "difficulty": 44,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8040
+      ],
+      "rewards": [
+        2
+      ],
+      "ideal_rewards": [
+        23
+      ],
+      "scores": [
+        8.695652173913043
+      ]
+    },
+    "5_Bat_kill": {
+      "difficulty": 45,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9019
+      ],
+      "rewards": [
+        9
+      ],
+      "ideal_rewards": [
+        25
+      ],
+      "scores": [
+        36.0
+      ]
+    },
+    "6_Lich_kill": {
+      "difficulty": 45,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        11497
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        26
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "7_Ogre_kill": {
+      "difficulty": 46,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        10060
+      ],
+      "rewards": [
+        25
+      ],
+      "ideal_rewards": [
+        25
+      ],
+      "scores": [
+        100.0
+      ]
+    },
+    "8_Cultist Emperor_kill": {
+      "difficulty": 46,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        6982
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        26
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "9_Ogre_kill": {
+      "difficulty": 47,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9297
+      ],
+      "rewards": [
+        16
+      ],
+      "ideal_rewards": [
+        19
+      ],
+      "scores": [
+        84.21052631578948
+      ]
+    },
+    "10_Skeleton_kill": {
+      "difficulty": 47,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        6551
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        25
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "11_Pig_kill": {
+      "difficulty": 48,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        10768
+      ],
+      "rewards": [
+        10
+      ],
+      "ideal_rewards": [
+        24
+      ],
+      "scores": [
+        41.666666666666664
+      ]
+    },
+    "12_Reaper_kill": {
+      "difficulty": 48,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        12029
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        30
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "13_Reaper_kill": {
+      "difficulty": 49,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        14526
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        27
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "14_Flying Serpent_kill": {
+      "difficulty": 49,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9741
+      ],
+      "rewards": [
+        19
+      ],
+      "ideal_rewards": [
+        26
+      ],
+      "scores": [
+        73.07692307692308
+      ]
+    },
+    "15_Lich_kill": {
+      "difficulty": 50,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        12189
+      ],
+      "rewards": [
+        9
+      ],
+      "ideal_rewards": [
+        28
+      ],
+      "scores": [
+        32.142857142857146
+      ]
+    },
+    "16_Ogre_kill": {
+      "difficulty": 50,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8247
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        23
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "17_Lich_kill": {
+      "difficulty": 51,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        12221
+      ],
+      "rewards": [
+        12
+      ],
+      "ideal_rewards": [
+        31
+      ],
+      "scores": [
+        38.70967741935484
+      ]
+    },
+    "18_Vampire_kill": {
+      "difficulty": 51,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        11143
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        25
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "19_Mushmush_kill": {
+      "difficulty": 52,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9521
+      ],
+      "rewards": [
+        16
+      ],
+      "ideal_rewards": [
+        24
+      ],
+      "scores": [
+        66.66666666666667
+      ]
+    },
+    "20_Scarecrow_kill": {
+      "difficulty": 52,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        11398
+      ],
+      "rewards": [
+        13
+      ],
+      "ideal_rewards": [
+        29
+      ],
+      "scores": [
+        44.827586206896555
+      ]
+    }
+  },
+  "6": {
+    "1_Skeleton_kill": {
+      "difficulty": 53,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        13108
+      ],
+      "rewards": [
+        22
+      ],
+      "ideal_rewards": [
+        25
+      ],
+      "scores": [
+        88.0
+      ]
+    },
+    "2_Lich_kill": {
+      "difficulty": 53,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        10264
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        31
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "3_Reaper_kill": {
+      "difficulty": 54,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9227
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        24
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "4_Skeleton_kill": {
+      "difficulty": 54,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9629
+      ],
+      "rewards": [
+        19
+      ],
+      "ideal_rewards": [
+        25
+      ],
+      "scores": [
+        76.0
+      ]
+    },
+    "5_Cultist Emperor_kill": {
+      "difficulty": 55,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        14204
+      ],
+      "rewards": [
+        10
+      ],
+      "ideal_rewards": [
+        32
+      ],
+      "scores": [
+        31.25
+      ]
+    },
+    "6_Flying Serpent_kill": {
+      "difficulty": 55,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9407
+      ],
+      "rewards": [
+        9
+      ],
+      "ideal_rewards": [
+        28
+      ],
+      "scores": [
+        32.142857142857146
+      ]
+    },
+    "7_Cultist Emperor_kill": {
+      "difficulty": 56,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        12913
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        35
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "8_Bandit Lizard_kill": {
+      "difficulty": 56,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        10178
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        26
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "9_Lich_kill": {
+      "difficulty": 57,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        10196
+      ],
+      "rewards": [
+        9
+      ],
+      "ideal_rewards": [
+        32
+      ],
+      "scores": [
+        28.125
+      ]
+    },
+    "10_Bat_kill": {
+      "difficulty": 57,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        10835
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        32
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "11_Bat_kill": {
+      "difficulty": 58,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        7242
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        28
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "12_Reaper_kill": {
+      "difficulty": 58,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        11498
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        29
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "13_Pig_kill": {
+      "difficulty": 59,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        10167
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        26
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "14_Ogre_kill": {
+      "difficulty": 59,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        10910
+      ],
+      "rewards": [
+        24
+      ],
+      "ideal_rewards": [
+        27
+      ],
+      "scores": [
+        88.88888888888889
+      ]
+    },
+    "15_Reaper_kill": {
+      "difficulty": 60,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        7503
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        33
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "16_Lich_kill": {
+      "difficulty": 60,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        14862
+      ],
+      "rewards": [
+        12
+      ],
+      "ideal_rewards": [
+        37
+      ],
+      "scores": [
+        32.432432432432435
+      ]
+    },
+    "17_Reaper_kill": {
+      "difficulty": 61,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        11032
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        24
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "18_Ogre_kill": {
+      "difficulty": 61,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        10010
+      ],
+      "rewards": [
+        19
+      ],
+      "ideal_rewards": [
+        26
+      ],
+      "scores": [
+        73.07692307692308
+      ]
+    },
+    "19_Bandit Lizard_kill": {
+      "difficulty": 62,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        7383
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        30
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "20_Reaper_kill": {
+      "difficulty": 62,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        12020
+      ],
+      "rewards": [
+        14
+      ],
+      "ideal_rewards": [
+        31
+      ],
+      "scores": [
+        45.16129032258065
+      ]
+    }
+  },
+  "7": {
+    "1_Bandit Lizard_kill": {
+      "difficulty": 63,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        6141
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        23
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "2_Cultist Emperor_kill": {
+      "difficulty": 63,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        14682
+      ],
+      "rewards": [
+        16
+      ],
+      "ideal_rewards": [
+        33
+      ],
+      "scores": [
+        48.484848484848484
+      ]
+    },
+    "3_Lich_kill": {
+      "difficulty": 64,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        12651
+      ],
+      "rewards": [
+        9
+      ],
+      "ideal_rewards": [
+        32
+      ],
+      "scores": [
+        28.125
+      ]
+    },
+    "4_Cultist Emperor_kill": {
+      "difficulty": 64,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        12521
+      ],
+      "rewards": [
+        10
+      ],
+      "ideal_rewards": [
+        32
+      ],
+      "scores": [
+        31.25
+      ]
+    },
+    "5_Lich_kill": {
+      "difficulty": 65,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        12676
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        35
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "6_Lich_kill": {
+      "difficulty": 65,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9877
+      ],
+      "rewards": [
+        9
+      ],
+      "ideal_rewards": [
+        36
+      ],
+      "scores": [
+        25.0
+      ]
+    },
+    "7_Bandit Lizard_kill": {
+      "difficulty": 66,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        7768
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        29
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "8_Cultist Emperor_kill": {
+      "difficulty": 66,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        12234
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        33
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "9_Lich_kill": {
+      "difficulty": 67,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        13053
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        35
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "10_Bat_kill": {
+      "difficulty": 67,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        11947
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        31
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "11_Ogre_kill": {
+      "difficulty": 68,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8335
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        30
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "12_Bandit Lizard_kill": {
+      "difficulty": 68,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        12418
+      ],
+      "rewards": [
+        19
+      ],
+      "ideal_rewards": [
+        27
+      ],
+      "scores": [
+        70.37037037037037
+      ]
+    },
+    "13_Reaper_kill": {
+      "difficulty": 69,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        15098
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        30
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "14_Ogre_kill": {
+      "difficulty": 69,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        14572
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        32
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "15_Reaper_kill": {
+      "difficulty": 70,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        13421
+      ],
+      "rewards": [
+        27
+      ],
+      "ideal_rewards": [
+        34
+      ],
+      "scores": [
+        79.41176470588235
+      ]
+    },
+    "16_Bat_kill": {
+      "difficulty": 70,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        10350
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        37
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "17_Reaper_kill": {
+      "difficulty": 71,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        12333
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        36
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "18_Ogre_kill": {
+      "difficulty": 71,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9812
+      ],
+      "rewards": [
+        17
+      ],
+      "ideal_rewards": [
+        26
+      ],
+      "scores": [
+        65.38461538461539
+      ]
+    },
+    "19_Skeleton_kill": {
+      "difficulty": 72,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9263
+      ],
+      "rewards": [
+        6
+      ],
+      "ideal_rewards": [
+        31
+      ],
+      "scores": [
+        19.35483870967742
+      ]
+    },
+    "20_Reaper_kill": {
+      "difficulty": 72,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        12733
+      ],
+      "rewards": [
+        16
+      ],
+      "ideal_rewards": [
+        35
+      ],
+      "scores": [
+        45.714285714285715
+      ]
+    }
+  },
+  "8": {
+    "1_Cultist Emperor_kill": {
+      "difficulty": 73,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        14187
+      ],
+      "rewards": [
+        23
+      ],
+      "ideal_rewards": [
+        36
+      ],
+      "scores": [
+        63.888888888888886
+      ]
+    },
+    "2_Cultist Emperor_kill": {
+      "difficulty": 73,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        13690
+      ],
+      "rewards": [
+        10
+      ],
+      "ideal_rewards": [
+        37
+      ],
+      "scores": [
+        27.027027027027028
+      ]
+    },
+    "3_Reaper_kill": {
+      "difficulty": 74,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        10106
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        32
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "4_Reaper_kill": {
+      "difficulty": 74,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        15182
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        38
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "5_Reaper_kill": {
+      "difficulty": 75,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        11596
+      ],
+      "rewards": [
+        18
+      ],
+      "ideal_rewards": [
+        32
+      ],
+      "scores": [
+        56.25
+      ]
+    },
+    "6_Cultist Emperor_kill": {
+      "difficulty": 75,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8264
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        39
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "7_Lich_kill": {
+      "difficulty": 76,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8787
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        37
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "8_Cultist Emperor_kill": {
+      "difficulty": 76,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        12573
+      ],
+      "rewards": [
+        10
+      ],
+      "ideal_rewards": [
+        37
+      ],
+      "scores": [
+        27.027027027027028
+      ]
+    },
+    "9_Bat_kill": {
+      "difficulty": 77,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        14228
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        36
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "10_Bat_kill": {
+      "difficulty": 77,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        15409
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        37
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "11_Cultist Emperor_kill": {
+      "difficulty": 78,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        13479
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        40
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "12_Bat_kill": {
+      "difficulty": 78,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        13936
+      ],
+      "rewards": [
+        6
+      ],
+      "ideal_rewards": [
+        38
+      ],
+      "scores": [
+        15.789473684210526
+      ]
+    },
+    "13_Bat_kill": {
+      "difficulty": 79,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        11814
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        31
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "14_Cultist Emperor_kill": {
+      "difficulty": 79,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        15781
+      ],
+      "rewards": [
+        16
+      ],
+      "ideal_rewards": [
+        39
+      ],
+      "scores": [
+        41.02564102564103
+      ]
+    },
+    "15_Ogre_kill": {
+      "difficulty": 80,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        12632
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        34
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "16_Lich_kill": {
+      "difficulty": 80,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9123
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        40
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "17_Reaper_kill": {
+      "difficulty": 81,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        15464
+      ],
+      "rewards": [
+        33
+      ],
+      "ideal_rewards": [
+        36
+      ],
+      "scores": [
+        91.66666666666667
+      ]
+    },
+    "18_Bat_kill": {
+      "difficulty": 81,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8069
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        39
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "19_Cultist Emperor_kill": {
+      "difficulty": 82,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        14237
+      ],
+      "rewards": [
+        15
+      ],
+      "ideal_rewards": [
+        39
+      ],
+      "scores": [
+        38.46153846153846
+      ]
+    },
+    "20_Reaper_kill": {
+      "difficulty": 82,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8329
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        40
+      ],
+      "scores": [
+        0.0
+      ]
+    }
+  },
+  "9": {
+    "1_Ogre_kill": {
+      "difficulty": 83,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        11327
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        32
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "2_Reaper_kill": {
+      "difficulty": 83,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        16441
+      ],
+      "rewards": [
+        12
+      ],
+      "ideal_rewards": [
+        41
+      ],
+      "scores": [
+        29.26829268292683
+      ]
+    },
+    "3_Reaper_kill": {
+      "difficulty": 83,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        12472
+      ],
+      "rewards": [
+        13
+      ],
+      "ideal_rewards": [
+        37
+      ],
+      "scores": [
+        35.13513513513514
+      ]
+    },
+    "4_Cultist Emperor_kill": {
+      "difficulty": 84,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        15152
+      ],
+      "rewards": [
+        16
+      ],
+      "ideal_rewards": [
+        39
+      ],
+      "scores": [
+        41.02564102564103
+      ]
+    },
+    "5_Reaper_kill": {
+      "difficulty": 84,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        11584
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        39
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "6_Cultist Emperor_kill": {
+      "difficulty": 85,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        15310
+      ],
+      "rewards": [
+        8
+      ],
+      "ideal_rewards": [
+        39
+      ],
+      "scores": [
+        20.512820512820515
+      ]
+    },
+    "7_Cultist Emperor_kill": {
+      "difficulty": 85,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        15155
+      ],
+      "rewards": [
+        12
+      ],
+      "ideal_rewards": [
+        42
+      ],
+      "scores": [
+        28.571428571428573
+      ]
+    },
+    "8_Lich_kill": {
+      "difficulty": 86,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        14026
+      ],
+      "rewards": [
+        22
+      ],
+      "ideal_rewards": [
+        40
+      ],
+      "scores": [
+        55.0
+      ]
+    },
+    "9_Lich_kill": {
+      "difficulty": 86,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        17253
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        40
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "10_Bat_kill": {
+      "difficulty": 87,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        13435
+      ],
+      "rewards": [
+        10
+      ],
+      "ideal_rewards": [
+        35
+      ],
+      "scores": [
+        28.571428571428573
+      ]
+    },
+    "11_Cultist Emperor_kill": {
+      "difficulty": 87,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        14692
+      ],
+      "rewards": [
+        11
+      ],
+      "ideal_rewards": [
+        43
+      ],
+      "scores": [
+        25.58139534883721
+      ]
+    },
+    "12_Bat_kill": {
+      "difficulty": 88,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        11509
+      ],
+      "rewards": [
+        4
+      ],
+      "ideal_rewards": [
+        34
+      ],
+      "scores": [
+        11.764705882352942
+      ]
+    },
+    "13_Bat_kill": {
+      "difficulty": 88,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        8594
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        37
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "14_Cultist Emperor_kill": {
+      "difficulty": 89,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9729
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        44
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "15_Bat_kill": {
+      "difficulty": 89,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        10335
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        40
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "16_Cultist Emperor_kill": {
+      "difficulty": 90,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        14022
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        39
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "17_Bat_kill": {
+      "difficulty": 90,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        15073
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        39
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "18_Bat_kill": {
+      "difficulty": 91,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        9081
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        42
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "19_Bat_kill": {
+      "difficulty": 91,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        15240
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        42
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "20_Cultist Emperor_kill": {
+      "difficulty": 92,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        12592
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        39
+      ],
+      "scores": [
+        0.0
+      ]
+    }
+  }
+}

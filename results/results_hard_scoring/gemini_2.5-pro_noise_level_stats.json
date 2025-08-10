@@ -1,0 +1,44 @@
+{
+  "9": {
+    "execution_errors": {
+      "total": 30,
+      "by_func": {
+        "gather": 14,
+        "craft": 16
+      },
+      "craft_reasons": {
+        "needed_skill_level": 14,
+        "enough_items_for_craft": 14
+      }
+    },
+    "craft_missing_not_attempted": 119,
+    "tasks_with_only_failed_gear_calculation": 0.1,
+    "tasks_failed_total": 0.95,
+    "tasks_with_both_calc_craft": 0.8,
+    "tasks_with_only_failed_craft": 0.05,
+    "tasks_with_wrong_code_format": 0.0,
+    "tasks_other": 0.0,
+    "win_tasks": 1
+  },
+  "total": {
+    "execution_errors": {
+      "total": 30,
+      "by_func": {
+        "gather": 14,
+        "craft": 16
+      },
+      "craft_reasons": {
+        "needed_skill_level": 14,
+        "enough_items_for_craft": 14
+      }
+    },
+    "craft_missing_not_attempted": 119,
+    "tasks_with_only_failed_gear_calculation": 0.011,
+    "tasks_failed_total": 0.1044,
+    "tasks_with_both_calc_craft": 0.0879,
+    "tasks_with_only_failed_craft": 0.0055,
+    "tasks_with_wrong_code_format": 0.0,
+    "tasks_other": 0.0,
+    "win_tasks": 1
+  }
+}
