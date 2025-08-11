@@ -173,8 +173,10 @@ class CharacterUpdateRedis:
                 gather_cycles -= 1
 
             skill_info = SkillInfoResponseRedis(skill=resource.skill , xp=total_got_xp, items=items)
+            drop_codes = [drop.code for drop in resource.drops]
+            drop_codes_str = ', '.join(drop_codes)
             await create_log(self.redis, self.character_name, ActionType.gather,
-                             f"{self.character_name} gather resource {resource.name} with the skill {resource.skill} x{quantity} times.")
+                             f"{self.changed_character.name} gathered resources {drop_codes_str} with the skill {resource.skill} x{quantity} times.")
             return skill_info, True
         except Exception as e:
             print(e)
@@ -225,6 +227,11 @@ class CharacterUpdateRedis:
         except Exception as e:
             print(e)
             return None, False
+
+    async def buy_item(self, buy_item: ItemRedis, buy_quantity: int = 1) -> bool:
+        await self.add_item(buy_item.code, buy_quantity)
+        await create_log(redis=self.redis, character_name=self.character_name, action=ActionType.buy_item, log=f"{self.changed_character.name} purchased {buy_item.code} x{buy_quantity}.")
+        return True
 
     async def add_craft_failure_log(self, log_text: str):
         await create_log(redis=self.redis, character_name=self.character_name, action=ActionType.craft, log=log_text)
@@ -441,7 +448,7 @@ class CharacterUpdateRedis:
                 fight.drops = items
                 fight.xp = got_xp
                 await create_log(redis=self.redis, character_name=self.character_name, action=ActionType.fight,
-                                   log=f"{self.character_name} won his fight against {monster.name}.")
+                                   log=f"{self.character_name} win his fight against {monster.name}.")
             else:
                 await create_log(redis=self.redis, character_name=self.character_name, action=ActionType.fight,
                                    log=f"{self.character_name} lost his fight against {monster.name}.")
@@ -559,4 +566,3 @@ class CharacterUpdateRedis:
         except Exception as e:
             print(e)
             return False
-

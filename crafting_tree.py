@@ -4,13 +4,13 @@ from collections import defaultdict
 # =============================================================================
 # Data Loading
 # =============================================================================
-with open("app/Data/monsters.json", "r") as file:
+with open("Virtual_Environment/Data/monsters.json", "r") as file:
     file_monsters = json.load(file)
-with open("app/Data/items.json", "r") as file:
+with open("Virtual_Environment/Data/items.json", "r") as file:
     file_items = json.load(file)
-with open("app/Data/resources.json", "r") as file:
+with open("Virtual_Environment/Data/resources.json", "r") as file:
     file_resources = json.load(file)
-with open("app/Data/maps.json", "r") as file:
+with open("Virtual_Environment/Data/maps.json", "r") as file:
     file_locations = json.load(file)
 
 # Global datasets

@@ -1,12 +1,20 @@
 import json
 import os
 import numpy as np
+from pathlib import Path
 
-PLOTS_DIR = "results/plots_tables"   
-os.makedirs(PLOTS_DIR, exist_ok=True)
+try:
+    REPO_ROOT = Path(__file__).resolve().parents[1]
+except NameError:
+    REPO_ROOT = Path.cwd()
 
-# Folder with result JSONs
-RESULTS_DIR = "results/results_hard"
+# Repo root = one level up from this file (adjust if your layout differs)
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
+PLOTS_DIR = REPO_ROOT / "results" / "plots_tables"
+PLOTS_DIR.mkdir(parents=True, exist_ok=True)
+
+RESULTS_DIR = REPO_ROOT / "results" / "results_hard"
 
 def build_model_specs(results_dir: str):
     """

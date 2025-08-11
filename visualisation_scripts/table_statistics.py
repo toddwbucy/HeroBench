@@ -51,7 +51,7 @@ def extract_metrics(total):
     return m
 
 # 1. point this at your folder:
-stats_dir = "results/results_scoring"
+stats_dir = "results/results_base_scoring"
 
 # 2. gather rows
 rows = []
@@ -85,5 +85,5 @@ columns_to_keep = [
     "tasks_with_wrong_code_format",
 ]
 df_subset = df.reindex(columns=columns_to_keep, fill_value=0)
-df.to_csv("results/plots_tables/models_comparison_subset.csv")
+df_subset.to_csv("results/plots_tables/models_comparison_subset.csv")
 print(df_subset)

@@ -1,11 +1,57 @@
-#!/usr/bin/env python3
+"""
+Task and Prompt Noise Injection Transformer.
+
+This script augments a *leveled* game task dataset and its corresponding
+prompt strings by injecting "noise" items—additional craftable/equipable
+items relevant to the target monster but not strictly required. The goal
+is to increase task complexity, diversify strategies, and test agent robustness.
+
+It performs three main operations:
+
+1. **Noise Item Injection**:
+   - Loads a catalog of candidate noise items from the game database.
+   - Profiles the target monster’s elemental weaknesses/attacks.
+   - Picks helpful, diverse items (avoiding monster drops and trivial items).
+   - Fills any remaining quota with random valid craftables.
+   - Updates each task’s `task_info` with noise items and their dependency data
+     (crafting ingredients, resources, locations).
+
+2. **Task Dataset Augmentation**:
+   - Iterates through all tasks in the input leveled dataset.
+   - Injects noise items into each applicable task.
+   - Writes the resulting noise-augmented dataset to a new JSON file.
+
+3. **Prompt String Patching**:
+   - Matches each transformed task to its corresponding prompt string.
+   - Replaces the in-text `task_info` structure with the updated version.
+   - Writes a new prompt dataset aligned with the noise-augmented tasks.
+
+Default input/output (same spirit as level_transformer.py):
+    --tasks_in       datasets/dataset_tasks_leveling.json
+    --prompts_in     datasets/dataset_prompts_leveling.json
+    --tasks_out      datasets/dataset_tasks_noise_leveling.json
+    --prompts_out    datasets/dataset_prompts_noise_leveling.json
+    --noise_catalog  Virtual_Environment/Data/noise_items.json
+    --noise_n        10
+
+Example:
+    python noise_transformer.py \
+        --tasks_in datasets/dataset_tasks_leveling.json \
+        --prompts_in datasets/dataset_prompts_leveling.json \
+        --tasks_out datasets/dataset_tasks_noise_leveling.json \
+        --prompts_out datasets/dataset_prompts_noise_leveling.json \
+        --noise_catalog Virtual_Environment/Data/noise_items.json \
+        --noise_n 12
+
+"""
+
+import argparse
 import json
 import re
 from pathlib import Path
 from random import sample
 import random
 import itertools
-from collections import defaultdict
 
 # ─────────────────────────────────────────────────────────
 # Imports from your existing module(s)
@@ -166,7 +212,7 @@ def update_variant_with_valid_items(
 
     if num_random_locations:
         try:
-            maps = json.loads(Path("app/Data/maps.json").read_text())
+            maps = json.loads(Path("app/Data/maps.json").read_text(encoding="utf-8"))
         except Exception as exc:
             print(f"Error loading maps.json: {exc}")
             maps = []
@@ -182,16 +228,15 @@ def update_variant_with_valid_items(
     return variant
 
 # ─────────────────────────────────────────────────────────
-# 4.  Noise injection helper (your add_noise_items)
+# 4.  Noise injection helper (add_noise_items)
 # ─────────────────────────────────────────────────────────
 def add_noise_items(task_blob: dict,
                     all_items_catalog: list,
                     n: int) -> dict:
-    """Inject up to *n* 'noise' items that are ACTUALLY HELPFUL
-    against the task’s target monster.  Any short‑fall is filled
-    with random valid items (old behaviour)."""
+    """Inject up to *n* helpful 'noise' items against the task’s target monster.
+    Any shortfall is backfilled with random valid items.
+    """
 
-    # ── helpers ───────────────────────────────────────────
     ELEMENTS = ("fire", "earth", "water", "air")
 
     def _monster_from_task(tb):
@@ -199,7 +244,6 @@ def add_noise_items(task_blob: dict,
         for m in tb["task_info"].get("Monsters", []):
             if m.get("name") == tgt_name or m.get("code") == tgt_name:
                 return m
-        # fallback: first monster in list
         return tb["task_info"]["Monsters"][0]
 
     def _weak_elements(mon):
@@ -212,12 +256,10 @@ def add_noise_items(task_blob: dict,
         hi = max(atk.values())
         return {el for el, v in atk.items() if v == hi and v > 0}
 
-    # ── derive monster profile ────────────────────────────
     monster = _monster_from_task(task_blob)
     weak_elems   = _weak_elements(monster)
     strong_elems = _strong_attack_elements(monster)
 
-    # ── filters copied from your original valid_noise ─────
     craftables_by_code = {
         c["code"]: c.get("level", 0)
         for c in task_blob["task_info"]["Craftable items"]
@@ -252,7 +294,6 @@ def add_noise_items(task_blob: dict,
             return False
         return True
 
-    # ── relevance scoring ─────────────────────────────────
     def relevance_score(itm):
         sc = 0
         for eff in itm.get("effects", []):
@@ -267,7 +308,6 @@ def add_noise_items(task_blob: dict,
                     sc += val or 5
         return sc
 
-    # ── build candidate pools ─────────────────────────────
     candidates = [i for i in all_items_catalog if valid_noise(i)]
     if not candidates:
         raise ValueError("No valid candidates in noise catalogue")
@@ -286,23 +326,21 @@ def add_noise_items(task_blob: dict,
                 break
             t = itm.get("type")
             if t in used_types:
-                continue        # keep type diversity
+                continue
             chosen.append(itm)
             used_types.add(t)
 
     _take_from(good)
-    if len(chosen) < n:               # back‑fill with randoms
+    if len(chosen) < n:
         sample_size = min(n - len(chosen), len(random_pool))
         _take_from(random.sample(random_pool, sample_size))
 
-    # ── fall back if STILL short (should be rare) ─────────
     if len(chosen) < n:
         missing = n - len(chosen)
         extras = random.sample([i for i in candidates if i not in chosen],
                                min(missing, len(candidates) - len(chosen)))
         chosen.extend(extras)
 
-    # ── inject into task (re‑use original plumbing) ──────
     def infer_slot(item_dict):
         if item_dict.get("slot"):
             return item_dict["slot"]
@@ -313,14 +351,12 @@ def add_noise_items(task_blob: dict,
         code = itm.get("code")
         if not code:
             continue
-        # Don’t mutate the global catalogue; but make sure items_by_code knows them
         if code not in items_by_code:
             items_by_code[code] = itm
         noise_pairs.append((infer_slot(itm), code))
 
     update_variant_with_valid_items(task_blob, noise_items=noise_pairs)
 
-    # ── normalise levels to task’s min_level (unchanged) ─
     min_lvl = task_blob.get("min_level")
     if min_lvl is not None:
         craft_list = task_blob["task_info"]["Craftable items"]
@@ -330,7 +366,6 @@ def add_noise_items(task_blob: dict,
                     entry["level"] = min_lvl
 
     return task_blob
-
 
 # ─────────────────────────────────────────────────────────
 # 5.  Process all tasks then patch prompt strings
@@ -373,10 +408,8 @@ def transform_strings_after_noise(tasks_json: dict,
             continue
         updated_bucket = []
         original_bucket = strings_json[diff_key]
-        # zip stops at shortest; if lengths can differ, manage carefully
         for task, txt in itertools.zip_longest(task_list, original_bucket, fillvalue=None):
             if task is None or txt is None:
-                # If mismatch, just carry through original text
                 updated_bucket.append(txt or "")
                 continue
             updated_bucket.append(patch_prompt_with_task_info(txt, task.get("task_info", {})))
@@ -387,28 +420,36 @@ def transform_strings_after_noise(tasks_json: dict,
     print(f"Updated noise prompt-strings → {strings_out_path}")
 
 # ─────────────────────────────────────────────────────────
-# 7.  Main execution
+# 7.  CLI entry-point (argparse, like File 1)
 # ─────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    # INPUTS
-    TASKS_IN   = Path("datasets/dataset_tasks_leveling.json")
-    PROMPTS_IN = Path("datasets/dataset_prompts_leveling.json")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--tasks_in",      default="datasets/dataset_tasks_leveling.json")
+    parser.add_argument("--prompts_in",    default="datasets/dataset_prompts_leveling.json")
+    parser.add_argument("--tasks_out",     default="datasets/dataset_tasks_noise_leveling.json")
+    parser.add_argument("--prompts_out",   default="datasets/dataset_prompts_noise_leveling.json")
+    parser.add_argument("--noise_catalog", default="Virtual_Environment/Data/noise_items.json")
+    parser.add_argument("--noise_n",       type=int, default=10,
+                        help="How many noise items to try to inject per task")
+    args = parser.parse_args()
 
-    # OUTPUTS
-    TASKS_OUT   = Path("datasets/dataset_tasks_noise_leveling.json")
-    PROMPTS_OUT = Path("datasets/dataset_prompts_noise_leveling.json")
+    TASKS_IN    = Path(args.tasks_in)
+    PROMPTS_IN  = Path(args.prompts_in)
+    TASKS_OUT   = Path(args.tasks_out)
+    PROMPTS_OUT = Path(args.prompts_out)
+    CATALOG     = Path(args.noise_catalog)
+    NOISE_N     = int(args.noise_n)
 
-    catalog = load_json("Virtual_Environment/Data/noise_items.json")
+    catalog = load_json(str(CATALOG))
     for itm in catalog:
         code = itm.get("code")
         if code and code not in items_by_code:
             items_by_code[code] = itm
 
     data = load_json(str(TASKS_IN))
-    augmented = process_all_tasks(data, catalog, n=10)
+    augmented = process_all_tasks(data, catalog, n=NOISE_N)
     TASKS_OUT.parent.mkdir(parents=True, exist_ok=True)
     TASKS_OUT.write_text(json.dumps(augmented, indent=4, ensure_ascii=False), encoding="utf-8")
     print(f"Wrote tasks with noise → {TASKS_OUT}")
 
-    # Patch corresponding prompts
     transform_strings_after_noise(augmented, PROMPTS_IN, PROMPTS_OUT)

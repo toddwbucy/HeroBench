@@ -161,6 +161,204 @@
       "scores": [
         42.5
       ]
+    },
+    "10_Bat_kill": {
+      "difficulty": 87,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        37280
+      ],
+      "rewards": [
+        10
+      ],
+      "ideal_rewards": [
+        35
+      ],
+      "scores": [
+        28.571428571428573
+      ]
+    },
+    "11_Cultist Emperor_kill": {
+      "difficulty": 87,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        30006
+      ],
+      "rewards": [
+        28
+      ],
+      "ideal_rewards": [
+        43
+      ],
+      "scores": [
+        65.11627906976744
+      ]
+    },
+    "12_Bat_kill": {
+      "difficulty": 88,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        33065
+      ],
+      "rewards": [
+        22
+      ],
+      "ideal_rewards": [
+        34
+      ],
+      "scores": [
+        64.70588235294117
+      ]
+    },
+    "13_Bat_kill": {
+      "difficulty": 88,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        29311
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        37
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "14_Cultist Emperor_kill": {
+      "difficulty": 89,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        37520
+      ],
+      "rewards": [
+        39
+      ],
+      "ideal_rewards": [
+        44
+      ],
+      "scores": [
+        88.63636363636364
+      ]
+    },
+    "15_Bat_kill": {
+      "difficulty": 89,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        34193
+      ],
+      "rewards": [
+        4
+      ],
+      "ideal_rewards": [
+        40
+      ],
+      "scores": [
+        10.0
+      ]
+    },
+    "16_Cultist Emperor_kill": {
+      "difficulty": 90,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        33397
+      ],
+      "rewards": [
+        0
+      ],
+      "ideal_rewards": [
+        39
+      ],
+      "scores": [
+        0.0
+      ]
+    },
+    "17_Bat_kill": {
+      "difficulty": 90,
+      "results": [
+        "win"
+      ],
+      "tokens": [
+        39291
+      ],
+      "rewards": [
+        39
+      ],
+      "ideal_rewards": [
+        39
+      ],
+      "scores": [
+        100.0
+      ]
+    },
+    "18_Bat_kill": {
+      "difficulty": 91,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        39666
+      ],
+      "rewards": [
+        36
+      ],
+      "ideal_rewards": [
+        42
+      ],
+      "scores": [
+        85.71428571428571
+      ]
+    },
+    "19_Bat_kill": {
+      "difficulty": 91,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        27023
+      ],
+      "rewards": [
+        3
+      ],
+      "ideal_rewards": [
+        42
+      ],
+      "scores": [
+        7.142857142857143
+      ]
+    },
+    "20_Cultist Emperor_kill": {
+      "difficulty": 92,
+      "results": [
+        "lose"
+      ],
+      "tokens": [
+        34432
+      ],
+      "rewards": [
+        17
+      ],
+      "ideal_rewards": [
+        39
+      ],
+      "scores": [
+        43.58974358974359
+      ]
     }
   }
 }

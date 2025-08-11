@@ -1,24 +1,44 @@
 """
-add_leveling_resources.py
--------------------------
+Task and Prompt Leveling Transformer.
 
-Extends the previous transformer with an extra pass that adjusts a second
-JSON file (task-strings) so that every text entry stays in sync with the
-updated task objects.
+This script processes a dataset of game tasks and their associated prompt
+strings to introduce skill leveling mechanics for resource gathering
+(e.g., mining, woodcutting) and crafting. It performs two main operations:
 
-Usage
------
-python add_leveling_resources.py \
-       --tasks        dataset_final/updated_kill_tasks_all_20_noise_6.json \
-       --out          dataset_final/updated_kill_tasks_all_20_noise_6_lvl1.json \
-       --strings      dataset_final/task_strings.json \
-       --strings_out  dataset_final/task_strings_lvl1.json
+1. **Task Transformation**:
+   - Loads item, resource, and location data from the game database.
+   - Determines the required profession levels to craft the items in each task.
+   - Adds intermediate resources and locations to the task based on the
+     player's starting skill level (set to level 1) and the target skill level.
+   - Updates the task's `task_info` section with the expanded resource and
+     location lists.
+
+2. **Prompt String Transformation**:
+   - Matches each transformed task to its corresponding prompt string.
+   - Updates in-text game data such as character stats and monsters.
+   - Resets gathering skill levels to 1 and adds a paragraph explaining the
+     XP/leveling system for gathering and crafting professions.
+
+The transformed task and prompt datasets are saved to new JSON files,
+as specified by command-line arguments.
+
+Default input/output:
+    --tasks        datasets/dataset_tasks.json
+    --out          datasets/dataset_tasks_leveling.json
+    --strings      datasets/dataset_prompts.json
+    --strings_out  datasets/dataset_prompts_leveling.json
+
+Example:
+    python level_transformer.py \
+        --tasks datasets/dataset_tasks.json \
+        --out datasets/dataset_tasks_leveling.json \
+        --strings datasets/dataset_prompts.json \
+        --strings_out datasets/dataset_prompts_leveling.json
 """
-from __future__ import annotations
 
+from __future__ import annotations
 import argparse
 import json
-import math
 import re
 from collections import defaultdict
 from pathlib import Path

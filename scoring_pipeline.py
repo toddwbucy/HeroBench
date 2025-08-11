@@ -52,16 +52,16 @@ from utils import *
 
 
 # ======================== CONFIGURATION ========================
-TASKS_PATH        = "datasets/dataset_tasks_noise_leveling.json"
-PROMPTS_PATH      = "datasets/dataset_prompts_noise_leveling.json"
-RESULTS_DIR       = "results/results_hard"
+TASKS_PATH        = "datasets/dataset_tasks.json"
+PROMPTS_PATH      = "datasets/dataset_prompts.json"
+RESULTS_DIR       = "results/results_base"
 
-DIFF_START        = 9
+DIFF_START        = 1
 DIFF_END          = 9
 DIFF_STEP         = 1
 DIFF_CUSTOM       = None      # List[int] or None
 TASK_NUM          = 'all'     # 'all', '12', or '12-18'
-SAVE_NAME         = 'gpt-5-noise_level'
+SAVE_NAME         = 'gpt-5-nano'
 SAMPLES           = 1
 TIMEOUT           = 100
 CUTOFF_ACTIONS    = 4000
@@ -71,10 +71,10 @@ OVERWRITE_MODE    = 'none'     # 'all', 'lose', '0', 'none'
 # LLM service configuration
 LLM_SERVICE_CFG = dict(
     service="openai",
-    model_name="gpt-5",
+    model_name="gpt-5-nano",
     max_tokens=40000,
     reasoning_effort="high",
-    api_key="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",
+    api_key="",
     streaming=False,
     thinking=False
 )
@@ -217,7 +217,9 @@ def run_task(
         create_character('Hero', prompt_str)
 
         try:
-            safe_exec(code, globals(), locals(), timeout=timeout)
+            sandbox = {"__name__": "__main__"}  # add exports you actually need
+            safe_exec(code, sandbox=sandbox, timeout=timeout)
+            #safe_exec(code, globals(), locals(), timeout=timeout)
             logs   = cut_events_before_creation(get_character_logs('Hero', cutoff_actions))
             result = extract_result(logs, prompt_str, task)
         except Exception as e:
@@ -252,4 +254,5 @@ def run_task(
     full_logs[diff_key][tag] = full_responses
 
 if __name__ == "__main__":
+    mp.freeze_support()
     main()

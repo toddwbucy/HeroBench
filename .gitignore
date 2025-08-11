@@ -16,3 +16,6 @@ Virtual_Environment/test_main.http
 /A2_Agent/.env
 /A2_Agent/agent/__pycache__
 /A2_Agent/agent/agents_description/__pycache__
+
+__pycache__/
+*.pyc
