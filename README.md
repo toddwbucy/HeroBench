@@ -49,11 +49,10 @@ Large language models (LLMs) have shown remarkable capabilities in isolated step
 - Combat mechanics and equipment management
 - Character progression and inventory systems
 
-### 🤖 **Advanced Agent System**
-- **Multi-Agent Architecture**: Sophisticated system with specialized agents for different responsibilities
+### 🤖 **Advanced Agent Systems**
+- **Multi-Agent Architecture**: Sophisticated systems with specialized agents for different responsibilities
 - **A1 Agent**: Hierarchical LLM agent with task decomposition and critic evaluation
-- **A2 Agent**: Enhanced agent system using taskgen-ai framework with curriculum, decomposer, and action agents
-- **Specialized Expert Agents**: Craft expert, map expert, and fight analytic agents for domain-specific knowledge
+- **A2 Agent**: Enhanced A1 Agent system based on taskgen-ai framework with curriculum, decomposer, and action agents
 
 ## Quick Start
 
@@ -130,19 +129,14 @@ uvicorn main:app --host 127.0.0.1 --port 8000
 
 ### Dependencies
 
-#### A1 Agent Dependencies
+#### A1 & A2 Agents Dependencies
 - `langchain==0.3.17` - LLM framework integration
 - `loguru==0.7.3` - Advanced logging
-- `openai==1.42.0` - OpenAI API client
-- `python-dotenv==1.0.1` - Environment variable management
-- `strictjson==6.1.1` - Structured JSON output from LLMs
-
-#### A2 Agent Dependencies
-- `taskgen-ai==4.0.1` - Main framework used to build A2 agentic system
 - `openai==1.59.9` - OpenAI API client
 - `python-dotenv==1.0.1` - Environment variable management
 - `requests==2.32.3` - HTTP client for API calls
 - `strictjson==6.1.1` - Structured JSON output from LLMs
+- `taskgen-ai==4.0.1` - Main framework used to build A2 agentic system
 
 #### Virtual Environment Dependencies
 - `fastapi==0.116.1` - Web framework
@@ -315,7 +309,7 @@ If you use HeroBench in your research, please cite our work:
 ```bibtex
 @article{HeroBench2025,
   title={HeroBench: A Benchmark for Long-Horizon Planning and Structured Reasoning in Virtual Worlds},
-  author={Your Name and Co-authors},
+  author={Anokhin, Petr and Khalikov, Roman and Rebrikov, Stefan and Volkov, Viktor and Sorokin, Artyom and Bissonnette, Vincent},
   journal={arXiv preprint},
   year={2025}
 }
