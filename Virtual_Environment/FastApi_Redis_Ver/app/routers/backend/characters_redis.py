@@ -5,7 +5,7 @@ from typing import Optional, List, Dict
 from app.db import Redis, create_log, ActionType
 from app.routers.backend.response_models import InventorySlotResponseRedis, CharacterResponseRedis
 
-with open("../Data/items.json") as j_file:
+with open("app/Data/items.json") as j_file:
     check_items = [item['code'] for item in json.load(j_file)]
 
 CHARACTER_KEY_PATTERN = "character:{}"

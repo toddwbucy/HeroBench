@@ -1,6 +1,7 @@
 requests
 pytest
 fastapi==0.116.1
+fastapi-cli==0.0.8
 graphviz==0.21
 matplotlib==3.10.5
 numpy==2.3.2

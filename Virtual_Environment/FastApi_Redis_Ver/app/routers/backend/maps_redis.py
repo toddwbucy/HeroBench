@@ -10,7 +10,7 @@ MAPS_CONTENT_CODE_INDEX_KEY_PATTERN = "maps:content_code:{}"
 
 async def load_maps_data(redis: Redis) -> bool:
     """Load maps from JSON into Redis"""
-    with open("../Data/maps.json") as file:
+    with open("app/Data/maps.json") as file:
         maps = json.load(file)
         async with redis.pipeline() as pipe:
             for map_data in maps:

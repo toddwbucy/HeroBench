@@ -10,7 +10,7 @@ DROP_CODE_INDEX_KEY_PATTERN = "monsters:drop:{}"
 MONSTERS_BY_LEVEL_INDEX_KEY_PATTERN = "monsters:by_level"
 
 async def load_monsters_data(redis: Redis) -> bool:
-    with open('../Data/monsters.json') as f:
+    with open('app/Data/monsters.json') as f:
         monsters = json.load(f)
         async with redis.pipeline() as pipe:
             for monster in monsters:

@@ -16,7 +16,7 @@ CRAFT_ITEMS_KEY_PATTERN = "{}:items"
 CRAFT_ITEM_INDEX_KEY_PATTERN = "items:craft_item:{}"
 
 async def load_items_data(redis: Redis) -> bool:
-    with open('../Data/items.json') as f:
+    with open('app/Data/items.json') as f:
         items_data = json.load(f)
         async with redis.pipeline() as pipe:
             for item_data in items_data:

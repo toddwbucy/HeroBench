@@ -12,7 +12,7 @@ RESOURCES_BY_LEVEL_INDEX_KEY_PATTERN = "resources:by_level"
 
 async def load_resources_data(redis: Redis) -> bool:
     """Load resources from JSON into Redis"""
-    with open('../Data/resources.json') as f:
+    with open('app/Data/resources.json') as f:
         resources = json.load(f)
         async with redis.pipeline() as pipe:
             for resource in resources:
