@@ -1,102 +1,119 @@
 # HeroBench: A Benchmark for Long-Horizon Planning and Structured Reasoning in Virtual Worlds
 
-[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.116+-green.svg)](https://fastapi.tiangolo.com/)
 
----
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.116%2B-green.svg)](https://fastapi.tiangolo.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#license)
+[![arXiv](https://img.shields.io/badge/arXiv-2508.xxxxx-b31b1b.svg)](#citation)
 
-## Abstract
+HeroBench evaluates long-horizon planning and structured reasoning within an RPG-inspired virtual world based on [ArtifactsMMO](https://www.artifactsmmo.com/). It couples a simulated environment with a carefully crafted task dataset and analysis tools to assess LLMs on strategic long-horizon planning, resource managment, and math.
 
-Large language models (LLMs) have shown remarkable capabilities in isolated step-by-step reasoning tasks such as mathematics and programming, but their proficiency in long-horizon planning, where solutions require extended, structured sequences of interdependent actions, remains underexplored. Existing benchmarks typically assess LLMs through abstract or low-dimensional algorithmic tasks, failing to capture the complexity of realistic planning environments. We introduce HeroBench, a novel benchmark designed specifically to evaluate long-horizon planning and structured reasoning within complex RPG-inspired virtual worlds. HeroBench provides a rigorously constructed dataset of tasks covering a wide range of difficulties, a simulated environment to execute and validate agent plans, and detailed analytical tools for evaluating model performance. Tasks challenge models to formulate strategic plans, efficiently gather resources, master necessary skills, craft equipment, and defeat adversaries, reflecting practical scenarios' layered dependencies and constraints. Our extensive evaluation of 20 state-of-the-art LLMs, including both open-source and proprietary models and agentic architectures, reveals significant performance disparities typically unseen in conventional reasoning benchmarks. Detailed error analysis further uncovers specific weaknesses in current models' abilities to generate robust high-level plans and reliably execute structured actions. HeroBench thus not only significantly advances the evaluation of LLM reasoning but also provides a flexible, scalable foundation for future research into advanced, autonomous planning in virtual environments.
+<p align="center">
+  <img src="figures/artifacts_example4.png" alt="Success rate on base tasks" width="45%"/>
+  <img src="figures/task_example3.png" alt="Example of a task" width="45%"/>
+</p>
 
----
+<p align="center">
+  <em>Figure 1. A snippet of the virtual environment in HeroBench (left). Example of task from HeroBench (right).</em>
+</p>
 
-<div align="center">
+We evaluated 25 state-of-the-art large language models (LLMs) on **HeroBench**.  
 
-![Success rate on base tasks](figures/success_rate_improved1.png "Success rate on base tasks")
 
-*Performance comparison across different LLM architectures on HeroBench tasks*
+| Model                | Success % | Score (mean ± SD) | Tokens (mean ± SD) |
+|-----------------------|-----------|-------------------|---------------------|
+| Qwen3 8b             | 0.0       | 11.5 ± 6.8        | 2883 ± 1965         |
+| Qwen3 32b            | 1.7       | 21.9 ± 12.8       | 2074 ± 1222         |
+| GigaChat 2 Max       | 2.8       | 21.3 ± 15.4       | 1190 ± 228          |
+| Qwen3 8b (t)         | 3.9       | 28.8 ± 15.5       | 9680 ± 1224         |
+| Deepseek-v3          | 7.2       | 32.7 ± 17.9       | 1586 ± 430          |
+| Kimi-K2              | 8.3       | 29.6 ± 16.4       | 1309 ± 237          |
+| GPT-oss-120b         | 8.9       | 27.0 ± 8.7        | 9372 ± 2959         |
+| Magistral-medium     | 9.4       | 25.0 ± 18.8       | 10885 ± 1667        |
+| Qwen3 32b (t)        | 10.0      | 44.8 ± 17.1       | 9107 ± 1458         |
+| DeepSeek-R1-70B      | 11.2      | 27.5 ± 21.2       | 7448 ± 1029         |
+| Qwen3-235b           | 13.3      | 34.9 ± 20.5       | 12006 ± 1746        |
+| GPT-4.1-mini         | 16.1      | 53.9 ± 17.6       | 4555 ± 1398         |
+| Claude-Sonnet-4      | 17.2      | 50.6 ± 21.0       | 1578 ± 306          |
+| Qwen3-235b-2507      | 24.4      | 49.4 ± 18.6       | 11387 ± 2702        |
+| Deepseek-R1-0528     | 21.7      | 48.7 ± 22.5       | 10711 ± 2088        |
+| Gemini-2.5-flash     | 26.1      | 64.8 ± 13.7       | 11028 ± 4010        |
+| GPT-4.1              | 31.7      | 73.7 ± 10.3       | 3518 ± 1202         |
+| o4-mini              | 35.0      | 56.1 ± 23.5       | 21993 ± 8181        |
+| GPT-5-mini           | 35.0      | 59.8 ± 22.5       | 14126 ± 4169        |
+| Claude-Sonnet-4 (t)  | 44.4      | 73.8 ± 16.9       | 16397 ± 4313        |
+| o3                   | 60.6      | 84.6 ± 8.5        | 13897 ± 5250        |
+| Gemini-2.5-pro       | 62.9      | 86.6 ± 10.4       | 12935 ± 4295        |
+| GPT-5                | 83.9      | 95.0 ± 3.3        | 17851 ± 7149        |
+| Grok-4               | 91.7      | 95.3 ± 3.3        | 15470 ± 5838        |
 
-</div>
+*Table: Mean performance of all evaluated models across nine base task difficulty levels in HeroBench.  
+Columns show success rate (%), score (mean ± SD), and tokens (mean ± SD). SD is computed across the nine difficulty-level averages for each model. Thinking-enabled variants are denoted by (t).*
 
+| Model            | Base Succ (%) | Base Score (±SD) | Base Tokens (±SD) | Leveling Succ (%) | Leveling Score (±SD) | Leveling Tokens (±SD) | L+Noise Succ (%) | L+Noise Score (±SD) | L+Noise Tokens (±SD) |
+|------------------|---------------|------------------|-------------------|-------------------|-----------------------|-----------------------|------------------|----------------------|-----------------------|
+| o3               | 5             | 66.2 ± 32.1      | 20688 ± 2791      | 0                 | 26.6 ± 28.4           | 22606 ± 2788          | 0                | 15.9 ± 12.0          | 23562 ± 3996          |
+| Claude-Sonnet-4  | 10            | 42.6 ± 36.3      | 21366 ± 6036      | 0                 | 25.6 ± 19.0           | 24588 ± 6651          | 0                | 21.9 ± 14.2          | 25404 ± 5697          |
+| Gemini-2.5-pro   | 25            | 66.1 ± 26.6      | 18636 ± 3835      | 10                | 32.7 ± 26.4           | 20047 ± 3141          | 5                | 36.0 ± 28.5          | 21741 ± 3127          |
+| GPT-5            | 55            | 90.6 ± 16.5      | 28052 ± 3776      | 15                | 62.3 ± 32.6           | 31704 ± 3656          | 20               | 59.9 ± 34.2          | 36052 ± 4196          |
+| Grok-4           | 80            | 95.5 ± 14.2      | 22850 ± 4587      | 65                | 92.9 ± 16.5           | 28361 ± 5953          | 65               | 78.8 ± 31.8          | 33305 ± 6672          |
+
+*Table: Evaluation of five leading reasoning models under increased task complexity.  
+Results are shown for three conditions: **Base** (standard level 9 tasks), **Leveling** (requires skill progression before crafting), and **Leveling+Noise** (adds adversarial distractor items). Metrics include success rate, progress score (mean ± SD), and token usage (mean ± SD).*
+
+For further details, please refer to our [paper](link-to-paper).
 ## Table of Contents
 
-- [Features](#features)
-- [Quick Start](#quick-start)
-- [Installation](#installation)
-- [Project Structure](#project-structure)
-- [Usage](#usage)
-- [API Documentation](#api-documentation)
+- [Environment Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Environment](#running-the-environment)
+- [LLM Evaluation](#llm-evaluation)
+- [Analysis & Visualisation](#analysis--visualisation)
+- [API Overview](#api-overview)
 - [Contributing](#contributing)
 - [License](#license)
 - [Citation](#citation)
 
-## Features
+## Environment Features
 
-### 🎯 **Long-Horizon Planning Evaluation**
-- Complex task decomposition and execution
-- Multi-step planning with interdependencies
-- Resource management
+HeroBench is built on a structured RPG-style grid world with the following features:
 
-### 🏗️ **Modular Architecture**
-- **Virtual Environment**: FastAPI-based game world simulation
-- **Benchmark Suite**: Comprehensive task datasets and evaluation metrics
-- **Analytics Tools**: Performance analysis and error categorization
+- **World layout**: 70 locations with resource nodes, workshops, and monster spawns.  
+- **Content**: 25 unique monsters, 17 resource types, and 208 craftable items (gear + components).  
+- **Task types**:  
+  - *Crafting* — gather resources and produce items.  
+  - *Combat* — defeat monsters, often requiring crafted gear.  
+- **Mechanics**:  
+  - Turn-based combat with four elemental damage types, resistances, and amplifications.  
+  - Directed crafting chains with multi-step dependencies.  
+- **Difficulty extensions**:  
+  - *Leveling*: agents must progress profession skills (e.g., mining, crafting) from level 1.  
+  - *Noise items*: distractor gear that appears valid but is impossible to craft.  
+- **Representation**: All environment data and tasks are defined in structured JSON, ensuring reproducibility.  
 
-### 🎮 **RPG-Inspired Game World**
-- Rich virtual environment with resources and monsters
-- Crafting system with skill requirements
-- Combat mechanics and equipment management
-- Character progression and inventory systems
-
-### 🤖 **Advanced Agent System**
-- **Multi-Agent Architecture**: Sophisticated system with specialized agents for different responsibilities
-- **A1 Agent**: Hierarchical LLM agent with task decomposition and critic evaluation
-- **A2 Agent**: Enhanced agent system using taskgen-ai framework with curriculum, decomposer, and action agents
-- **Specialized Expert Agents**: Craft expert, map expert, and fight analytic agents for domain-specific knowledge
-
-## Quick Start
+## Getting Started
 
 ### Prerequisites
-
 - Python 3.8 or higher (Python 3.12.4 recommended)
-- OpenAI API key
-- Redis (optional, for faster performance)
+- Redis (optional, for performance)
 
-### 1. Clone the Repository
+### Installation
 
 ```bash
 git clone https://github.com/stefanrer/HeroBench
 cd HeroBench
 ```
 
-### 2. Set Up the Virtual Environment
+Install dependencies for the environment server:
 
 ```bash
 cd Virtual_Environment/FastApi_Redis_Ver
 pip install -r requirements.txt
 ```
 
-### 3. Start the Environment Server
-
-```bash
-# For Redis version (recommended)
-uvicorn main:app --host 127.0.0.1 --port 8000
-
-# For SQLite version
-cd ../FastApi_SQLite_Ver
-pip install -r requirements.txt
-uvicorn main:app --host 127.0.0.1 --port 8000
-```
-
-
-## Installation
-
-### Detailed Setup Instructions
-
-#### Option 1: Redis Version (Recommended)
-
-1. **Install Redis**
+**Install Redis**
    ```bash
    # Ubuntu/Debian
    sudo apt-get install redis-server
@@ -108,262 +125,99 @@ uvicorn main:app --host 127.0.0.1 --port 8000
    # Download from https://redis.io/download
    ```
 
-2. **Start Redis**
+**Start Redis**
    ```bash
    redis-server
    ```
 
-3. **Set up the environment**
-   ```bash
-   cd Virtual_Environment/FastApi_Redis_Ver
-   pip install -r requirements.txt
-   uvicorn main:app --host 127.0.0.1 --port 8000
-   ```
+### Running the Environment
 
-#### Option 2: SQLite Version
+Start the environment using Redis (recommended):
 
 ```bash
-cd Virtual_Environment/FastApi_SQLite_Ver
-pip install -r requirements.txt
 uvicorn main:app --host 127.0.0.1 --port 8000
 ```
 
-### Dependencies
+To run the SQLite version:
 
-#### A1 Agent Dependencies
-- `langchain==0.3.17` - LLM framework integration
-- `loguru==0.7.3` - Advanced logging
-- `openai==1.42.0` - OpenAI API client
-- `python-dotenv==1.0.1` - Environment variable management
-- `strictjson==6.1.1` - Structured JSON output from LLMs
-
-#### A2 Agent Dependencies
-- `taskgen-ai==4.0.1` - Main framework used to build A2 agentic system
-- `openai==1.59.9` - OpenAI API client
-- `python-dotenv==1.0.1` - Environment variable management
-- `requests==2.32.3` - HTTP client for API calls
-- `strictjson==6.1.1` - Structured JSON output from LLMs
-
-#### Virtual Environment Dependencies
-- `fastapi==0.116.1` - Web framework
-- `redis==6.2.0` - Redis client (Redis version)
-- `uvicorn==0.35.0` - ASGI server
-- `pydantic==2.11.7` - Data validation
-
-## Project Structure
-
+```bash
+cd ../FastApi_SQLite_Ver
+pip install -r requirements.txt
+uvicorn main:app --host 127.0.0.1 --port 8000
 ```
-HeroBench/
-├── README.md                           # This file
-├── figures/                            # Images and visualizations
-│   └── success_rate_improved1.png     # Benchmark results
-│
-├── A1_Agent/                           # Hierarchical LLM agent system
-│   ├── agent.py                        # Main A1Agent implementation
-│   ├── agent_demo.ipynb                # Interactive demo
-│   ├── agent_settings.json             # Agent configuration
-│   ├── tasks_executor.py               # Task execution orchestrator
-│   ├── requirements.txt                # Python dependencies
-│   │
-│   ├── agents/                         # Agent implementations
-│   │   ├── action_agent.py            # Task decomposition agent
-│   │   ├── critic_agent.py            # Plan evaluation agent
-│   │   └── prompts/                   # LLM prompt templates
-│   │
-│   ├── env_api/                       # Environment API integration
-│   │   ├── api.py                     # Main API client
-│   │   ├── api_calls_ext.py           # Extended API functionality
-│   │   └── actions_executors.py       # Action execution handlers
-│   │
-│   ├── memory/                        # Knowledge and data storage
-│   │   ├── MAPS.json                  # Game world map data
-│   │   ├── available_items_craft.py   # Crafting item management
-│   │   ├── craft_parser.py            # Crafting recipe parser
-│   │   └── source_jsons/              # Game data sources
-│   │
-│   ├── tasks/                         # Task definitions
-│   │   ├── combined_tasks8_small.json # Task dataset
-│   │   └── combined_prompts8_2_small.json
-│   │
-│   ├── utils/                         # Utility modules
-│   │   ├── agent_logger.py            # Logging system
-│   │   ├── environment_state.py       # Environment state management
-│   │   ├── llm_connect.py             # LLM connection utilities
-│   │   └── state_parse.py             # State parsing utilities
-│   │
-│   └── results/                       # Execution results
-│
-├── A2_Agent/
-│   ├── agent_demo.ipynb                 # Interactive demo notebook
-│   ├── requirements.txt                 # Python dependencies
-│   │
-│   ├── agent/                           # Agent implementations
-│   │   ├── agent.py                     # Main A2 agents system implementation
-│   │   ├── task_knowledge.py            # Contains environment instance knowledge getters
-│   │   └── agents_description/          # Agent prompts and functions to get task-dependent prompts
-│   │
-│   ├── utils/                           # Utility modules
-│   │   ├── api.py                       # ArtifactsMMO API implementation
-│   │   ├── crafting_tree.py             # Crafting tree generation for reward calculation
-│   │   ├── reward.py                    # Reward calculation for task evaluation
-│   │   └── data/                        # Contains environment data
-│   │
-│   ├── tasks/                           # Task datasets storage
-│   │   └── combined_tasks8_small.json   # Standard dataset in a JSON format
-│   │
-│   └── results/                         # Execution results storage
-│       └── [generated during execution]
-│
-└── Virtual_Environment/               # Game world simulation
-    ├── FastApi_Redis_Ver/             # Redis-based implementation
-    │   ├── app/
-    │   │   ├── routers/               # API endpoints
-    │   │   └── db.py                  # Database configuration
-    │   ├── main.py                    # FastAPI application
-    │   └── requirements.txt           # Dependencies
-    │
-    ├── FastApi_SQLite_Ver/            # SQLite-based implementation
-    │   ├── app/
-    │   │   ├── routers/               # API endpoints
-    │   │   └── db.py                  # Database configuration
-    │   ├── main.py                    # FastAPI application
-    │   └── requirements.txt           # Dependencies
-    │
-    ├── Data/                          # Game data files
-    │   ├── items.json                 # Item definitions
-    │   ├── maps.json                  # Map definitions
-    │   ├── monsters.json              # Monster definitions
-    │   └── resources.json             # Resource definitions
-    │
-    └── world_map.png                  # Visual map representation
-```
+## Datasets
 
-## Usage
+The datasets are split into two files:  
+- **prompts.json** – contains ready-to-use prompts for LLMs.  
+- **tasks.json** – contains structured task descriptions.  
 
-### Running the Benchmark
+The repository provides an original dataset of **844 tasks** (`dataset_large`) and a smaller dataset that is a subset of the large one, used for experiments in our paper. The smaller dataset includes **9 difficulty levels with 20 tasks each**.  
 
-1. **Start the environment server**
-   ```bash
-   cd Virtual_Environment/FastApi_Redis_Ver
-   uvicorn main:app --host 127.0.0.1 --port 8000
-   ```
+In addition, there are extended versions of the dataset that incorporate **leveling mechanics** and **noisy items**.  
 
-### LLM Evaluation
+You can also generate custom datasets:  
+- Use `datasets/dataset_create` to sample different tasks from `dataset_large`.  
+- Use `increase_difficulty_scripts/add_leveling.py` and `increase_difficulty_scripts/add_noise.py` to add extra complexity mechanics to a dataset.  
 
-To run the LLM evaluation, use the `scoring_pipeline.py` script.  
-We provide an **LLMService** that supports:
+## LLM Evaluation
 
-- OpenAI API  
-- OpenRouter API  
-- Ollama  
-- HuggingFace (local models)  
+Use `scoring_pipeline.py` to evaluate models. The `LLMService` supports:
 
-You will need to set the **task** and **prompt** file paths.
+- OpenAI API
+- OpenRouter API
+- Ollama
+- HuggingFace (local models)
 
-This script will generate **three** files in the output directory:
+Configure the task and prompt file paths. Running the script produces three files in the output directory:
 
-1. `<name>.json` – main results file.  
-2. `<name>_full_log.json` – full logged response from the model.  
-3. `<name>_code_logs.json` – extracted code from the LLM response plus logs from the environment.
+1. `<name>.json` – main results
+2. `<name>_full_log.json` – full model responses
+3. `<name>_code_logs.json` – extracted code and environment logs
 
----
+## Analysis & Visualisation
 
-### Results Visualization
+Visualise results with:
 
-For visualizing results, use:
+- `visualisation_scripts/table_mean.py`
+- `visualisation_scripts/plot_figures.py`
 
-- `visualisation_scripts/table_mean.py`  
-- `visualisation_scripts/plot_figures.py`  
+Outputs are saved to `results/plots_tables`.
 
-These scripts will save figures and tables to: results/plots_tables
+For error analysis run `statistics_pipeline.py` on `<name>_code_logs.json` or results/your_results folder to produce:
 
----
+1. `<name>_scores.json` – failure analysis per task
+2. `<name>_stats.json` – mean analysis by difficulty
 
-### Error Type Analysis
-
-For additional analysis of error types, run `statistics_pipeline.py`.  
-The script takes the `<name>_code_logs.json` file from the input directory and outputs:
-
-1. `<name>_scores.json` – failure analysis for each task.  
-2. `<name>_stats.json` – mean analysis per difficulty and across all difficulties.
-
-To generate the resulting statistics table use visualisation_scripts/table_statistics.py
-
-
-### Task Types
-
-HeroBench supports various task types:
-
-- **Crafting Tasks**: Gather resources and craft items
-- **Combat Tasks**: Navigate to monsters and engage in combat
-
-## API Documentation
-
-The virtual environment provides a comprehensive REST API for:
-
-- **Character Management**: Create, delete, and manage characters
-- **Movement**: Navigate the game world
-- **Actions**: Gather resources, craft items, fight monsters
-- **State Queries**: Check inventory, position, and status
-
-### Key Endpoints
-
-- `POST /characters/create` - Create a new character
-- `POST /my/{name}/action/move` - Move character
-- `POST /my/{name}/action/gathering` - Gather resources
-- `POST /my/{name}/action/crafting` - Craft items
-- `POST /my/{name}/action/fight` - Fight monsters
-- `GET /maps/{x}/{y}` - Get map information
-- `GET /items` - List available items
-
-For complete API documentation, see [Virtual_Environment/README.md](Virtual_Environment/README.md).
-
-### Base vs Hard Results
-
-Results are divided into:
-
-- **Base** – from the standard datasets.  
-- **Hard** – from datasets with leveling mechanics and noise items.
-
+Generate statistics tables using `visualisation_scripts/table_statistics.py`.
 
 ## Contributing
 
-We welcome contributions to HeroBench! Here's how you can help:
+Contributions are welcome!
 
-### Development Setup
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature-name`
+3. Make your changes
+4. Run tests (if available)
+5. Submit a pull request
 
-1. **Fork the repository**
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. **Make your changes**
-4. **Run tests** (if available)
-5. **Submit a pull request**
-
-### Areas for Contribution
-
-- **New Task Types**: Add novel planning challenges
-- **Environment Features**: Extend the virtual world
-- **Evaluation Metrics**: Improve benchmark assessment
-- **Documentation**: Enhance guides and examples
+Ideas for contribution include new task types, environment features, evaluation metrics, and improved documentation.
 
 ## License
 
-Fill here
+HeroBench is licensed under the MIT License.
 
 ## Citation
 
-If you use HeroBench in your research, please cite our work:
+If you use HeroBench in your research, please cite:
 
 ```bibtex
 @article{HeroBench2025,
   title={HeroBench: A Benchmark for Long-Horizon Planning and Structured Reasoning in Virtual Worlds},
-  author={Your Name and Co-authors},
+  author={Anokhin, Petr and Khalikov, Roman and Rebrikov, Stefan and Volkov, Viktor and Sorokin, Artyom and Bissonnette, Vincent},
   journal={arXiv preprint},
   year={2025}
 }
 ```
 
+For questions or issues, open an issue on GitHub or contact the maintainers.
 
-For questions, issues, or contributions, please open an issue on GitHub or contact the maintainers.

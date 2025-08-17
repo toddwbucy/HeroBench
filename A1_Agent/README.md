@@ -54,7 +54,7 @@ A1 Agent is an advanced hierarchical LLM agent system designed for automated tas
 The project requires the following Python packages:
 - `langchain==0.3.17` - LLM framework integration
 - `loguru==0.7.3` - Advanced logging
-- `openai==1.42.0` - OpenAI API client
+- `openai==1.59.9` - OpenAI API client
 - `python-dotenv==1.0.1` - Environment variable management
 - `requests==2.32.3` - HTTP client for API calls
 - `strictjson==6.1.1` - Structured JSON output from LLMs
