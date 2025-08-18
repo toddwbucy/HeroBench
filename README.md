@@ -50,6 +50,7 @@ We evaluated 25 state-of-the-art large language models (LLMs) on **HeroBench**.
 *Table: Mean performance of all evaluated models across nine base task difficulty levels in HeroBench.  
 Columns show success rate (%), score (mean ± SD), and tokens (mean ± SD). SD is computed across the nine difficulty-level averages for each model. Thinking-enabled variants are denoted by (t).*
 
+
 | Model            | Base Succ (%) | Base Score (±SD) | Base Tokens (±SD) | Leveling Succ (%) | Leveling Score (±SD) | Leveling Tokens (±SD) | L+Noise Succ (%) | L+Noise Score (±SD) | L+Noise Tokens (±SD) |
 |------------------|---------------|------------------|-------------------|-------------------|-----------------------|-----------------------|------------------|----------------------|-----------------------|
 | o3               | 5             | 66.2 ± 32.1      | 20688 ± 2791      | 0                 | 26.6 ± 28.4           | 22606 ± 2788          | 0                | 15.9 ± 12.0          | 23562 ± 3996          |
@@ -57,6 +58,7 @@ Columns show success rate (%), score (mean ± SD), and tokens (mean ± SD). SD i
 | Gemini-2.5-pro   | 25            | 66.1 ± 26.6      | 18636 ± 3835      | 10                | 32.7 ± 26.4           | 20047 ± 3141          | 5                | 36.0 ± 28.5          | 21741 ± 3127          |
 | GPT-5            | 55            | 90.6 ± 16.5      | 28052 ± 3776      | 15                | 62.3 ± 32.6           | 31704 ± 3656          | 20               | 59.9 ± 34.2          | 36052 ± 4196          |
 | Grok-4           | 80            | 95.5 ± 14.2      | 22850 ± 4587      | 65                | 92.9 ± 16.5           | 28361 ± 5953          | 65               | 78.8 ± 31.8          | 33305 ± 6672          |
+
 
 *Table: Evaluation of five leading reasoning models under increased task complexity.  
 Results are shown for three conditions: **Base** (standard level 9 tasks), **Leveling** (requires skill progression before crafting), and **Leveling+Noise** (adds adversarial distractor items). Metrics include success rate, progress score (mean ± SD), and token usage (mean ± SD).*
@@ -109,7 +111,6 @@ cd HeroBench
 Install dependencies for the environment server:
 
 ```bash
-cd Virtual_Environment/FastApi_Redis_Ver
 pip install -r requirements.txt
 ```
 
@@ -135,14 +136,14 @@ pip install -r requirements.txt
 Start the environment using Redis (recommended):
 
 ```bash
+cd Virtual_Environment/FastApi_Redis_Ver
 uvicorn main:app --host 127.0.0.1 --port 8000
 ```
 
 To run the SQLite version:
 
 ```bash
-cd ../FastApi_SQLite_Ver
-pip install -r requirements.txt
+cd Virtual_Environment/FastApi_SQLite_Ver
 uvicorn main:app --host 127.0.0.1 --port 8000
 ```
 ## Datasets
