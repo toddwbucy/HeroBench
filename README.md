@@ -137,14 +137,14 @@ Start the environment using Redis (recommended):
 
 ```bash
 cd Virtual_Environment/FastApi_Redis_Ver
-uvicorn main:app --host 127.0.0.1 --port 8000
+fastapi run
 ```
 
 To run the SQLite version:
 
 ```bash
 cd Virtual_Environment/FastApi_SQLite_Ver
-uvicorn main:app --host 127.0.0.1 --port 8000
+fastapi run
 ```
 ## Datasets
 
