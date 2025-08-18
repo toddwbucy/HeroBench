@@ -1,12 +1,43 @@
 # Virtual Environment
-![Virtual Enviroment Map](world_map.png "Virtual Enviroment Map")
+![Virtual Environment Map](world_map.png "Virtual Environment Map")
 
 ## SQLite Version
-Works slower, localy saves database in artifact.db file
+Works slower, locally saves database in artifact.db file
+
+**Start the environment server**
+   - Go to Environment folder
+      ````bash
+      cd Virtual_Environment/FastApi_SQLite_Ver
+      ````
+   - Development mode
+      ````bash
+      fastapi dev
+      ```` 
+   - Production mode
+      ```bash
+      fastapi run
+      ``` 
+ - Ensure the environment server is running on `http://0.0.0.0:8000`
+ - API docs: `http://0.0.0.0:8000/docs`
 
 ## Redis Version
 Works faster, needs Redis instance running on port 6379
 
+**Start the environment server**
+   - Go to Environment folder
+      ````bash
+      cd Virtual_Environment/FastApi_Redis_Ver
+      ````
+   - Development mode
+      ````bash
+      fastapi dev
+      ```` 
+   - Production mode
+      ```bash
+      fastapi run
+      ``` 
+ - Ensure the environment server is running on `http://0.0.0.0:8000`
+ - API docs: `http://0.0.0.0:8000/docs`
 ---
 
 # API CALLS Documentation
