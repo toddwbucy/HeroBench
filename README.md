@@ -4,7 +4,7 @@
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.116%2B-green.svg)](https://fastapi.tiangolo.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#license)
-[![arXiv](https://img.shields.io/badge/arXiv-2508.12782-b31b1b.svg)](#citation)
+[![arXiv](https://img.shields.io/badge/arXiv-2508.12782-b31b1b.svg)](https://arxiv.org/abs/2508.12782)
 
 HeroBench evaluates long-horizon planning and structured reasoning within an RPG-inspired virtual world based on [ArtifactsMMO](https://www.artifactsmmo.com/). It couples a simulated environment with a carefully crafted task dataset and analysis tools to assess LLMs on strategic long-horizon planning, resource managment, and math.
 
