@@ -63,7 +63,7 @@ Columns show success rate (%), score (mean ± SD), and tokens (mean ± SD). SD i
 *Table: Evaluation of five leading reasoning models under increased task complexity.  
 Results are shown for three conditions: **Base** (standard level 9 tasks), **Leveling** (requires skill progression before crafting), and **Leveling+Noise** (adds adversarial distractor items). Metrics include success rate, progress score (mean ± SD), and token usage (mean ± SD).*
 
-For further details, please refer to our [paper](link-to-paper).
+For further details, please refer to our [paper](https://arxiv.org/abs/2508.12782).
 ## Table of Contents
 
 - [Environment Features](#features)
