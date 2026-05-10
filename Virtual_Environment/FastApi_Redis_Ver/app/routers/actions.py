@@ -28,6 +28,7 @@ router = APIRouter()
     responses={
         404: {"description": "Map not found."},
         486: {"description": "Redis Error."},
+        489: {"description": "Destination is not adjacent to current position (Chebyshev distance > 1)."},
         490: {"description": "Character already at destination."},
         498: {"description": "Character not found."},
     },
@@ -51,6 +52,16 @@ async def action_move(
     move_map: Optional[MapRedis] = await get_map_from_redis(redis, x, y)
     if not move_map:
         return error_response(404, "Map not found.")
+
+    dx = abs(character.x - move_map.x)
+    dy = abs(character.y - move_map.y)
+    if max(dx, dy) > 1:
+        return error_response(
+            489,
+            f"Destination ({x},{y}) is not adjacent to current "
+            f"position ({character.x},{character.y}). "
+            f"Move one tile at a time (Chebyshev distance <= 1).",
+        )
 
     if character.x == move_map.x and character.y == move_map.y:
         return error_response(490, "Character already at destination.")

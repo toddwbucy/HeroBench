@@ -31,6 +31,7 @@ class CharacterMovementDataResponse(SQLModel, ordered=True):
     responses={
         404: {"description": "Map not found."},
         # 486: {"description": "An action is already in progress by your character."},
+        489: {"description": "Destination is not adjacent to current position (Chebyshev distance > 1)."},
         490: {"description": "Character already at destination."},
         498: {"description": "Character not found."},
     },
@@ -51,6 +52,15 @@ async def action_move(
     if character:
         move_map = session.exec(select(Map).filter_by(x=x, y=y)).first()
         if move_map:
+            dx = abs(character.x - move_map.x)
+            dy = abs(character.y - move_map.y)
+            if max(dx, dy) > 1:
+                return error_response(
+                    489,
+                    f"Destination ({x},{y}) is not adjacent to current "
+                    f"position ({character.x},{character.y}). "
+                    f"Move one tile at a time (Chebyshev distance <= 1).",
+                )
             if not (character.x == move_map.x and character.y == move_map.y):
                 character.move_character(session, move_map.x, move_map.y)
                 log = CharacterLog(character_name=character.name, action_type=ActionType.move,
