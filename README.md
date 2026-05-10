@@ -63,6 +63,10 @@ Columns show success rate (%), score (mean ± SD), and tokens (mean ± SD). SD i
 Results are shown for three conditions: **Base** (standard level 9 tasks), **Leveling** (requires skill progression before crafting), and **Leveling+Noise** (adds adversarial distractor items). Metrics include success rate, progress score (mean ± SD), and token usage (mean ± SD).*
 
 For further details, please refer to our [paper](https://arxiv.org/abs/2508.12782).
+## Differences from upstream
+
+- `action_move` enforces Chebyshev distance ≤ 1: moves to non-adjacent tiles return HTTP 489 instead of teleporting. Applies to both the SQLite and Redis FastAPI backends.
+
 ## Table of Contents
 
 - [Environment Features](#features)
