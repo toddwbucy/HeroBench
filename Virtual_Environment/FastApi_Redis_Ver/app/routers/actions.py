@@ -325,6 +325,11 @@ async def action_fight(
     if not fought or not await update_redis.update_redis():
         return error_response(486, "Redis Error.")
 
+    # Report which monster was fought so clients can grade a win against a
+    # specific objective monster (the response otherwise only carries the
+    # win/lose result, not the monster's identity).
+    fight_response.monster = current_map.content.code
+
     return CharacterFightDataRedis(fight=fight_response, character=update_redis.changed_character)
 
 
@@ -372,6 +377,7 @@ async def action_fight_multiple(
         if not fought:
             return error_response(486, "Redis Error.")
 
+        fight_response.monster = current_map.content.code
         fight_responses.append(fight_response)
 
         quantity -= 1
