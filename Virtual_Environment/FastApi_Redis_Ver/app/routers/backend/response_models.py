@@ -207,6 +207,7 @@ class BlockedHitsResponseRedis(BaseModel):
 
 class FightResponseRedis(BaseModel):
     result: Annotated[FightResult, Field(description="The result of the fight.")] = FightResult.win
+    monster: Annotated[str, Field(description="The code of the monster fought.")] = ""
     xp: Annotated[int,  Field(description="The amount of xp gained by the fight.")] = 0
     drops: Annotated[list[DropResponseRedis], Field(description="The items dropped by the fight.")] = []
     turns: Annotated[int, Field(description="Numbers of the turns of the combat.")] = 0
