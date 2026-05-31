@@ -76,6 +76,42 @@ async def action_move(
 
 
 @router.post(
+    name="Action Rest",
+    path="/my/{name}/action/rest",
+    tags=["My characters"],
+    response_model=CharacterResponseRedis,
+    description="Restore the character's HP to its level-derived maximum "
+                "(120 + 5 per level above 1). This grants a fresh 'life' and is "
+                "intended for harness-controlled revival at an attempt boundary, "
+                "not as a free in-run heal — in-run recovery is via restore "
+                "consumables used during a fight.",
+    response_description="The character has been restored to full HP.",
+    responses={
+        486: {"description": "Redis Error."},
+        498: {"description": "Character not found."},
+    },
+)
+async def action_rest(
+        redis: RedisDep,
+        name: Annotated[
+            str, Path(description="Name of your character.", regex=r'^[a-zA-Z0-9_-]+$')
+        ],
+):
+    character: Optional[CharacterResponseRedis] = await get_character_redis(redis, name)
+    if not character:
+        return error_response(498, "Character not found.")
+
+    update_redis = CharacterUpdateRedis(redis, character)
+    max_hp = 120 + 5 * (update_redis.changed_character.level - 1)
+    update_redis.changed_character.hp = max_hp
+
+    if not await update_redis.update_redis():
+        return error_response(486, "Redis Error.")
+
+    return update_redis.changed_character
+
+
+@router.post(
     name="Action Gathering",
     path="/my/{name}/action/gathering",
     tags=["My characters"],

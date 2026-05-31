@@ -392,20 +392,26 @@ class CharacterUpdateRedis:
                     logs.append(f"Fight result: win. (Character HP: {self.changed_character.hp}, Monster HP: {0})")
                     got_xp = await self.increase_battle_xp(monster.level)
                     await commit_consumables()
-                    return turn, logs, "win", got_xp
+                    # Return the character's remaining combat HP so the caller can
+                    # persist post-fight damage (HP is a depleting resource).
+                    return turn, logs, "win", got_xp, max(0, character_hp)
 
                 character_hp = await monster_turn(turn, character_hp)
                 if character_hp <= 0:
                     logs.append(f"Fight result: lose. (Character HP: {0}, Monster HP: {monster.hp})")
                     await self.move_character(0, 0)
                     await commit_consumables()
-                    return turn, logs, "lose", 0
+                    # Character died: ending HP is 0 (the caller persists this and
+                    # treats HP==0 as death).
+                    return turn, logs, "lose", 0, 0
 
                 turn += 1
 
             await commit_consumables()
             logs.append(f"Fight result: lose. (Character HP: {self.changed_character.hp}, Monster HP: {monster.hp})")
-            return turn, logs, "lose", 0
+            # 50-turn stalemate: the fight is lost but the character survived,
+            # so persist its remaining combat HP (it is damaged, not dead).
+            return turn, logs, "lose", 0, max(0, character_hp)
 
         boost_stats, consumables = await init_consumables()  # Apply boosts before the fight
         character_hp = self.changed_character.hp + boost_stats["hp"]
@@ -420,7 +426,7 @@ class CharacterUpdateRedis:
 
     async def fight_monster(self, monster: MonsterRedis) -> Tuple[Optional[FightResponseRedis], bool]:
         try:
-            turn, logs, result, got_xp = await self.fight_monster_simulation(monster)
+            turn, logs, result, got_xp, ending_hp = await self.fight_monster_simulation(monster)
             fight = FightResponseRedis(turns=turn, logs=logs, result=result)
             if result == "win":
                 items = []
@@ -445,6 +451,14 @@ class CharacterUpdateRedis:
             else:
                 await create_log(redis=self.redis, character_name=self.character_name, action=ActionType.fight,
                                    log=f"{self.character_name} lost his fight against {monster.name}.")
+            # Persist post-fight damage: HP is a depleting resource. `ending_hp`
+            # is the character's remaining combat HP (0 on death), clamped to the
+            # level-derived maximum (base 120 + 5 per level above 1). Damage now
+            # sticks across fights — the character must heal (restore consumables)
+            # or die. A revive to full HP happens only at a new life, via the
+            # harness-only /action/rest endpoint.
+            max_hp = 120 + 5 * (self.changed_character.level - 1)
+            self.changed_character.hp = max(0, min(ending_hp, max_hp))
             return fight, True
         except Exception as e:
             print(e)
