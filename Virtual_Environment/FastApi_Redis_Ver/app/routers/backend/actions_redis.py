@@ -462,7 +462,12 @@ class CharacterUpdateRedis:
             # or die. A revive to full HP happens only at a new life, via the
             # harness-only /action/rest endpoint.
             max_hp = 120 + 5 * (self.changed_character.level - 1)
-            self.changed_character.hp = max(0, min(ending_hp, max_hp))
+            # Combat damage is computed in floats ("dealt 4.0 damage"), so
+            # ending_hp is a float. HP is conceptually integer, and clients
+            # deserialize it as such (the Rust CharacterState uses u32), so a
+            # float here ("74.0") fails the whole fight response to parse —
+            # silently turning wins into parse-errors. Coerce to int.
+            self.changed_character.hp = int(max(0, min(ending_hp, max_hp)))
             return fight, True
         except Exception as e:
             print(e)
