@@ -392,9 +392,12 @@ class CharacterUpdateRedis:
                     logs.append(f"Fight result: win. (Character HP: {self.changed_character.hp}, Monster HP: {0})")
                     got_xp = await self.increase_battle_xp(monster.level)
                     await commit_consumables()
-                    # Return the character's remaining combat HP so the caller can
-                    # persist post-fight damage (HP is a depleting resource).
-                    return turn, logs, "win", got_xp, max(0, character_hp)
+                    # Return the character's remaining BASE combat HP so the caller
+                    # can persist post-fight damage (HP is a depleting resource).
+                    # Subtract the temporary boost (cooked_beef/wolf_meat), which
+                    # raises max HP only for the duration of the fight — it must
+                    # not turn into permanent health after the fight ends.
+                    return turn, logs, "win", got_xp, max(0, character_hp - boost_stats["hp"])
 
                 character_hp = await monster_turn(turn, character_hp)
                 if character_hp <= 0:
@@ -410,8 +413,9 @@ class CharacterUpdateRedis:
             await commit_consumables()
             logs.append(f"Fight result: lose. (Character HP: {self.changed_character.hp}, Monster HP: {monster.hp})")
             # 50-turn stalemate: the fight is lost but the character survived,
-            # so persist its remaining combat HP (it is damaged, not dead).
-            return turn, logs, "lose", 0, max(0, character_hp)
+            # so persist its remaining BASE combat HP (damaged, not dead).
+            # Subtract the temporary boost so it does not persist as real HP.
+            return turn, logs, "lose", 0, max(0, character_hp - boost_stats["hp"])
 
         boost_stats, consumables = await init_consumables()  # Apply boosts before the fight
         character_hp = self.changed_character.hp + boost_stats["hp"]

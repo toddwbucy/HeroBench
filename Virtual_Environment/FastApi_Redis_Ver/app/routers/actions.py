@@ -347,6 +347,12 @@ async def action_fight(
     if not character:
         return error_response(498, "Character not found.")
 
+    # A character at 0 HP is dead and cannot fight — reject before the
+    # simulation, otherwise a dead character (which attacks first) could win
+    # the next fight. It must be revived (/action/rest) first.
+    if character.hp <= 0:
+        return error_response(491, "Character is dead (0 HP) — rest to revive before fighting.")
+
     current_map: Optional[MapRedis] = await get_map_from_redis(redis, character.x, character.y)
     if not current_map or not current_map.content or not current_map.content.type == "monster":
         return error_response(598, "Monster not found on this map.")
@@ -395,6 +401,12 @@ async def action_fight_multiple(
     character: Optional[CharacterResponseRedis] = await get_character_redis(redis, name)
     if not character:
         return error_response(498, "Character not found.")
+
+    # A character at 0 HP is dead and cannot fight — reject before the
+    # simulation, otherwise a dead character (which attacks first) could win
+    # the next fight. It must be revived (/action/rest) first.
+    if character.hp <= 0:
+        return error_response(491, "Character is dead (0 HP) — rest to revive before fighting.")
 
     current_map: Optional[MapRedis] = await get_map_from_redis(redis, character.x, character.y)
     if not current_map or not current_map.content or not current_map.content.type == "monster":
