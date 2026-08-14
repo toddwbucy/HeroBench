@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HeroBench Replay Viewer</title>
+<style>
+  :root {
+    --bg: #0e1217; --panel: #161b22; --border: #232a33; --fg: #d4dbe2;
+    --muted: #7a8696; --accent: #58a6ff; --good: #56d364; --bad: #f85149;
+    --warn: #d29922; --ink: #e6edf3; --code-bg: #0c0f14;
+    --pen: #c08bff; --notepad: #f0c674; --aql: #79b8ff; --llm: #84e1bc;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; }
+  body { font: 13px/1.4 -apple-system, system-ui, "Segoe UI", sans-serif; color: var(--fg); background: var(--bg); }
+  code, pre, .mono { font-family: "JetBrains Mono", "SF Mono", Menlo, monospace; }
+  button, select { font: inherit; color: var(--fg); background: var(--panel); border: 1px solid var(--border); padding: 4px 8px; border-radius: 4px; cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  #app { display: grid; grid-template-rows: auto 1fr auto; height: 100vh; }
+  #header { display: flex; gap: 16px; align-items: center; padding: 8px 16px; border-bottom: 1px solid var(--border); background: var(--panel); }
+  #header h1 { font-size: 14px; margin: 0; font-weight: 600; }
+  #header .meta { color: var(--muted); font-size: 12px; }
+  #header .grow { flex: 1; }
+  #live-btn.live-on { background: rgba(248, 81, 73, 0.18); border-color: var(--bad); color: #ff8c8c; animation: livepulse 2s ease-in-out infinite; }
+  @keyframes livepulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
+  #main { display: grid; grid-template-columns: 280px 1fr 1fr; gap: 8px; padding: 8px; overflow: hidden; }
+  #left-stack { display: grid; grid-template-rows: 1fr 1fr; gap: 8px; min-height: 0; overflow: hidden; }
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; }
+  .panel h2 { font-size: 12px; font-weight: 600; padding: 8px 12px; margin: 0; border-bottom: 1px solid var(--border); color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .panel-body { padding: 8px 12px; overflow: auto; flex: 1; }
+  #episode-list .ep { padding: 6px 8px; border-radius: 4px; cursor: pointer; margin-bottom: 2px; display: grid; grid-template-columns: auto 1fr auto; column-gap: 8px; align-items: center; font-size: 12px; }
+  #episode-list .ep:hover { background: var(--code-bg); }
+  #episode-list .ep.active { background: rgba(88, 166, 255, 0.15); border-left: 2px solid var(--accent); }
+  #episode-list .ep .badge { font-size: 10px; padding: 1px 6px; border-radius: 8px; background: var(--border); color: var(--muted); }
+  #episode-list .ep.solved .badge { background: rgba(86, 211, 100, 0.18); color: var(--good); }
+  #episode-list .ep.failed .badge { background: rgba(248, 81, 73, 0.18); color: var(--bad); }
+  #episode-list .ep .att { color: var(--muted); font-size: 11px; }
+  /* Run summary panel — tasks done, character state, skills, inventory */
+  #run-summary .section { padding: 6px 0; border-bottom: 1px solid var(--border); }
+  #run-summary .section:last-child { border-bottom: none; }
+  #run-summary .section h3 { font-size: 10px; color: var(--muted); margin: 0 0 4px 0; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  #run-summary .task-row { display: grid; grid-template-columns: auto 1fr auto auto; column-gap: 6px; font-size: 11px; padding: 2px 0; align-items: center; }
+  #run-summary .task-row .check { width: 12px; text-align: center; }
+  #run-summary .task-row.solved .check { color: var(--good); }
+  #run-summary .task-row.unsolved .check { color: var(--bad); }
+  #run-summary .task-row .name { font-family: "JetBrains Mono", monospace; }
+  #run-summary .task-row .attempts { color: var(--muted); font-size: 10px; }
+  #run-summary .task-row .score { font-family: monospace; }
+  #run-summary .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 8px; font-size: 11px; }
+  #run-summary .skills-grid .skill-cell { display: flex; justify-content: space-between; }
+  #run-summary .skills-grid .skill-cell .lvl { font-family: monospace; color: var(--good); }
+  #run-summary .inv-item { display: inline-block; margin: 1px 3px 1px 0; padding: 1px 5px; background: var(--code-bg); border-radius: 3px; font-size: 11px; }
+  #run-summary .kv { display: grid; grid-template-columns: auto 1fr; gap: 2px 8px; font-size: 11px; }
+  #run-summary .kv .k { color: var(--muted); }
+  #map-wrap { position: relative; flex: 1; overflow: hidden; }
+  #map { width: 100%; height: 100%; display: block; background: #0a0d12; }
+  #map-overlay { position: absolute; top: 8px; left: 8px; padding: 4px 8px; border-radius: 4px; background: rgba(0,0,0,0.5); color: var(--muted); font-size: 11px; pointer-events: none; }
+  /* World biome tiles (background layer). Saturated enough to read on dark UI. */
+  .world-tile { stroke: #0a0d12; stroke-width: 0.04; }
+  .world-Forest { fill: #2d6e44; }
+  .world-Forest__Forge_ { fill: #c47a2e; }
+  .world-Lake { fill: #2c6fb3; }
+  .world-Graveyard { fill: #5a4d6b; }
+  .world-City { fill: #8a8276; }
+  .world-Spawn { fill: #6ed886; }
+  .world-Spawn-marker { fill: none; stroke: #fff; stroke-width: 0.08; stroke-dasharray: 0.1 0.1; }
+  /* World content markers */
+  .content-marker { stroke-width: 0.04; }
+  .content-resource { fill: #3a8c5a; stroke: #5fbf80; }
+  .content-monster { fill: #8c3a3a; stroke: #c06060; }
+  .content-workshop { fill: #c08b3a; stroke: #f0c674; }
+  .content-tasks { fill: #5a8cc0; stroke: #79b8ff; }
+  .content-bank { fill: #c08bff; stroke: #d8a8ff; }
+  .content-other { fill: #555; stroke: #999; }
+  .content-label { fill: #fff; font-size: 0.32px; text-anchor: middle; pointer-events: none; font-weight: 700; }
+  /* Agent footprint (overlay over biome layer — needs strong contrast) */
+  .footprint { fill: transparent; stroke-width: 0.12; }
+  .fp-observed { stroke: #ffffff; stroke-dasharray: 0.1 0.1; opacity: 0.5; }
+  .fp-success { stroke: #6ee37c; stroke-width: 0.16; }
+  .fp-failure { stroke: #ff6e6e; stroke-width: 0.16; }
+  .fp-future { opacity: 0.18; stroke-dasharray: 0.06 0.12; }
+  .fp-current { stroke: #ffffff; stroke-width: 0.2; opacity: 1; }
+  /* Agent + trail */
+  .agent { fill: #ffffff; stroke: var(--accent); stroke-width: 0.06; }
+  .trail { stroke: #ffffff; stroke-opacity: 0.85; fill: none; stroke-width: 0.1; }
+  #state-panel .section { padding: 8px 0; border-bottom: 1px solid var(--border); }
+  #state-panel .section:last-child { border-bottom: none; }
+  #state-panel .section h3 { font-size: 11px; color: var(--muted); margin: 0 0 4px 0; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  .kv { display: grid; grid-template-columns: 100px 1fr; gap: 4px 8px; font-size: 12px; }
+  .kv .k { color: var(--muted); }
+  .kv .v { font-family: "JetBrains Mono", monospace; }
+  .inv-item { display: inline-block; margin: 2px; padding: 2px 6px; background: var(--code-bg); border-radius: 3px; font-size: 11px; }
+  .skill { display: inline-block; margin: 1px 4px 1px 0; font-size: 11px; }
+  .skill .lvl { color: var(--good); font-weight: 600; }
+  #log .step { padding: 6px 10px; margin-bottom: 6px; border-radius: 4px; background: var(--code-bg); border-left: 3px solid var(--border); font-size: 12px; }
+  #log .step.before, #log .step.after { opacity: 0.5; }
+  #log .step.current { border-left-color: var(--accent); background: #131923; opacity: 1; }
+  #log .step .head { display: flex; justify-content: space-between; gap: 8px; align-items: center; margin-bottom: 4px; font-size: 11px; }
+  #log .step .kind { text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em; font-size: 10px; padding: 1px 6px; border-radius: 3px; background: var(--border); }
+  #log .step.observe .kind { background: rgba(121, 184, 255, 0.15); color: var(--aql); }
+  #log .step.act .kind { background: rgba(88, 166, 255, 0.15); color: var(--accent); }
+  #log .step.act.error .kind { background: rgba(248, 81, 73, 0.15); color: var(--bad); }
+  #log .step.llm .kind { background: rgba(132, 225, 188, 0.15); color: var(--llm); }
+  #log .step.pen .kind { background: rgba(192, 139, 255, 0.15); color: var(--pen); }
+  #log .step.notepad .kind { background: rgba(240, 198, 116, 0.15); color: var(--notepad); }
+  #log .step.aql .kind { background: rgba(121, 184, 255, 0.10); color: var(--aql); }
+  #log .step.plan .kind { background: rgba(132, 225, 188, 0.10); color: var(--llm); }
+  #log .step.nap .kind { background: rgba(210, 153, 34, 0.15); color: var(--warn); }
+  #log .step .ts { color: var(--muted); font-family: monospace; font-size: 10px; }
+  #log .step .body { white-space: pre-wrap; word-break: break-word; }
+  #log .step pre { margin: 4px 0; white-space: pre-wrap; word-break: break-word; font-size: 11px; max-height: 400px; overflow-y: auto; }
+  #log .step details { margin-top: 4px; }
+  #log .step details summary { cursor: pointer; color: var(--muted); font-size: 11px; }
+  #log .step .role { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; margin-top: 6px; }
+  #footer { border-top: 1px solid var(--border); background: var(--panel); padding: 8px 16px; display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; }
+  #footer .scrubber { width: 100%; }
+  #footer .step-pos { font-family: monospace; font-size: 12px; color: var(--muted); white-space: nowrap; }
+  #footer .controls { display: flex; gap: 4px; }
+  #drop-zone { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(14, 18, 23, 0.95); z-index: 100; flex-direction: column; gap: 16px; }
+  #drop-zone.hidden { display: none; }
+  #drop-zone .box { border: 2px dashed var(--border); border-radius: 8px; padding: 60px 80px; text-align: center; color: var(--muted); background: var(--panel); }
+  #drop-zone .box h2 { color: var(--fg); margin: 0 0 8px 0; }
+  #drop-zone .box .hint { font-size: 12px; margin-top: 12px; }
+  .hidden { display: none !important; }
+  /* S2: flat color-coded navigable trace (replaces the episode split). Each row
+     is one step; clicking it scrubs there. A left color bar encodes the event. */
+  #episode-list .trow { display: grid; grid-template-columns: 4px auto 1fr auto; column-gap: 7px; align-items: center; padding: 2px 6px; border-radius: 3px; cursor: pointer; font-size: 11px; line-height: 1.5; }
+  #episode-list .trow:hover { background: var(--code-bg); }
+  #episode-list .trow.active { background: rgba(88,166,255,0.18); outline: 1px solid var(--accent); }
+  #episode-list .trow .bar { width: 4px; height: 100%; min-height: 12px; border-radius: 2px; background: var(--border); }
+  #episode-list .trow .k { color: var(--muted); text-transform: uppercase; font-size: 9px; letter-spacing: 0.03em; }
+  #episode-list .trow .lbl { font-family: "JetBrains Mono", monospace; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #episode-list .trow .tag { color: var(--muted); font-size: 9px; font-family: monospace; }
+  /* event colors (left bar + label tint) */
+  .ev-death  .bar { background: var(--bad); }   .ev-death  .lbl { color: var(--bad); font-weight: 700; }
+  .ev-error  .bar { background: var(--warn); }  .ev-error  .lbl { color: var(--warn); }
+  .ev-observe .bar { background: var(--aql); }
+  .ev-act    .bar { background: var(--accent); }
+  .ev-plan   .bar { background: var(--llm); }
+  .ev-pen    .bar { background: var(--pen); }
+  .ev-notepad .bar { background: var(--notepad); }
+  .ev-llm    .bar { background: #3a4150; }
+  .ev-aql    .bar { background: var(--aql); opacity: 0.6; }
+  .ev-nap    .bar { background: var(--warn); opacity: 0.7; }
+  .ev-levelup .bar { background: var(--good); }  .ev-levelup .lbl { color: var(--good); font-weight: 700; }
+  /* task boundary marker rows (subtle dividers within the continuous trace) */
+  #episode-list .tmark { display: grid; grid-template-columns: auto 1fr auto; column-gap: 6px; align-items: center; margin: 6px 0 2px; padding: 2px 6px; border-top: 1px solid var(--border); font-size: 10px; color: var(--muted); cursor: pointer; }
+  #episode-list .tmark:hover { color: var(--fg); }
+  #episode-list .tmark .badge { font-size: 9px; padding: 0 5px; border-radius: 7px; background: var(--border); }
+  #episode-list .tmark.solved .badge { background: rgba(86,211,100,0.2); color: var(--good); }
+  #episode-list .tmark.failed .badge { background: rgba(248,81,73,0.18); color: var(--bad); }
+  #episode-list .tmark .tname { font-family: monospace; color: var(--fg); }
+</style>
+</head>
+<body>
+
+<div id="drop-zone">
+  <div class="box">
+    <h2>HeroBench Replay Viewer</h2>
+    <div>Drop a trace file here:</div>
+    <div style="margin-top: 12px;"><input type="file" id="file-input" accept=".json,.jsonl"></div>
+    <div class="hint">
+      Accepts either a raw <code>weaver-trace</code> <code>*.jsonl</code> (extracted in-browser)
+      or an <code>episodes.json</code> from <code>extract_episodes.py</code> (faster for large traces).<br>
+      Don't drop the <code>*.manifest.json</code> file — that's metadata, not the trace.
+    </div>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+  <div id="header">
+    <h1>HeroBench Replay Viewer</h1>
+    <div class="meta" id="header-meta"></div>
+    <div class="grow"></div>
+    <button id="live-btn" title="Re-fetch the file every few seconds. Requires ?file= URL parameter (HTTP server)." disabled>● Live: off</button>
+    <button id="reload-btn">Load different file</button>
+  </div>
+  <div id="main">
+    <div id="left-stack">
+      <div class="panel" id="episode-panel">
+        <h2>Trace</h2>
+        <div class="panel-body" id="episode-list"></div>
+      </div>
+      <div class="panel" id="state-stack-panel">
+        <h2 id="state-title">Player state</h2>
+        <div class="panel-body" id="state-panel"></div>
+      </div>
+    </div>
+    <div class="panel" id="map-panel">
+      <h2 id="map-title" style="display:flex; align-items:center; gap:10px; justify-content:space-between;">
+        <span id="map-title-text">Map</span>
+        <button type="button" id="fog-toggle" title="Toggle between the agent's known map (fog-of-war) and full ground truth (god-view)" style="font-size:11px; padding:2px 8px;">🌫 Fog-of-war: ON</button>
+      </h2>
+      <div id="map-wrap">
+        <svg id="map" preserveAspectRatio="xMidYMid meet"></svg>
+        <div id="map-overlay">No episode selected</div>
+      </div>
+    </div>
+    <div class="panel" id="log-panel">
+      <h2 id="log-title">Cognitive log</h2>
+      <div class="panel-body" id="log"></div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="controls">
+      <button id="prev-btn" title="Step back (Left arrow)">&#9664;</button>
+      <button id="play-btn" title="Play/Pause (Space)">&#9654;</button>
+      <button id="next-btn" title="Step forward (Right arrow)">&#9654;&#9654;</button>
+    </div>
+    <input type="range" class="scrubber" id="scrubber" min="0" max="0" value="0">
+    <div class="step-pos" id="step-pos">- / -</div>
+  </div>
+</div>
+
+<script>
+// Cache-bust viewer.js on EVERY load. A stale cached copy (e.g. a pre-#438 build
+// that starved the fog timeline) is the recurring "no fog of war" symptom — a
+// fixed `?v=N` doesn't help if the browser already cached that same N. Date.now()
+// guarantees a unique URL each load; serve.py also sends no-cache. Local 59 KB
+// dev tool, so re-fetching every load is free. Appended at end-of-body so the
+// DOM viewer.js touches is already parsed (same timing as a static tag here).
+(function () {
+  var s = document.createElement("script");
+  s.src = "viewer.js?v=" + Date.now();
+  document.body.appendChild(s);
+})();
+</script>
+</body>
+</html>
