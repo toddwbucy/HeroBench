@@ -96,12 +96,18 @@ def start(port: int, backend: str = "sqlite", redis_db: int | None = None) -> di
     log_file = open(log_path, "ab", buffering=0)
     process = subprocess.Popen(
         # **Bound to loopback, because `fastapi run` defaults to 0.0.0.0.**
-        # The backend authenticates nothing and its endpoints create, mutate
-        # and delete characters, so a default bind put an unauthenticated
-        # writer for every in-flight run on the whole LAN. Anything that talks
-        # to it is on this host by construction: the agents hardcode
-        # 127.0.0.1 in A1_Agent/env_api/api.py and the health and log probes
-        # in this file use it too, so nothing loses reach.
+        # This is defense in depth rather than a hole being closed. On olympus
+        # ufw denies incoming by default and does not allow this port, so the
+        # wide bind was not reachable off the host and was one firewall edit
+        # away from being so. The backend authenticates nothing and its
+        # endpoints create, mutate and delete characters, so what that edit
+        # would expose is an unauthenticated writer to the state of every run
+        # in flight. Reach for it should not rest on a control living
+        # somewhere else.
+        #
+        # Nothing loses reach. The agents hardcode 127.0.0.1 in
+        # A1_Agent/env_api/api.py and the health and log probes in this file
+        # use it too, so everything that talks to the backend is already here.
         [
             str(venv_bin("fastapi")),
             "run",
