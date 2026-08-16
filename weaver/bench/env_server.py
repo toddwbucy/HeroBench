@@ -95,25 +95,26 @@ def start(port: int, backend: str = "sqlite", redis_db: int | None = None) -> di
 
     log_file = open(log_path, "ab", buffering=0)
     process = subprocess.Popen(
-        # **Bound to loopback, because `fastapi run` defaults to 0.0.0.0.**
-        # This is defense in depth rather than a hole being closed. On olympus
-        # ufw denies incoming by default and does not allow this port, so the
-        # wide bind was not reachable off the host and was one firewall edit
-        # away from being so. The backend authenticates nothing and its
-        # endpoints create, mutate and delete characters, so what that edit
-        # would expose is an unauthenticated writer to the state of every run
-        # in flight. Reach for it should not rest on a control living
-        # somewhere else.
+        # **All interfaces, with the reach decided by ufw rather than here.**
+        # Olympus serves this to the LAN on purpose, and a bind cannot express
+        # a subnet: it names one address on this host. Binding 192.168.0.203
+        # would reach the LAN and drop loopback, which breaks the things that
+        # already speak to this backend, since the agents hardcode 127.0.0.1
+        # in A1_Agent/env_api/api.py and the health and log probes below use
+        # it too. So the socket listens everywhere and the firewall says who
+        # may arrive, scoped to 192.168.0.0/24.
         #
-        # Nothing loses reach. The agents hardcode 127.0.0.1 in
-        # A1_Agent/env_api/api.py and the health and log probes in this file
-        # use it too, so everything that talks to the backend is already here.
+        # That firewall rule is the whole of the access control. The backend
+        # authenticates nothing and its endpoints create, mutate and delete
+        # characters, so anything that reaches it can rewrite the state of a
+        # run in flight. Widening the rule past the LAN, or running this on a
+        # host whose firewall is not carrying it, exposes exactly that.
         [
             str(venv_bin("fastapi")),
             "run",
             str(BACKENDS[backend] / "main.py"),
             "--host",
-            "127.0.0.1",
+            "0.0.0.0",
             "--port",
             str(port),
         ],
